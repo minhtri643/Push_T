@@ -142,9 +142,15 @@ def evaluate(
 
 
 def main():
+    import argparse
     config_path = "configs/default.yaml"
     with open(config_path, "r") as f:
         config = yaml.safe_load(f)
+    p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    p.add_argument("--epochs", type=int, default=config["world_model"]["epochs"])
+    p.add_argument("--out", default=config["world_model"]["save_path"], help="checkpoint path (default: config world_model.save_path)")
+    args = p.parse_args()
+    config["world_model"]["epochs"], config["world_model"]["save_path"] = args.epochs, args.out
 
     device = config.get("device", "cuda") if torch.cuda.is_available() else "cpu"
     wm_config = config["world_model"]
