@@ -1,0 +1,6 @@
+﻿World Model weights frozen successfully for Diffusion training.
+gate  none: success  23.3% | mean max coverage  80.5% | 123s
+gate   0.5: success  20.0% | mean max coverage  81.6% | 110s
+gate   0.7: success  20.0% | mean max coverage  80.9% | 119s
+gate  0.85: success  23.3% | mean max coverage  80.9% | 122s
+Best on development seeds: gate 0.85

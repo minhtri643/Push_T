@@ -1,0 +1,5 @@
+data: https://huggingface.co/datasets/lerobot/pusht (only data source)
+25,650 frames | train windows 20,439 | val windows 1,915
+d:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\.venv\Lib\site-packages\torch\nn\modules\transformer.py:385: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+encoder 1.69M params, predictor 3.34M

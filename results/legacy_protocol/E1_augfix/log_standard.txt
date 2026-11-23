@@ -1,0 +1,70 @@
+======================================================================
+STEP 5: CLOSED-LOOP EVALUATION (DEVICE: CUDA)
+  checkpoints: pusht_wm_dit/checkpoints | episodes: 50 | max_steps: 300
+  exec_horizon: 8 | stance: False | early_stop: False
+======================================================================
+World Model weights frozen successfully for Diffusion training.
+  Episode 001/050 (seed 42) | max cov  79.6% | final cov  29.8% | steps 300 | MAX_STEPS
+  Episode 002/050 (seed 143) | max cov  45.7% | final cov  45.7% | steps 300 | MAX_STEPS
+  Episode 003/050 (seed 244) | max cov  76.0% | final cov  34.6% | steps 300 | MAX_STEPS
+  Episode 004/050 (seed 345) | max cov  96.7% | final cov  96.7% | steps 179 | SUCCESS
+  Episode 005/050 (seed 446) | max cov   0.0% | final cov   0.0% | steps 300 | MAX_STEPS
+  Episode 006/050 (seed 547) | max cov  96.4% | final cov  96.4% | steps 222 | SUCCESS
+  Episode 007/050 (seed 648) | max cov  96.5% | final cov  96.5% | steps  42 | SUCCESS
+  Episode 008/050 (seed 749) | max cov  92.9% | final cov  51.3% | steps 300 | MAX_STEPS
+  Episode 009/050 (seed 850) | max cov  96.0% | final cov  96.0% | steps  87 | SUCCESS
+  Episode 010/050 (seed 951) | max cov  72.2% | final cov  34.8% | steps 300 | MAX_STEPS
+  Episode 011/050 (seed 1052) | max cov  94.3% | final cov  94.3% | steps 300 | MAX_STEPS
+  Episode 012/050 (seed 1153) | max cov  88.8% | final cov  14.9% | steps 300 | MAX_STEPS
+  Episode 013/050 (seed 1254) | max cov  95.7% | final cov  95.7% | steps 191 | SUCCESS
+  Episode 014/050 (seed 1355) | max cov  94.2% | final cov   5.3% | steps 300 | MAX_STEPS
+  Episode 015/050 (seed 1456) | max cov  88.7% | final cov  79.4% | steps 300 | MAX_STEPS
+  Episode 016/050 (seed 1557) | max cov  88.7% | final cov  88.4% | steps 300 | MAX_STEPS
+  Episode 017/050 (seed 1658) | max cov  96.2% | final cov  96.2% | steps 242 | SUCCESS
+  Episode 018/050 (seed 1759) | max cov  95.4% | final cov  95.4% | steps 187 | SUCCESS
+  Episode 019/050 (seed 1860) | max cov  95.2% | final cov  95.2% | steps 230 | SUCCESS
+  Episode 020/050 (seed 1961) | max cov   0.0% | final cov   0.0% | steps 300 | MAX_STEPS
+  Episode 021/050 (seed 2062) | max cov  91.4% | final cov   0.0% | steps 300 | MAX_STEPS
+  Episode 022/050 (seed 2163) | max cov  94.0% | final cov  44.9% | steps 300 | MAX_STEPS
+  Episode 023/050 (seed 2264) | max cov  94.4% | final cov  38.7% | steps 300 | MAX_STEPS
+  Episode 024/050 (seed 2365) | max cov  95.2% | final cov  95.2% | steps 180 | SUCCESS
+  Episode 025/050 (seed 2466) | max cov  93.6% | final cov  72.7% | steps 300 | MAX_STEPS
+  Episode 026/050 (seed 2567) | max cov  87.1% | final cov  53.2% | steps 300 | MAX_STEPS
+  Episode 027/050 (seed 2668) | max cov  95.1% | final cov  95.1% | steps 250 | SUCCESS
+  Episode 028/050 (seed 2769) | max cov  32.3% | final cov  32.3% | steps 300 | MAX_STEPS
+  Episode 029/050 (seed 2870) | max cov  91.4% | final cov  44.9% | steps 300 | MAX_STEPS
+  Episode 030/050 (seed 2971) | max cov  90.4% | final cov  31.7% | steps 300 | MAX_STEPS
+  Episode 031/050 (seed 3072) | max cov  19.4% | final cov   0.0% | steps 300 | MAX_STEPS
+  Episode 032/050 (seed 3173) | max cov  80.1% | final cov  39.7% | steps 300 | MAX_STEPS
+  Episode 033/050 (seed 3274) | max cov  94.7% | final cov  58.6% | steps 300 | MAX_STEPS
+  Episode 034/050 (seed 3375) | max cov  95.1% | final cov  95.1% | steps 266 | SUCCESS
+  Episode 035/050 (seed 3476) | max cov  92.8% | final cov  42.5% | steps 300 | MAX_STEPS
+  Episode 036/050 (seed 3577) | max cov  95.2% | final cov  95.2% | steps 290 | SUCCESS
+  Episode 037/050 (seed 3678) | max cov  23.0% | final cov  19.8% | steps 300 | MAX_STEPS
+  Episode 038/050 (seed 3779) | max cov  13.4% | final cov   0.0% | steps 300 | MAX_STEPS
+  Episode 039/050 (seed 3880) | max cov  91.3% | final cov  34.1% | steps 300 | MAX_STEPS
+  Episode 040/050 (seed 3981) | max cov  45.3% | final cov  30.7% | steps 300 | MAX_STEPS
+  Episode 041/050 (seed 4082) | max cov  90.9% | final cov  68.0% | steps 300 | MAX_STEPS
+  Episode 042/050 (seed 4183) | max cov  96.2% | final cov  96.2% | steps 171 | SUCCESS
+  Episode 043/050 (seed 4284) | max cov  95.5% | final cov  95.5% | steps 199 | SUCCESS
+  Episode 044/050 (seed 4385) | max cov  97.0% | final cov  97.0% | steps 129 | SUCCESS
+  Episode 045/050 (seed 4486) | max cov  95.4% | final cov  95.4% | steps 225 | SUCCESS
+  Episode 046/050 (seed 4587) | max cov  94.2% | final cov  34.5% | steps 300 | MAX_STEPS
+  Episode 047/050 (seed 4688) | max cov  95.8% | final cov  95.8% | steps 144 | SUCCESS
+  Episode 048/050 (seed 4789) | max cov  92.9% | final cov  88.8% | steps 300 | MAX_STEPS
+  Episode 049/050 (seed 4890) | max cov  73.2% | final cov  68.5% | steps 300 | MAX_STEPS
+  Episode 050/050 (seed 4991) | max cov  93.2% | final cov  93.2% | steps 300 | MAX_STEPS
+Saved rollout video (301 frames) to results/v2_aug_fix/standard\eval_rollout.mp4
+
+======================================================================
+EVALUATION SUMMARY
+======================================================================
+  Mean max coverage:     80.58% (std 26.89%)
+  Mean final coverage:   60.08%
+  Success rate (>95%):   34.0%
+  Max coverage >= 80%:   76.0%
+  Mean FDE (plan vs executed): 0.1278
+  Results:  results/v2_aug_fix/standard\eval_results.json
+  Hard cases: results/v2_aug_fix/standard\hard_cases.json
+  Video:    results/v2_aug_fix/standard\eval_rollout.mp4
+======================================================================

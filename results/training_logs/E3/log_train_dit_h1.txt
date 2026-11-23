@@ -1,0 +1,27 @@
+﻿==============================================================================
+STEP 4: DiT PLANNER + INVERSE DYNAMICS | device cuda | obs_history 1 | epochs 100
+==============================================================================
+PushTDataset [train]: 23415 timesteps from 186 episodes (pred_horizon=16, action_horizon=8)
+World Model weights frozen successfully for Diffusion training.
+PushTDataset [val]: 2235 timesteps from 20 episodes (pred_horizon=16, action_horizon=8)
+Train samples 46,830 | val samples 2,235
+Training DiT planner (val = FDE of sampled plans, normalized units)...
+  epoch 010 | train loss 0.0357 | val 0.1989 * | 140s
+  epoch 020 | train loss 0.0221 | val 0.1610 * | 257s
+  epoch 030 | train loss 0.0147 | val 0.1452 * | 393s
+  epoch 040 | train loss 0.0107 | val 0.1436 * | 528s
+  epoch 050 | train loss 0.0071 | val 0.1389 * | 661s
+  epoch 060 | train loss 0.0050 | val 0.1374 * | 796s
+  epoch 070 | train loss 0.0036 | val 0.1380 | 933s
+  epoch 080 | train loss 0.0027 | val 0.1378 | 1054s
+  epoch 090 | train loss 0.0023 | val 0.1373 * | 1154s
+  epoch 100 | train loss 0.0022 | val 0.1365 * | 1255s
+Best DiT: val FDE 0.1365 | val ADE 0.0825 -> pusht_wm_dit/checkpoints/v4/dit_planner_best.pt
+Sampling DiT plans for every training state (input distribution of the controller)...
+  46,830 plans in 22s
+  ID epoch 005 | val action RMSE 24.7px (on DiT plans) *
+  ID epoch 010 | val action RMSE 24.7px (on DiT plans)
+  ID epoch 015 | val action RMSE 25.5px (on DiT plans)
+  ID epoch 020 | val action RMSE 25.6px (on DiT plans)
+  ID epoch 025 | val action RMSE 25.8px (on DiT plans)
+Best inverse dynamics: val action RMSE 24.7px -> pusht_wm_dit/checkpoints/v4/inverse_dynamics_best.pt

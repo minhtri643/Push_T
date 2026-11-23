@@ -1,0 +1,20 @@
+﻿==============================================================================
+STEP 4: DiT PLANNER + INVERSE DYNAMICS | device cuda | obs_history 1 | epochs 100
+==============================================================================
+PushTDataset [train]: 23415 timesteps from 186 episodes (pred_horizon=16, action_horizon=8)
+World Model weights frozen successfully for Diffusion training.
+PushTDataset [val]: 2235 timesteps from 20 episodes (pred_horizon=16, action_horizon=8)
+Train samples 46,830 | val samples 2,235
+DiT pusht_wm_dit/checkpoints/v4b/dit_planner_best.pt: val FDE 0.1371 | val ADE 0.0823
+  ID epoch 005 | val action RMSE on DiT plans 28.5px (snapshot kept)
+  ID epoch 010 | val action RMSE on DiT plans 26.2px (snapshot kept)
+  ID epoch 015 | val action RMSE on DiT plans 25.9px (snapshot kept)
+  ID epoch 020 | val action RMSE on DiT plans 26.2px (snapshot kept)
+  ID epoch 025 | val action RMSE on DiT plans 26.2px (snapshot kept)
+Choosing the inverse-dynamics snapshot by closed-loop simulation (20 validation seeds)...
+  snapshot epoch 005: closed-loop success 0% | mean max coverage 37.1%
+  snapshot epoch 010: closed-loop success 10% | mean max coverage 56.9%
+  snapshot epoch 015: closed-loop success 35% | mean max coverage 64.5%
+  snapshot epoch 020: closed-loop success 45% | mean max coverage 73.2%
+  snapshot epoch 025: closed-loop success 70% | mean max coverage 82.5%
+Best inverse dynamics: epoch 25 (success 70%, coverage 82.5%) -> pusht_wm_dit/checkpoints/v4b/inverse_dynamics_best.pt

@@ -1,0 +1,23 @@
+======================================================================
+STEP 3: TRAINING WORLD MODEL (DEVICE: CUDA, augment_symmetry=True)
+======================================================================
+PushTDataset [train]: 23415 timesteps from 186 episodes (pred_horizon=16, action_horizon=8)
+PushTDataset [val]: 2235 timesteps from 20 episodes (pred_horizon=16, action_horizon=8)
+Starting training for 5 epochs...
+Epoch 01/05 | Train Loss: 0.1568 (Pose: 0.1383, Ag: 0.0176, Trans: 0.0019) | Val Loss: 0.1188 (Pose: 0.1172) ★ (Best Saved)
+Epoch 02/05 | Train Loss: 0.0506 (Pose: 0.0484, Ag: 0.0007, Trans: 0.0030) | Val Loss: 0.0084 (Pose: 0.0076) ★ (Best Saved)
+Epoch 03/05 | Train Loss: 0.0020 (Pose: 0.0015, Ag: 0.0001, Trans: 0.0009) | Val Loss: 0.0021 (Pose: 0.0017) ★ (Best Saved)
+Epoch 04/05 | Train Loss: 0.0008 (Pose: 0.0005, Ag: 0.0000, Trans: 0.0005) | Val Loss: 0.0016 (Pose: 0.0013) ★ (Best Saved)
+Epoch 05/05 | Train Loss: 0.0005 (Pose: 0.0003, Ag: 0.0000, Trans: 0.0004) | Val Loss: 0.0011 (Pose: 0.0009) ★ (Best Saved)
+
+======================================================================
+FREEZING WORLD MODEL & PRECOMPUTING LATENTS
+======================================================================
+World Model weights frozen successfully for Diffusion training.
+PushTDataset [train]: 23415 timesteps from 186 episodes (pred_horizon=16, action_horizon=8)
+Precomputing latents for 46830 samples using frozen World Model...
+Cached 46830 latents to pusht_wm_dit/data/precomputed_latents_aug.pt (shape: torch.Size([46830, 128]))
+World Model training and latent caching completed!
+  Best Model Checkpoint: pusht_wm_dit/checkpoints/world_model_best.pt
+  Latents Cache Path:    pusht_wm_dit/data/precomputed_latents_aug.pt
+======================================================================

@@ -1,0 +1,52 @@
+[
+  {
+    "name": "1. Chuẩn mực (Góc lệch nhỏ 35°, cự ly vừa)",
+    "init_dist": 62.4,
+    "final_dist": 2.8,
+    "init_dth_deg": 35.0,
+    "final_dth_deg": 1.3,
+    "max_cov": 91.4,
+    "final_cov": 91.4,
+    "steps": 313
+  },
+  {
+    "name": "2. Cực đoan (Lật ngược 165° - Khó nhất OOD)",
+    "init_dist": 69.1,
+    "final_dist": 3.4,
+    "init_dth_deg": 165.0,
+    "final_dth_deg": 1.6,
+    "max_cov": 88.5,
+    "final_cov": 88.5,
+    "steps": 220
+  },
+  {
+    "name": "3. Xa bàn cờ (Tọa độ góc xa 200px)",
+    "init_dist": 164.0,
+    "final_dist": 12.2,
+    "init_dth_deg": 25.0,
+    "final_dth_deg": 2.8,
+    "max_cov": 81.4,
+    "final_cov": 75.2,
+    "steps": 92
+  },
+  {
+    "name": "4. Sát mép tường (Góc dưới biên 166, 384)",
+    "init_dist": 156.5,
+    "final_dist": 5.1,
+    "init_dth_deg": 91.0,
+    "final_dth_deg": 4.1,
+    "max_cov": 91.7,
+    "final_cov": 91.7,
+    "steps": 156
+  },
+  {
+    "name": "5. Mục tiêu di động (Kéo đích thời gian thực)",
+    "init_dist": 39.4,
+    "final_dist": 18.6,
+    "init_dth_deg": 5.0,
+    "final_dth_deg": 17.8,
+    "max_cov": 70.7,
+    "final_cov": 15.0,
+    "steps": 97
+  }
+]

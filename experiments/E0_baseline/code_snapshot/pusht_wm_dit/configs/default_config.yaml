@@ -1,0 +1,66 @@
+data:
+  action_horizon: 8
+  latents_cache_path: pusht_wm_dit/data/precomputed_latents_aug.pt
+  num_workers: 0
+  pred_horizon: 16
+  val_ratio: 0.1
+  zarr_path: pusht_wm_dit/data/pusht_cchi_v7_replay.zarr
+device: cuda
+dit_planner:
+  batch_size: 128
+  beta_schedule: squaredcos_cap_v2
+  diffusion_steps: 100
+  epochs: 25
+  horizon: 16
+  lambda_fde: 1.0
+  lr: 0.0002
+  mlp_ratio: 4.0
+  model_dim: 256
+  num_heads: 4
+  num_layers: 4
+  sample_steps: 10
+  save_path: pusht_wm_dit/checkpoints/dit_planner_best.pt
+  traj_dim: 4
+  w_theta: 1.0
+  w_xy: 1.0
+  weight_decay: 0.0001
+env:
+  env_name: gym_pusht/PushT-v0
+  max_steps: 200
+  render_size:
+  - 96
+  - 96
+  success_threshold: 0.95
+evaluation:
+  exec_horizon: 4
+  hard_cases_log: pusht_wm_dit/eval_videos/hard_cases.json
+  num_eval_episodes: 10
+  pred_horizon: 16
+  video_dir: pusht_wm_dit/eval_videos
+inverse_dynamics:
+  action_dim: 2
+  batch_size: 128
+  epochs: 25
+  exec_steps: 8
+  hidden_dims:
+  - 256
+  - 256
+  lr: 0.0003
+  save_path: pusht_wm_dit/checkpoints/inverse_dynamics_best.pt
+  weight_decay: 0.0001
+seed: 42
+world_model:
+  action_dim: 2
+  agent_pos_dim: 2
+  batch_size: 64
+  epochs: 5
+  lambda_agent: 1.0
+  lambda_recon: 1.0
+  lambda_transition: 0.5
+  latent_dim: 128
+  lr: 0.001
+  num_groups: 16
+  pose_dim: 4
+  save_path: pusht_wm_dit/checkpoints/world_model_best.pt
+  transition_hidden_dim: 256
+  weight_decay: 0.0001

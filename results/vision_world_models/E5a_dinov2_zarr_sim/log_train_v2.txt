@@ -1,0 +1,8 @@
+﻿Loaded 95,895 frames in 6s | train windows 81,756 | val windows 1,915
+Epoch 01 | train feat 0.2444 agent 0.8598 | val feat 0.1862 | val block pos err (probe) k=4/8/12/16: 7.2 / 12.5 / 17.3 / 21.6 px * | 862s
+Epoch 02 | train feat 0.1884 agent 0.0322 | val feat 0.1433 | val block pos err (probe) k=4/8/12/16: 6.3 / 10.1 / 13.0 / 15.6 px * | 1768s
+Epoch 03 | train feat 0.1516 agent 0.0184 | val feat 0.1226 | val block pos err (probe) k=4/8/12/16: 5.6 / 8.5 / 10.8 / 12.9 px * | 2642s
+Epoch 04 | train feat 0.1329 agent 0.0137 | val feat 0.1247 | val block pos err (probe) k=4/8/12/16: 5.9 / 9.0 / 11.6 / 14.1 px | 3513s
+Epoch 05 | train feat 0.1200 agent 0.0089 | val feat 0.1107 | val block pos err (probe) k=4/8/12/16: 4.9 / 7.3 / 9.3 / 11.3 px * | 4382s
+Epoch 06 | train feat 0.1072 agent 0.0048 | val feat 0.1084 | val block pos err (probe) k=4/8/12/16: 4.9 / 7.1 / 9.2 / 11.0 px * | 5247s
+Epoch 07 | train feat 0.0975 agent 0.0037 | val feat 0.1009 | val block pos err (probe) k=4/8/12/16: 4.8 / 6.8 / 8.5 / 10.0 px * | 6107s

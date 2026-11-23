@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Large artifacts: published as GitHub Release assets (python scripts/download_assets.py) or regenerated
+checkpoints/
+data/
+
+# Local only, never published
+_pending_delete/
+docs/archive/

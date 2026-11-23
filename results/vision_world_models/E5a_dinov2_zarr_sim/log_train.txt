@@ -1,0 +1,29 @@
+﻿Loaded 95,895 frames in 4s | train windows 81,756 | val windows 1,915
+Epoch 01 | train feat 0.2399 agent 0.9063 | val feat 0.1897 | val block pos err (probe) k=4/8/12/16: 8.3 / 13.1 / 17.6 / 21.5 px * | 212s
+Epoch 02 | train feat 0.1882 agent 0.0196 | val feat 0.1492 | val block pos err (probe) k=4/8/12/16: 7.3 / 10.7 / 13.8 / 16.9 px * | 423s
+Epoch 03 | train feat 0.1552 agent 0.0106 | val feat 0.1307 | val block pos err (probe) k=4/8/12/16: 6.6 / 9.1 / 11.6 / 13.8 px * | 633s
+Epoch 04 | train feat 0.1378 agent 0.0069 | val feat 0.1252 | val block pos err (probe) k=4/8/12/16: 6.7 / 9.4 / 12.1 / 14.6 px * | 844s
+Epoch 05 | train feat 0.1266 agent 0.0043 | val feat 0.1190 | val block pos err (probe) k=4/8/12/16: 6.2 / 8.5 / 10.8 / 13.2 px * | 1054s
+Epoch 06 | train feat 0.1178 agent 0.0016 | val feat 0.1098 | val block pos err (probe) k=4/8/12/16: 6.1 / 7.9 / 9.5 / 11.1 px * | 1265s
+Epoch 07 | train feat 0.1083 agent 0.0008 | val feat 0.1053 | val block pos err (probe) k=4/8/12/16: 5.8 / 7.6 / 9.1 / 10.5 px * | 1475s
+Epoch 08 | train feat 0.1011 agent 0.0006 | val feat 0.1051 | val block pos err (probe) k=4/8/12/16: 5.8 / 7.6 / 9.2 / 11.0 px * | 1686s
+Epoch 09 | train feat 0.0960 agent 0.0004 | val feat 0.1021 | val block pos err (probe) k=4/8/12/16: 5.7 / 7.4 / 8.8 / 10.2 px * | 1897s
+Epoch 10 | train feat 0.0925 agent 0.0004 | val feat 0.1002 | val block pos err (probe) k=4/8/12/16: 5.7 / 7.2 / 8.5 / 9.8 px * | 2108s
+Epoch 11 | train feat 0.0903 agent 0.0003 | val feat 0.0999 | val block pos err (probe) k=4/8/12/16: 5.7 / 7.2 / 8.5 / 9.9 px * | 2318s
+Epoch 12 | train feat 0.0894 agent 0.0003 | val feat 0.0998 | val block pos err (probe) k=4/8/12/16: 5.7 / 7.2 / 8.5 / 9.9 px * | 2529s
+
+====================================================================================================
+VISION WORLD MODEL – 1,915 cửa sổ kiểm tra (1,233 có khối di chuyển > 5px), dữ liệu: demo+sim
+====================================================================================================
+Mô hình                                     vị trí (px) tại bước 4/8/12/16       góc (°) bước 16
+Đoán đứng yên                               6.1 / 12.3 / 18.8 / 25.6                       15.00
+Đầu dò trên ảnh thật (sàn)                  4.3 / 4.2 / 4.1 / 4.0                           1.65
+WM ảnh (tưởng tượng)                        5.7 / 7.2 / 8.5 / 9.9                           6.07
+WM ảnh, hành động xáo trộn                  23.5 / 28.6 / 31.8 / 35.1                      16.13
+Động lực học trạng thái thật (cận trên)     0.4 / 0.5 / 0.6 / 0.7                           0.51
+
+Phép thử phản thực tế (độ nhạy lý tưởng 100%):
+  WM ảnh (tưởng tượng)                         độ nhạy    80% | sai vị trí cuối với hành động lạ   8.6px
+  Động lực học trạng thái thật (cận trên)      độ nhạy    98% | sai vị trí cuối với hành động lạ   1.2px
+
+Đã lưu pusht_wm_dit/checkpoints/vision_wm.pt, results/vision_wm/metrics.json, results/vision_wm/curves.png

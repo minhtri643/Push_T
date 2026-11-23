@@ -1,0 +1,38 @@
+======================================================================
+COMPREHENSIVE BENCHMARK SWEEP (20 SCENARIOS) | DEVICE: CUDA
+  checkpoints: backups/baseline_v1/checkpoints | stance: False | early_stop: False
+======================================================================
+World Model weights frozen successfully for Diffusion training.
+[01/20] Center-Bottom                              | max cov  89.7% | dist  84.0 ->  12.3px | NEAR_SUCCESS
+[02/20] Center-Right                               | max cov  47.3% | dist  84.0 -> 288.9px | PUSHED_AWAY_FROM_GOAL
+[03/20] Center-Top                                 | max cov  84.1% | dist  86.0 ->  27.3px | NEAR_SUCCESS
+[04/20] Center-Left                                | max cov  69.2% | dist  85.6 ->  28.6px | APPROACHED_BUT_ANGLE_UNALIGNED
+[05/20] Q1 Top-Right (Normal angle)                | max cov  53.8% | dist 140.4 -> 179.0px | PUSHED_AWAY_FROM_GOAL
+[06/20] Q1 Top-Right (Inverted angle)              | max cov   0.0% | dist 142.0 -> 217.3px | PUSHED_AWAY_FROM_GOAL
+[07/20] Q1 Near Top Wall                           | max cov  69.6% | dist 177.9 -> 103.8px | APPROACHED_BUT_ANGLE_UNALIGNED
+[08/20] Q2 Top-Left (Standard)                     | max cov  82.7% | dist 143.0 ->  89.7px | NEAR_SUCCESS
+[09/20] Q2 Top-Left (Opposite angle)               | max cov   0.0% | dist 142.9 -> 205.8px | PUSHED_AWAY_FROM_GOAL
+[10/20] Q2 Near Left Wall                          | max cov  14.4% | dist 175.2 ->  51.3px | APPROACHED_BUT_ANGLE_UNALIGNED
+[11/20] Q3 Bottom-Left (Standard)                  | max cov  84.3% | dist 141.5 ->   6.4px | NEAR_SUCCESS
+[12/20] Q3 Bottom-Left (Extreme Angle)             | max cov   8.2% | dist 142.8 -> 266.4px | PUSHED_AWAY_FROM_GOAL
+[13/20] Q3 Near Corner (100, 420)                  | max cov  82.1% | dist 226.3 ->  12.0px | NEAR_SUCCESS
+[14/20] Q4 Bottom-Right (Standard)                 | max cov  81.2% | dist 147.1 ->  68.2px | NEAR_SUCCESS
+[15/20] Q4 Bottom-Right (Rotated 90 deg)           | max cov   0.0% | dist 147.1 -> 177.4px | PUSHED_AWAY_FROM_GOAL
+[16/20] Q4 Near Right Wall                         | max cov   0.0% | dist 185.4 -> 141.3px | PUSHER_MISSED_OR_CIRCLED_INTO_WALL
+[17/20] Pusher Opposite Side (Block Q3, Agent Q1)  | max cov   0.0% | dist 120.9 -> 176.7px | PUSHED_AWAY_FROM_GOAL
+[18/20] Pusher Trapped Behind Goal                 | max cov  79.5% | dist  50.1 ->  58.0px | NEAR_SUCCESS
+[19/20] Inverted Block at Center                   | max cov   0.0% | dist   0.0 -> 133.3px | PUSHED_AWAY_FROM_GOAL
+[20/20] Block Tilted 180 at Center                 | max cov  89.0% | dist   0.0 ->  26.7px | NEAR_SUCCESS
+
+======================================================================
+BENCHMARK SUMMARY
+======================================================================
+  Success rate (>95%):  0.0%
+  Mean max coverage:    46.76%
+  Mean final goal dist: 113.5px
+  APPROACHED_BUT_ANGLE_UNALIGNED       3
+  NEAR_SUCCESS                         8
+  PUSHED_AWAY_FROM_GOAL                8
+  PUSHER_MISSED_OR_CIRCLED_INTO_WALL   1
+  Results saved to: results/baseline_v1/comprehensive_eval.json
+======================================================================

@@ -1,0 +1,560 @@
+{
+  "num_trials": 25,
+  "mean_max_coverage": 17.804000000000002,
+  "success_high_rate": 0.04,
+  "success_mid_rate": 0.04,
+  "approached_rate": 0.12,
+  "pushed_away_rate": 0.6,
+  "trials": [
+    {
+      "trial": 1,
+      "init_block": [
+        173.6,
+        229.8,
+        2.99
+      ],
+      "init_agent": [
+        119.3,
+        248.2
+      ],
+      "init_dist": 86.5,
+      "final_dist": 88.7,
+      "init_cov": 8.0,
+      "max_cov": 15.4,
+      "final_cov": 0.0,
+      "init_dth_deg": 126.6,
+      "final_dth_deg": 127.4,
+      "steps": 240,
+      "status_reason": "MAX_STEPS",
+      "verdict": "KẸT / KHÔNG TIẾP XÚC HIỆU QUẢ"
+    },
+    {
+      "trial": 2,
+      "init_block": [
+        396.4,
+        167.5,
+        2.59
+      ],
+      "init_agent": [
+        274.2,
+        348.5
+      ],
+      "init_dist": 166.0,
+      "final_dist": 213.7,
+      "init_cov": 0.0,
+      "max_cov": 0.0,
+      "final_cov": 0.0,
+      "init_dth_deg": 103.2,
+      "final_dth_deg": 62.0,
+      "steps": 240,
+      "status_reason": "MAX_STEPS",
+      "verdict": "ĐẨY CHỆCH HƯỚNG (Đi xa đích hơn)"
+    },
+    {
+      "trial": 3,
+      "init_block": [
+        197.7,
+        225.2,
+        -1.28
+      ],
+      "init_agent": [
+        385.0,
+        105.9
+      ],
+      "init_dist": 65.9,
+      "final_dist": 288.8,
+      "init_cov": 5.2,
+      "max_cov": 54.7,
+      "final_cov": 0.0,
+      "init_dth_deg": 118.5,
+      "final_dth_deg": 44.8,
+      "steps": 240,
+      "status_reason": "MAX_STEPS",
+      "verdict": "ĐẨY CHỆCH HƯỚNG (Đi xa đích hơn)"
+    },
+    {
+      "trial": 4,
+      "init_block": [
+        239.1,
+        272.9,
+        -0.86
+      ],
+      "init_agent": [
+        319.2,
+        394.7
+      ],
+      "init_dist": 24.0,
+      "final_dist": 182.2,
+      "init_cov": 8.8,
+      "max_cov": 16.7,
+      "final_cov": 0.0,
+      "init_dth_deg": 94.1,
+      "final_dth_deg": 16.3,
+      "steps": 240,
+      "status_reason": "MAX_STEPS",
+      "verdict": "ĐẨY CHỆCH HƯỚNG (Đi xa đích hơn)"
+    },
+    {
+      "trial": 5,
+      "init_block": [
+        118.9,
+        145.2,
+        -1.68
+      ],
+      "init_agent": [
+        302.2,
+        167.9
+      ],
+      "init_dist": 176.3,
+      "final_dist": 183.9,
+      "init_cov": 0.0,
+      "max_cov": 0.0,
+      "final_cov": 0.0,
+      "init_dth_deg": 141.5,
+      "final_dth_deg": 154.1,
+      "steps": 240,
+      "status_reason": "MAX_STEPS",
+      "verdict": "KẸT / KHÔNG TIẾP XÚC HIỆU QUẢ"
+    },
+    {
+      "trial": 6,
+      "init_block": [
+        390.4,
+        153.3,
+        -2.85
+      ],
+      "init_agent": [
+        245.2,
+        315.3
+      ],
+      "init_dist": 169.2,
+      "final_dist": 182.1,
+      "init_cov": 0.0,
+      "max_cov": 0.0,
+      "final_cov": 0.0,
+      "init_dth_deg": 151.9,
+      "final_dth_deg": 161.6,
+      "steps": 240,
+      "status_reason": "MAX_STEPS",
+      "verdict": "KẸT / KHÔNG TIẾP XÚC HIỆU QUẢ"
+    },
+    {
+      "trial": 7,
+      "init_block": [
+        365.0,
+        308.0,
+        0.13
+      ],
+      "init_agent": [
+        244.1,
+        174.9
+      ],
+      "init_dist": 120.8,
+      "final_dist": 162.0,
+      "init_cov": 0.0,
+      "max_cov": 3.0,
+      "final_cov": 0.4,
+      "init_dth_deg": 37.7,
+      "final_dth_deg": 44.4,
+      "steps": 240,
+      "status_reason": "MAX_STEPS",
+      "verdict": "ĐẨY CHỆCH HƯỚNG (Đi xa đích hơn)"
+    },
+    {
+      "trial": 8,
+      "init_block": [
+        257.3,
+        276.6,
+        -0.06
+      ],
+      "init_agent": [
+        158.4,
+        238.8
+      ],
+      "init_dist": 20.6,
+      "final_dist": 152.6,
+      "init_cov": 10.7,
+      "max_cov": 44.2,
+      "final_cov": 0.0,
+      "init_dth_deg": 48.5,
+      "final_dth_deg": 63.9,
+      "steps": 240,
+      "status_reason": "MAX_STEPS",
+      "verdict": "ĐẨY CHỆCH HƯỚNG (Đi xa đích hơn)"
+    },
+    {
+      "trial": 9,
+      "init_block": [
+        382.6,
+        200.4,
+        -3.0
+      ],
+      "init_agent": [
+        172.2,
+        159.6
+      ],
+      "init_dist": 138.2,
+      "final_dist": 119.2,
+      "init_cov": 0.0,
+      "max_cov": 0.0,
+      "final_cov": 0.0,
+      "init_dth_deg": 143.3,
+      "final_dth_deg": 141.8,
+      "steps": 240,
+      "status_reason": "MAX_STEPS",
+      "verdict": "KẸT / KHÔNG TIẾP XÚC HIỆU QUẢ"
+    },
+    {
+      "trial": 10,
+      "init_block": [
+        168.8,
+        304.6,
+        1.52
+      ],
+      "init_agent": [
+        372.0,
+        117.8
+      ],
+      "init_dist": 99.9,
+      "final_dist": 23.1,
+      "init_cov": 2.6,
+      "max_cov": 31.6,
+      "final_cov": 31.6,
+      "init_dth_deg": 42.2,
+      "final_dth_deg": 12.3,
+      "steps": 240,
+      "status_reason": "MAX_STEPS",
+      "verdict": "ĐẨY GẦN ĐÍCH (Chưa xoay khớp ô)"
+    },
+    {
+      "trial": 11,
+      "init_block": [
+        159.3,
+        393.0,
+        -3.13
+      ],
+      "init_agent": [
+        241.0,
+        106.6
+      ],
+      "init_dist": 167.7,
+      "final_dist": 148.8,
+      "init_cov": 0.0,
+      "max_cov": 0.1,
+      "final_cov": 0.0,
+      "init_dth_deg": 135.9,
+      "final_dth_deg": 52.3,
+      "steps": 240,
+      "status_reason": "MAX_STEPS",
+      "verdict": "KẸT / KHÔNG TIẾP XÚC HIỆU QUẢ"
+    },
+    {
+      "trial": 12,
+      "init_block": [
+        299.0,
+        398.9,
+        -0.23
+      ],
+      "init_agent": [
+        212.8,
+        308.4
+      ],
+      "init_dist": 149.3,
+      "final_dist": 181.8,
+      "init_cov": 0.0,
+      "max_cov": 0.0,
+      "final_cov": 0.0,
+      "init_dth_deg": 58.3,
+      "final_dth_deg": 64.4,
+      "steps": 240,
+      "status_reason": "MAX_STEPS",
+      "verdict": "ĐẨY CHỆCH HƯỚNG (Đi xa đích hơn)"
+    },
+    {
+      "trial": 13,
+      "init_block": [
+        305.4,
+        283.3,
+        0.55
+      ],
+      "init_agent": [
+        122.0,
+        419.1
+      ],
+      "init_dist": 56.4,
+      "final_dist": 100.3,
+      "init_cov": 18.6,
+      "max_cov": 31.3,
+      "final_cov": 0.2,
+      "init_dth_deg": 13.5,
+      "final_dth_deg": 86.0,
+      "steps": 240,
+      "status_reason": "MAX_STEPS",
+      "verdict": "ĐẨY CHỆCH HƯỚNG (Đi xa đích hơn)"
+    },
+    {
+      "trial": 14,
+      "init_block": [
+        294.8,
+        178.2,
+        2.58
+      ],
+      "init_agent": [
+        145.5,
+        202.6
+      ],
+      "init_dist": 86.9,
+      "final_dist": 227.1,
+      "init_cov": 7.3,
+      "max_cov": 13.6,
+      "final_cov": 0.0,
+      "init_dth_deg": 103.0,
+      "final_dth_deg": 163.3,
+      "steps": 240,
+      "status_reason": "MAX_STEPS",
+      "verdict": "ĐẨY CHỆCH HƯỚNG (Đi xa đích hơn)"
+    },
+    {
+      "trial": 15,
+      "init_block": [
+        264.9,
+        217.0,
+        0.03
+      ],
+      "init_agent": [
+        244.5,
+        178.3
+      ],
+      "init_dist": 40.0,
+      "final_dist": 153.1,
+      "init_cov": 0.0,
+      "max_cov": 10.5,
+      "final_cov": 0.0,
+      "init_dth_deg": 43.2,
+      "final_dth_deg": 44.1,
+      "steps": 240,
+      "status_reason": "MAX_STEPS",
+      "verdict": "ĐẨY CHỆCH HƯỚNG (Đi xa đích hơn)"
+    },
+    {
+      "trial": 16,
+      "init_block": [
+        314.7,
+        141.1,
+        -2.1
+      ],
+      "init_agent": [
+        360.4,
+        338.0
+      ],
+      "init_dist": 129.1,
+      "final_dist": 48.7,
+      "init_cov": 0.0,
+      "max_cov": 53.4,
+      "final_cov": 31.7,
+      "init_dth_deg": 165.2,
+      "final_dth_deg": 11.5,
+      "steps": 240,
+      "status_reason": "MAX_STEPS",
+      "verdict": "ĐẨY GẦN ĐÍCH (Chưa xoay khớp ô)"
+    },
+    {
+      "trial": 17,
+      "init_block": [
+        191.0,
+        358.1,
+        1.51
+      ],
+      "init_agent": [
+        392.1,
+        183.6
+      ],
+      "init_dist": 121.1,
+      "final_dist": 155.0,
+      "init_cov": 7.9,
+      "max_cov": 14.6,
+      "final_cov": 0.0,
+      "init_dth_deg": 41.5,
+      "final_dth_deg": 68.3,
+      "steps": 240,
+      "status_reason": "MAX_STEPS",
+      "verdict": "ĐẨY CHỆCH HƯỚNG (Đi xa đích hơn)"
+    },
+    {
+      "trial": 18,
+      "init_block": [
+        158.7,
+        177.4,
+        2.02
+      ],
+      "init_agent": [
+        371.4,
+        120.9
+      ],
+      "init_dist": 125.1,
+      "final_dist": 6.4,
+      "init_cov": 0.0,
+      "max_cov": 86.0,
+      "final_cov": 86.0,
+      "init_dth_deg": 70.8,
+      "final_dth_deg": 1.1,
+      "steps": 150,
+      "status_reason": "GOAL_REACHED",
+      "verdict": "HOÀN HẢO (Vào ô chuẩn)"
+    },
+    {
+      "trial": 19,
+      "init_block": [
+        283.3,
+        389.6,
+        1.36
+      ],
+      "init_agent": [
+        109.3,
+        288.2
+      ],
+      "init_dist": 136.3,
+      "final_dist": 203.0,
+      "init_cov": 2.9,
+      "max_cov": 5.6,
+      "final_cov": 0.0,
+      "init_dth_deg": 32.8,
+      "final_dth_deg": 31.9,
+      "steps": 240,
+      "status_reason": "MAX_STEPS",
+      "verdict": "ĐẨY CHỆCH HƯỚNG (Đi xa đích hơn)"
+    },
+    {
+      "trial": 20,
+      "init_block": [
+        392.6,
+        378.3,
+        0.71
+      ],
+      "init_agent": [
+        383.9,
+        156.9
+      ],
+      "init_dist": 183.4,
+      "final_dist": 175.8,
+      "init_cov": 0.0,
+      "max_cov": 0.7,
+      "final_cov": 0.0,
+      "init_dth_deg": 4.5,
+      "final_dth_deg": 43.4,
+      "steps": 240,
+      "status_reason": "MAX_STEPS",
+      "verdict": "KẸT / KHÔNG TIẾP XÚC HIỆU QUẢ"
+    },
+    {
+      "trial": 21,
+      "init_block": [
+        380.3,
+        198.1,
+        2.72
+      ],
+      "init_agent": [
+        232.9,
+        196.9
+      ],
+      "init_dist": 137.1,
+      "final_dist": 147.6,
+      "init_cov": 0.0,
+      "max_cov": 0.0,
+      "final_cov": 0.0,
+      "init_dth_deg": 110.6,
+      "final_dth_deg": 133.4,
+      "steps": 240,
+      "status_reason": "MAX_STEPS",
+      "verdict": "KẸT / KHÔNG TIẾP XÚC HIỆU QUẢ"
+    },
+    {
+      "trial": 22,
+      "init_block": [
+        296.2,
+        295.1,
+        1.02
+      ],
+      "init_agent": [
+        286.9,
+        244.7
+      ],
+      "init_dist": 56.1,
+      "final_dist": 148.1,
+      "init_cov": 0.0,
+      "max_cov": 18.1,
+      "final_cov": 0.0,
+      "init_dth_deg": 13.7,
+      "final_dth_deg": 46.3,
+      "steps": 240,
+      "status_reason": "MAX_STEPS",
+      "verdict": "ĐẨY CHỆCH HƯỚNG (Đi xa đích hơn)"
+    },
+    {
+      "trial": 23,
+      "init_block": [
+        376.3,
+        310.0,
+        -0.47
+      ],
+      "init_agent": [
+        322.7,
+        402.5
+      ],
+      "init_dist": 131.8,
+      "final_dist": 182.7,
+      "init_cov": 0.0,
+      "max_cov": 0.0,
+      "final_cov": 0.0,
+      "init_dth_deg": 71.9,
+      "final_dth_deg": 161.5,
+      "steps": 240,
+      "status_reason": "MAX_STEPS",
+      "verdict": "ĐẨY CHỆCH HƯỚNG (Đi xa đích hơn)"
+    },
+    {
+      "trial": 24,
+      "init_block": [
+        126.3,
+        225.7,
+        -2.17
+      ],
+      "init_agent": [
+        398.4,
+        319.7
+      ],
+      "init_dist": 133.2,
+      "final_dist": 180.9,
+      "init_cov": 0.0,
+      "max_cov": 16.2,
+      "final_cov": 0.0,
+      "init_dth_deg": 169.2,
+      "final_dth_deg": 74.2,
+      "steps": 240,
+      "status_reason": "MAX_STEPS",
+      "verdict": "ĐẨY CHỆCH HƯỚNG (Đi xa đích hơn)"
+    },
+    {
+      "trial": 25,
+      "init_block": [
+        312.1,
+        278.8,
+        -2.71
+      ],
+      "init_agent": [
+        402.4,
+        382.7
+      ],
+      "init_dist": 60.5,
+      "final_dist": 95.7,
+      "init_cov": 13.2,
+      "max_cov": 29.4,
+      "final_cov": 0.8,
+      "init_dth_deg": 159.8,
+      "final_dth_deg": 38.1,
+      "steps": 240,
+      "status_reason": "MAX_STEPS",
+      "verdict": "ĐẨY CHỆCH HƯỚNG (Đi xa đích hơn)"
+    }
+  ]
+}

@@ -1,0 +1,512 @@
+{
+  "total_tests": 20,
+  "success_placed": 4,
+  "approached_but_angle_unaligned": 7,
+  "pushed_away_from_goal": 7,
+  "wall_or_pusher_missed": 2,
+  "success_rate": 20.0,
+  "mean_max_coverage": 41.54417817988746,
+  "mean_final_distance": 88.62273641645871,
+  "detailed_results": [
+    {
+      "init_block": [
+        256,
+        340,
+        0.7853981633974483
+      ],
+      "init_agent": [
+        256,
+        420
+      ],
+      "final_block": [
+        266.48919677734375,
+        246.4637451171875,
+        1.2049217224121094
+      ],
+      "init_cov": 0.004479866775198629,
+      "max_cov": 0.702531672128845,
+      "final_cov": 0.38251850498944184,
+      "init_dist": 84.0,
+      "final_dist": 14.176156257032572,
+      "mean_fde": 0.12110916783580172,
+      "steps": 184,
+      "verdict": "APPROACHED_BUT_ANGLE_UNALIGNED",
+      "test_name": "Center-Bottom"
+    },
+    {
+      "init_block": [
+        340,
+        256,
+        0.7853981633974483
+      ],
+      "init_agent": [
+        420,
+        256
+      ],
+      "final_block": [
+        280.19415283203125,
+        72.23860168457031,
+        0.18259164690971375
+      ],
+      "init_cov": 0.0,
+      "max_cov": 0.0,
+      "final_cov": 0.0,
+      "init_dist": 84.0,
+      "final_dist": 185.34726472786613,
+      "mean_fde": 0.2165634524299877,
+      "steps": 184,
+      "verdict": "PUSHED_AWAY_FROM_GOAL",
+      "test_name": "Center-Right"
+    },
+    {
+      "init_block": [
+        256,
+        170,
+        0.7853981633974483
+      ],
+      "init_agent": [
+        256,
+        100
+      ],
+      "final_block": [
+        404.1917724609375,
+        164.79490661621094,
+        1.2823729515075684
+      ],
+      "init_cov": 0.0,
+      "max_cov": 0.0,
+      "final_cov": 0.0,
+      "init_dist": 86.0,
+      "final_dist": 174.00911034845262,
+      "mean_fde": 0.43549304130568034,
+      "steps": 184,
+      "verdict": "PUSHED_AWAY_FROM_GOAL",
+      "test_name": "Center-Top"
+    },
+    {
+      "init_block": [
+        170,
+        256,
+        0.7853981633974483
+      ],
+      "init_agent": [
+        100,
+        256
+      ],
+      "final_block": [
+        229.0312957763672,
+        287.9368591308594,
+        0.5707808136940002
+      ],
+      "init_cov": 0.04213982667903504,
+      "max_cov": 0.29013660965541777,
+      "final_cov": 0.26050211381120386,
+      "init_dist": 86.0,
+      "final_dist": 41.80040644115971,
+      "mean_fde": 0.1258963094796451,
+      "steps": 184,
+      "verdict": "APPROACHED_BUT_ANGLE_UNALIGNED",
+      "test_name": "Center-Left"
+    },
+    {
+      "init_block": [
+        360,
+        160,
+        0.5
+      ],
+      "init_agent": [
+        400,
+        120
+      ],
+      "final_block": [
+        249.5160675048828,
+        251.02536010742188,
+        0.7868214845657349
+      ],
+      "init_cov": 0.0,
+      "max_cov": 0.8264270943645076,
+      "final_cov": 0.8264270943645076,
+      "init_dist": 141.53444810363305,
+      "final_dist": 8.172418409630426,
+      "mean_fde": 0.09869598957034302,
+      "steps": 51,
+      "verdict": "SUCCESS_PLACED",
+      "test_name": "Q1 Top-Right (Normal angle)"
+    },
+    {
+      "init_block": [
+        360,
+        160,
+        -1.5707963267948966
+      ],
+      "init_agent": [
+        320,
+        200
+      ],
+      "final_block": [
+        252.8159637451172,
+        240.3665008544922,
+        0.8094687461853027
+      ],
+      "init_cov": 0.0,
+      "max_cov": 0.5930638134071667,
+      "final_cov": 0.5930638134071667,
+      "init_dist": 141.53444810363305,
+      "final_dist": 15.954447104334317,
+      "mean_fde": 1.393105283399801,
+      "steps": 184,
+      "verdict": "APPROACHED_BUT_ANGLE_UNALIGNED",
+      "test_name": "Q1 Top-Right (Inverted angle)"
+    },
+    {
+      "init_block": [
+        320,
+        90,
+        0.0
+      ],
+      "init_agent": [
+        320,
+        40
+      ],
+      "final_block": [
+        244.00732421875,
+        252.093017578125,
+        0.7899764776229858
+      ],
+      "init_cov": 0.0,
+      "max_cov": 0.741918809711425,
+      "final_cov": 0.692452625274684,
+      "init_dist": 177.9100896520487,
+      "final_dist": 12.613040237746826,
+      "mean_fde": 0.12221412043574986,
+      "steps": 84,
+      "verdict": "APPROACHED_BUT_ANGLE_UNALIGNED",
+      "test_name": "Q1 Near Top Wall"
+    },
+    {
+      "init_block": [
+        150,
+        160,
+        0.7853981633974483
+      ],
+      "init_agent": [
+        100,
+        120
+      ],
+      "final_block": [
+        386.8755187988281,
+        231.01235961914062,
+        1.206477165222168
+      ],
+      "init_cov": 0.0,
+      "max_cov": 0.07249721493460103,
+      "final_cov": 0.006289374869420262,
+      "init_dist": 143.01048912579805,
+      "final_dist": 133.23957217233013,
+      "mean_fde": 0.28450919588921453,
+      "steps": 184,
+      "verdict": "PUSHER_MISSED_OR_CIRCLED_INTO_WALL",
+      "test_name": "Q2 Top-Left (Standard)"
+    },
+    {
+      "init_block": [
+        150,
+        160,
+        -2.0
+      ],
+      "init_agent": [
+        180,
+        200
+      ],
+      "final_block": [
+        91.09197235107422,
+        111.9205093383789,
+        -1.3513902425765991
+      ],
+      "init_cov": 0.0047772051964825035,
+      "max_cov": 0.0047772051964825035,
+      "final_cov": 0.0,
+      "init_dist": 143.01048912579805,
+      "final_dist": 218.98300594921264,
+      "mean_fde": 1.5598042553686,
+      "steps": 184,
+      "verdict": "PUSHED_AWAY_FROM_GOAL",
+      "test_name": "Q2 Top-Left (Opposite angle)"
+    },
+    {
+      "init_block": [
+        90,
+        200,
+        1.0
+      ],
+      "init_agent": [
+        40,
+        200
+      ],
+      "final_block": [
+        247.31138610839844,
+        220.53257751464844,
+        0.5258427858352661
+      ],
+      "init_cov": 0.005580052044492534,
+      "max_cov": 0.700692441033951,
+      "final_cov": 0.4400479650471083,
+      "init_dist": 175.1913239860924,
+      "final_dist": 36.5161617521852,
+      "mean_fde": 0.07797483696207458,
+      "steps": 184,
+      "verdict": "APPROACHED_BUT_ANGLE_UNALIGNED",
+      "test_name": "Q2 Near Left Wall"
+    },
+    {
+      "init_block": [
+        160,
+        360,
+        0.7853981633974483
+      ],
+      "init_agent": [
+        120,
+        420
+      ],
+      "final_block": [
+        250.04122924804688,
+        246.73593139648438,
+        0.7130782604217529
+      ],
+      "init_cov": 0.14977248426130166,
+      "max_cov": 0.8298494318167144,
+      "final_cov": 0.8298494318167144,
+      "init_dist": 141.53444810363305,
+      "final_dist": 11.014985972073498,
+      "mean_fde": 0.06742099137045378,
+      "steps": 44,
+      "verdict": "SUCCESS_PLACED",
+      "test_name": "Q3 Bottom-Left (Standard)"
+    },
+    {
+      "init_block": [
+        160,
+        360,
+        3.141592653589793
+      ],
+      "init_agent": [
+        200,
+        320
+      ],
+      "final_block": [
+        211.14410400390625,
+        388.0524597167969,
+        0.4109192192554474
+      ],
+      "init_cov": 0.0,
+      "max_cov": 0.0,
+      "final_cov": 0.0,
+      "init_dist": 141.53444810363305,
+      "final_dist": 139.4629109221109,
+      "mean_fde": 0.28729120903976163,
+      "steps": 184,
+      "verdict": "PUSHER_MISSED_OR_CIRCLED_INTO_WALL",
+      "test_name": "Q3 Bottom-Left (Extreme Angle)"
+    },
+    {
+      "init_block": [
+        100,
+        420,
+        -0.5
+      ],
+      "init_agent": [
+        60,
+        450
+      ],
+      "final_block": [
+        259.18280029296875,
+        264.0357666015625,
+        0.6703672409057617
+      ],
+      "init_cov": 0.0,
+      "max_cov": 0.727385569501031,
+      "final_cov": 0.6597257323717118,
+      "init_dist": 226.34486961272174,
+      "final_dist": 8.64313384020572,
+      "mean_fde": 0.13793510840916243,
+      "steps": 177,
+      "verdict": "APPROACHED_BUT_ANGLE_UNALIGNED",
+      "test_name": "Q3 Near Corner (80, 420)"
+    },
+    {
+      "init_block": [
+        360,
+        360,
+        0.7853981633974483
+      ],
+      "init_agent": [
+        420,
+        420
+      ],
+      "final_block": [
+        248.17596435546875,
+        247.47166442871094,
+        0.70912766456604
+      ],
+      "init_cov": 0.0,
+      "max_cov": 0.8298175551187891,
+      "final_cov": 0.8298175551187891,
+      "init_dist": 147.07821048680188,
+      "final_dist": 11.57359241477813,
+      "mean_fde": 0.13830442038611893,
+      "steps": 162,
+      "verdict": "SUCCESS_PLACED",
+      "test_name": "Q4 Bottom-Right (Standard)"
+    },
+    {
+      "init_block": [
+        360,
+        360,
+        -0.7853981633974483
+      ],
+      "init_agent": [
+        320,
+        400
+      ],
+      "final_block": [
+        437.7599182128906,
+        160.10568237304688,
+        -0.31477975845336914
+      ],
+      "init_cov": 0.0,
+      "max_cov": 0.07768827720088262,
+      "final_cov": 0.0,
+      "init_dist": 147.07821048680188,
+      "final_dist": 205.50520193390645,
+      "mean_fde": 0.49415955003610074,
+      "steps": 184,
+      "verdict": "PUSHED_AWAY_FROM_GOAL",
+      "test_name": "Q4 Bottom-Right (Rotated 90 deg)"
+    },
+    {
+      "init_block": [
+        430,
+        320,
+        0.0
+      ],
+      "init_agent": [
+        470,
+        320
+      ],
+      "final_block": [
+        251.7698516845703,
+        247.57257080078125,
+        0.640968918800354
+      ],
+      "init_cov": 0.0,
+      "max_cov": 0.8355716036766638,
+      "final_cov": 0.8355716036766638,
+      "init_dist": 185.39687160251654,
+      "final_dist": 9.429513119900593,
+      "mean_fde": 0.19484976420192907,
+      "steps": 67,
+      "verdict": "SUCCESS_PLACED",
+      "test_name": "Q4 Near Right Wall"
+    },
+    {
+      "init_block": [
+        180,
+        350,
+        0.78
+      ],
+      "init_agent": [
+        400,
+        120
+      ],
+      "final_block": [
+        222.67483520507812,
+        295.08984375,
+        0.5819727182388306
+      ],
+      "init_cov": 0.07692428395086304,
+      "max_cov": 0.24337760885831836,
+      "final_cov": 0.24337760885831836,
+      "init_dist": 120.88010589009261,
+      "final_dist": 51.36713436632527,
+      "mean_fde": 0.1270748657812158,
+      "steps": 184,
+      "verdict": "APPROACHED_BUT_ANGLE_UNALIGNED",
+      "test_name": "Pusher Opposite Side (Block Q3, Agent Q1)"
+    },
+    {
+      "init_block": [
+        280,
+        300,
+        0.78
+      ],
+      "init_agent": [
+        200,
+        200
+      ],
+      "final_block": [
+        132.28668212890625,
+        358.48065185546875,
+        1.1698027849197388
+      ],
+      "init_cov": 0.012428327437469133,
+      "max_cov": 0.1518538121046318,
+      "final_cov": 0.0,
+      "init_dist": 50.11985634456667,
+      "final_dist": 160.64640992999526,
+      "mean_fde": 0.14830327964812987,
+      "steps": 184,
+      "verdict": "PUSHED_AWAY_FROM_GOAL",
+      "test_name": "Pusher Trapped Behind Goal"
+    },
+    {
+      "init_block": [
+        256,
+        256,
+        -2.356194490192345
+      ],
+      "init_agent": [
+        320,
+        320
+      ],
+      "final_block": [
+        86.1824722290039,
+        116.08433532714844,
+        -1.4616270065307617
+      ],
+      "init_cov": 0.20058307923187846,
+      "max_cov": 0.33414284373089803,
+      "final_cov": 0.0,
+      "init_dist": 0.0,
+      "final_dist": 220.0326988206725,
+      "mean_fde": 1.8065114095547672,
+      "steps": 184,
+      "verdict": "PUSHED_AWAY_FROM_GOAL",
+      "test_name": "Inverted Block at Center"
+    },
+    {
+      "init_block": [
+        256,
+        256,
+        3.9215926535897934
+      ],
+      "init_agent": [
+        180,
+        180
+      ],
+      "final_block": [
+        342.4302062988281,
+        330.2861022949219,
+        5.04343318939209
+      ],
+      "init_cov": 0.17262426037107215,
+      "max_cov": 0.34710407353716555,
+      "final_cov": 0.0,
+      "init_dist": 0.0,
+      "final_dist": 113.96756360925501,
+      "mean_fde": 2.190697655079218,
+      "steps": 184,
+      "verdict": "PUSHED_AWAY_FROM_GOAL",
+      "test_name": "Block Tilted 180 at Center"
+    }
+  ]
+}

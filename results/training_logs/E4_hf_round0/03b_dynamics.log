@@ -1,0 +1,18 @@
+Train windows: 46,830 | val windows: 2,235 (moving: 1,846) | horizon K=16
+Static baseline on val: pos k=1/8/16 = 1.6/12.7/25.6px
+Epoch 001 | train loss 27.198 | val pos k=1/8/16 1.70/10.10/17.01px | moving k=16 18.85px 9.87deg * | 4s
+Epoch 005 | train loss 6.489 | val pos k=1/8/16 1.14/4.61/7.40px | moving k=16 7.87px 3.43deg * | 19s
+Epoch 010 | train loss 3.214 | val pos k=1/8/16 0.89/2.75/4.19px | moving k=16 4.66px 2.08deg * | 38s
+Epoch 015 | train loss 2.121 | val pos k=1/8/16 0.78/2.00/3.12px | moving k=16 3.27px 1.53deg * | 57s
+Epoch 020 | train loss 1.405 | val pos k=1/8/16 0.70/1.52/2.26px | moving k=16 2.51px 1.32deg * | 76s
+Epoch 025 | train loss 1.060 | val pos k=1/8/16 0.66/1.30/1.94px | moving k=16 2.19px 1.33deg * | 95s
+Epoch 030 | train loss 0.830 | val pos k=1/8/16 0.62/1.18/1.81px | moving k=16 2.04px 1.18deg * | 114s
+Epoch 035 | train loss 0.687 | val pos k=1/8/16 0.61/1.13/1.71px | moving k=16 1.94px 1.09deg | 133s
+Epoch 040 | train loss 0.626 | val pos k=1/8/16 0.59/0.98/1.39px | moving k=16 1.57px 0.86deg * | 152s
+Epoch 045 | train loss 0.551 | val pos k=1/8/16 0.59/0.95/1.30px | moving k=16 1.47px 0.83deg | 171s
+Epoch 050 | train loss 0.516 | val pos k=1/8/16 0.58/0.92/1.34px | moving k=16 1.52px 0.85deg * | 190s
+Epoch 055 | train loss 0.483 | val pos k=1/8/16 0.58/0.92/1.28px | moving k=16 1.46px 0.83deg | 209s
+Epoch 058 | train loss 0.473 | val pos k=1/8/16 0.58/0.91/1.24px | moving k=16 1.42px 0.80deg * | 221s
+Epoch 060 | train loss 0.470 | val pos k=1/8/16 0.59/0.91/1.25px | moving k=16 1.43px 0.80deg | 228s
+Best val score 1.430 -> pusht_wm_dit/checkpoints/dynamics_best.pt
+{"pos_px_all": [0.58, 0.73, 0.87, 0.98, 1.11, 1.24], "ang_deg_all": [0.28, 0.39, 0.47, 0.55, 0.64, 0.73], "pos_px_moving": [0.67, 0.83, 0.99, 1.13, 1.28, 1.42], "ang_deg_moving": [0.32, 0.43, 0.52, 0.61, 0.71, 0.8], "score": 1.4296232797205448}

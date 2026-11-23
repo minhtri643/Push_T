@@ -1,0 +1,45 @@
+==============================================================================
+STEP 4: DiT PLANNER + INVERSE DYNAMICS | device cuda | obs_history 1 | epochs 100
+==============================================================================
+PushTDataset [train]: 23415 timesteps from 186 episodes (pred_horizon=16, action_horizon=8)
+World Model weights frozen successfully for Diffusion training.
+PushTDataset [val]: 2235 timesteps from 20 episodes (pred_horizon=16, action_horizon=8)
+Train samples 46,830 | val samples 2,235
+Training DiT planner (val = FDE of sampled plans, normalized units)...
+  epoch 010 | train loss 0.0342 | val 0.1871 * | 98s
+  epoch 020 | train loss 0.0215 | val 0.1506 * | 197s
+  epoch 030 | train loss 0.0150 | val 0.1414 * | 295s
+  epoch 040 | train loss 0.0106 | val 0.1372 * | 394s
+  epoch 050 | train loss 0.0077 | val 0.1354 * | 493s
+  epoch 060 | train loss 0.0056 | val 0.1339 * | 591s
+  epoch 070 | train loss 0.0041 | val 0.1359 | 690s
+  epoch 080 | train loss 0.0031 | val 0.1371 | 788s
+  epoch 090 | train loss 0.0027 | val 0.1371 | 887s
+  epoch 100 | train loss 0.0025 | val 0.1373 | 986s
+DiT pusht_wm_dit/checkpoints/dit_planner_best.pt: val FDE 0.1342 | val ADE 0.0804
+  ID epoch 005 | val action RMSE on DiT plans 28.8px (snapshot kept)
+  ID epoch 010 | val action RMSE on DiT plans 26.3px (snapshot kept)
+  ID epoch 015 | val action RMSE on DiT plans 25.5px (snapshot kept)
+  ID epoch 020 | val action RMSE on DiT plans 26.1px (snapshot kept)
+  ID epoch 025 | val action RMSE on DiT plans 26.0px (snapshot kept)
+  ID epoch 030 | val action RMSE on DiT plans 26.5px (snapshot kept)
+  ID epoch 035 | val action RMSE on DiT plans 26.4px (snapshot kept)
+  ID epoch 040 | val action RMSE on DiT plans 26.2px (snapshot kept)
+  ID epoch 045 | val action RMSE on DiT plans 26.6px (snapshot kept)
+  ID epoch 050 | val action RMSE on DiT plans 26.5px (snapshot kept)
+  ID epoch 055 | val action RMSE on DiT plans 26.6px (snapshot kept)
+  ID epoch 060 | val action RMSE on DiT plans 26.6px (snapshot kept)
+Choosing the inverse-dynamics snapshot by closed-loop simulation (20 validation seeds)...
+  snapshot epoch 005: closed-loop success 0% | mean max coverage 30.8%
+  snapshot epoch 010: closed-loop success 5% | mean max coverage 44.4%
+  snapshot epoch 015: closed-loop success 10% | mean max coverage 58.6%
+  snapshot epoch 020: closed-loop success 25% | mean max coverage 73.5%
+  snapshot epoch 025: closed-loop success 15% | mean max coverage 56.3%
+  snapshot epoch 030: closed-loop success 50% | mean max coverage 70.0%
+  snapshot epoch 035: closed-loop success 55% | mean max coverage 75.3%
+  snapshot epoch 040: closed-loop success 40% | mean max coverage 69.1%
+  snapshot epoch 045: closed-loop success 40% | mean max coverage 66.5%
+  snapshot epoch 050: closed-loop success 60% | mean max coverage 80.9%
+  snapshot epoch 055: closed-loop success 45% | mean max coverage 83.2%
+  snapshot epoch 060: closed-loop success 65% | mean max coverage 85.5%
+Best inverse dynamics: epoch 60 (success 65%, coverage 85.5%) -> pusht_wm_dit/checkpoints/inverse_dynamics_best.pt

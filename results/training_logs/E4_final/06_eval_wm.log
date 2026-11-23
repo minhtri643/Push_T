@@ -1,0 +1,18 @@
+PushTDataset [val]: 2235 timesteps from 20 episodes (pred_horizon=16, action_horizon=16)
+World Model weights frozen successfully for Diffusion training.
+================================================================================================
+WORLD MODEL – 2235 cửa sổ kiểm tra (1846 có khối di chuyển), sai số trung bình tại k = (1, 2, 4, 8, 12, 16)
+================================================================================================
+Mô hình                                       vị trí (px)                   góc (°) k=16  độ dịch k=16
+Đoán đứng yên                                 1.6 / 3.2 / 6.4 / 12.7 / 19.1 / 25.6       15.03         25.62
+WM cũ (latent)                                4.4 / 5.6 / 8.7 / 14.6 / 19.6 / 23.7       10.54         23.33
+WM cũ, hành động xáo trộn                     6.2 / 8.8 / 12.2 / 16.5 / 20.7 / 25.4       11.11         24.97
+Động lực học (demo)                           0.5 / 0.5 / 0.6 / 0.8 / 0.9 / 1.1        0.63          1.06
+Động lực học (demo), từ ảnh                   3.5 / 3.4 / 3.4 / 3.5 / 3.8 / 4.1        2.18          3.26
+Động lực học (demo), hành động xáo trộn       2.3 / 4.3 / 8.9 / 15.7 / 21.9 / 28.4       16.85         28.35
+
+Phép thử phản thực tế (150 trạng thái): độ nhạy = |dự đoán khác nhau| / |thực tế khác nhau| (lý tưởng 100%)
+  WM cũ (latent)                               độ nhạy     5% | sai vị trí cuối với hành động lạ  20.8px
+  Động lực học (demo)                          độ nhạy    96% | sai vị trí cuối với hành động lạ   1.0px
+
+Đã lưu: results/wm_eval/metrics.json, curves.png, trajectories.png

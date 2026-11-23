@@ -1,0 +1,114 @@
+data:
+  action_horizon: 8
+  # Anti-diagonal reflection augmentation (train split only). Used by BOTH 03_train_wm.py
+  # (WM training + latent caching) and 04_train_dit.py so the cache always matches.
+  augment_symmetry: true
+  latents_cache_path: pusht_wm_dit/data/precomputed_latents_aug.pt
+  num_workers: 0
+  pred_horizon: 16
+  val_ratio: 0.1
+  zarr_path: pusht_wm_dit/data/pusht_cchi_v7_replay.zarr
+device: cuda
+action_diffusion:
+  # Baseline in the style of Diffusion Policy: diffuse 16 robot actions directly, execute 8.
+  epochs: 100
+  horizon: 16
+  obs_history: 1
+  save_path: pusht_wm_dit/checkpoints/action_diffusion_best.pt
+dit_planner:
+  batch_size: 128
+  beta_schedule: squaredcos_cap_v2
+  diffusion_steps: 100
+  ema_decay: 0.999
+  epochs: 100
+  eval_every: 10
+  horizon: 16
+  lambda_fde: 1.0
+  lr: 0.0002
+  mlp_ratio: 4.0
+  model_dim: 256
+  num_heads: 4
+  num_layers: 4
+  # 1 = condition on the current frame only, 2 = current + previous frame (as Diffusion Policy)
+  obs_history: 1
+  sample_steps: 10
+  save_path: pusht_wm_dit/checkpoints/dit_planner_best.pt
+  traj_dim: 4
+  w_theta: 1.0
+  w_xy: 1.0
+  weight_decay: 0.0001
+demo:
+  # "wm" = actions chosen with the World Model dynamics (best measured policy), "id" = inverse dynamics only
+  action_mode: wm
+  # The interactive demo may keep pushing longer than the evaluation protocol.
+  max_steps: 1000
+dynamics:
+  # Action-conditioned dynamics (World Model part 2): (state, action) -> change of block pose.
+  batch_size: 1024
+  epochs: 60
+  hidden: 256
+  horizon: 16
+  layers: 3
+  lr: 0.002
+  save_path: pusht_wm_dit/checkpoints/dynamics_best.pt
+  sim_data_path: pusht_wm_dit/data/sim_interactions.npz
+  weight_decay: 0.0001
+vision_wm:
+  # Vision World Model: frozen DINOv2 patch features + action-conditioned latent predictor (DINO-WM style)
+  batch_size: 64
+  depth: 4
+  dim: 256
+  epochs: 12
+  heads: 4
+  lr: 0.0003
+  probe_epochs: 6
+  rollout_steps: 4     # predictor steps in the training rollout (4 x skip = 16 control steps)
+  save_path: pusht_wm_dit/checkpoints/vision_wm.pt
+  skip: 4              # control steps per predictor step (0.4 s), as the frame-skip of DINO-WM
+env:
+  env_name: gym_pusht/PushT-v0
+  # Evaluation protocol: 300 steps (30 s), success = coverage > 0.95.
+  max_steps: 300
+  render_size:
+  - 96
+  - 96
+  success_threshold: 0.95
+evaluation:
+  exec_horizon: 8
+  num_eval_episodes: 50
+  pred_horizon: 16
+  video_dir: pusht_wm_dit/eval_videos
+inverse_dynamics:
+  action_dim: 2
+  batch_size: 128
+  # Share of DiT-sampled paths in the controller's training input. 0 = true paths + small noise.
+  # 0.5 was tried: equal offline error, but closed-loop success fell from 46% to 10% (results/README).
+  dit_path_ratio: 0.0
+  # closed-loop quality kept improving up to 60 epochs although the offline error stopped at ~10
+  epochs: 60
+  # Snapshots are compared by closed-loop simulation on validation seeds (never used by the benchmark).
+  select_closed_loop_episodes: 20
+  snapshot_every: 5
+  exec_steps: 8
+  hidden_dims:
+  - 256
+  - 256
+  lr: 0.0003
+  save_path: pusht_wm_dit/checkpoints/inverse_dynamics_best.pt
+  weight_decay: 0.0001
+seed: 42
+world_model:
+  action_dim: 2
+  agent_pos_dim: 2
+  batch_size: 64
+  epochs: 5
+  lambda_agent: 1.0
+  lambda_recon: 1.0
+  lambda_transition: 0.5
+  latent_dim: 128
+  lr: 0.001
+  num_groups: 16
+  pose_dim: 4
+  save_path: pusht_wm_dit/checkpoints/world_model_best.pt
+  transition_hidden_dim: 256
+  weight_decay: 0.0001

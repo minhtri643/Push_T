@@ -1,0 +1,40 @@
+﻿
+2000 simulator frames, AV1 round trip done; mean abs pixel change 0.43
+  calibration round 1: loss 0.0034, blur s = 0.48 world px, colours (0-255):
+     background   [255, 255, 255]
+     goal         [144, 238, 144]
+     wall         [237, 237, 237]
+     agent        [62, 102, 223]
+     agent_inner  [78, 126, 255]
+     block_edge   [116, 133, 150]
+     block_fill   [143, 163, 184]
+  calibration round 2: loss 0.0036, blur s = 0.28 world px, colours (0-255):
+     background   [255, 255, 255]
+     goal         [144, 238, 144]
+     wall         [240, 239, 240]
+     agent        [65, 105, 224]
+     agent_inner  [78, 126, 255]
+     block_edge   [119, 136, 153]
+     block_fill   [143, 163, 184]
+[clean] pos 0.57 px (median 0.61, p99 1.13, max 1.5) | angle 0.18 deg (p99 0.43) | keypoints 0.58 px (contact 0.71, 
+free 0.57) | >5px 0.00% | residual median 0.0076 | 328s
+  calibration round 1: loss 0.0045, blur s = 0.50 world px, colours (0-255):
+     background   [255, 255, 255]
+     goal         [143, 237, 143]
+     wall         [238, 238, 238]
+     agent        [77, 104, 176]
+     agent_inner  [77, 124, 251]
+     block_edge   [116, 130, 145]
+     block_fill   [143, 162, 183]
+  calibration round 2: loss 0.0044, blur s = 0.39 world px, colours (0-255):
+     background   [255, 255, 255]
+     goal         [143, 237, 143]
+     wall         [254, 246, 251]
+     agent        [79, 106, 178]
+     agent_inner  [78, 124, 250]
+     block_edge   [118, 132, 147]
+     block_fill   [143, 162, 183]
+[av1] pos 0.58 px (median 0.59, p99 0.96, max 1.7) | angle 0.17 deg (p99 0.55) | keypoints 0.59 px (contact 0.71, free 
+0.59) | >5px 0.00% | residual median 0.0111 | 237s
+
+

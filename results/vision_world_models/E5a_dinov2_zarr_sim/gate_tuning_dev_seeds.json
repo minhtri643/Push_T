@@ -1,0 +1,21 @@
+{
+  "dev_seeds": "90000-90029",
+  "results": {
+    "none": {
+      "success": 0.23333333333333334,
+      "mean_max_coverage": 0.8051302143935783
+    },
+    "0.5": {
+      "success": 0.2,
+      "mean_max_coverage": 0.8162423757522644
+    },
+    "0.7": {
+      "success": 0.2,
+      "mean_max_coverage": 0.8087326846707733
+    },
+    "0.85": {
+      "success": 0.23333333333333334,
+      "mean_max_coverage": 0.8088941849572576
+    }
+  }
+}

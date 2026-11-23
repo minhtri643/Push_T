@@ -1,0 +1,18 @@
+# Experiments: from the first version to the final system / Từ phiên bản đầu tiên đến hệ thống cuối
+
+Every stage has a README (what changed, why, lessons) and a generated `results.md` with all of its benchmark runs, computed from `results/benchmark/*.json` by `scripts/5_evaluation/summarize_results.py`.
+
+The evolution table with numbers is in the [main README](../README.md#results). The table of every run: [results/summary/benchmark_table.md](../results/summary/benchmark_table.md).
+
+*Mỗi giai đoạn có README (đã đổi gì, vì sao, bài học) và `results.md` sinh tự động với mọi lần chạy benchmark. Bảng tiến hoá có số liệu nằm ở [README chính](../README_vi.md#kết-quả).*
+
+| Stage | Question asked | What was done | Outcome / lesson |
+|---|---|---|---|
+| [E0](E0_baseline/README.md) — original baseline | Does the first World Model + DiT pipeline push the T? | ResNet-18 latent World Model, DiT path planner, inverse dynamics; trained on the zarr data | Almost never succeeds. Review found evaluation bugs and an augmentation bug. |
+| [E1](E1_protocol_and_augmentation_fix/README.md) — protocol + augmentation fix | How good is the pipeline when it is measured correctly and trained on consistent labels? | One evaluation module, exact placement, gym-pusht coverage, corrected reflection augmentation, retraining | Large jump. Hand-written heuristics only hurt. **Measure correctly first.** |
+| [E2](E2_handcrafted_controllers/README.md) — hand-written controllers | Can rules (tactical phases, collision guard, lookahead) fix the remaining failures? | Controllers on top of the E1 models; re-measured on the standard benchmark | Guard, lookahead and locks hurt (they rely on an old World Model that ignores the actions). The tactical controller without locks helps (41% → 58%), but it uses privileged state and hand-written geometry; with the same models the learned World Model of E3 reaches 84%. **Archived.** |
+| [E3](E3_dynamics_world_model/README.md) — dynamics World Model | Can a World Model that predicts how the object moves under the robot's actions choose the actions? | `PushDynamics` (Δx, Δy, Δθ from state + actions); `dit_wm` selects among 64 candidates; DiT / inverse-dynamics retraining variants | **Biggest gain** (84% on zarr data). Offline errors mislead model selection; design matters more than extra data. |
+| [E4](E4_hf_only_final/README.md) — **Hugging Face data only (final)** | Does it still work with only the public dataset, which has no block pose? | Block pose recovered from the images by render-and-compare, image-offset correction from the dataset's reward, full retraining | **76% success, 94.6% coverage** with lerobot/pusht only; 71 ± 5% over three diffusion-noise draws. No measurable loss versus zarr; a ~1 px label offset costs 20 points. |
+| [E5](E5_vision_world_models/README.md) — vision-only extension | Can the block pose and the World Model come from images alone? | Vision World Models on self-trained JEPA, frozen DINOv2 and frozen V-JEPA 2 features | 45–54% with the pose read from images (mean over 3 noise draws: JEPA 45%, DINOv2 53%, V-JEPA 2 54%). Reading the pose from the image costs nothing for DiT + inverse dynamics (54% vs 55% with the true pose), but a vision World Model as action selector hurts (11–20%). Not better than E4. |
+
+`run_phase3_reruns.ps1` re-runs, on the standard protocol, the stages that had no paired per-start results (E0, E2), plus diffusion-noise repeats of the main configurations.

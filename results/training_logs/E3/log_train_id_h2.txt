@@ -1,0 +1,34 @@
+﻿==============================================================================
+STEP 4: DiT PLANNER + INVERSE DYNAMICS | device cuda | obs_history 2 | epochs 100
+==============================================================================
+PushTDataset [train]: 23415 timesteps from 186 episodes (pred_horizon=16, action_horizon=8)
+World Model weights frozen successfully for Diffusion training.
+PushTDataset [val]: 2235 timesteps from 20 episodes (pred_horizon=16, action_horizon=8)
+Train samples 46,830 | val samples 2,235
+DiT pusht_wm_dit/checkpoints/v4_h2/dit_planner_best.pt: val FDE 0.1420 | val ADE 0.0864
+  ID epoch 005 | val action RMSE on DiT plans 27.3px (snapshot kept)
+  ID epoch 010 | val action RMSE on DiT plans 25.7px (snapshot kept)
+  ID epoch 015 | val action RMSE on DiT plans 23.3px (snapshot kept)
+  ID epoch 020 | val action RMSE on DiT plans 22.6px (snapshot kept)
+  ID epoch 025 | val action RMSE on DiT plans 22.9px (snapshot kept)
+  ID epoch 030 | val action RMSE on DiT plans 22.8px (snapshot kept)
+  ID epoch 035 | val action RMSE on DiT plans 21.8px (snapshot kept)
+  ID epoch 040 | val action RMSE on DiT plans 22.3px (snapshot kept)
+  ID epoch 045 | val action RMSE on DiT plans 22.3px (snapshot kept)
+  ID epoch 050 | val action RMSE on DiT plans 22.0px (snapshot kept)
+  ID epoch 055 | val action RMSE on DiT plans 22.1px (snapshot kept)
+  ID epoch 060 | val action RMSE on DiT plans 22.0px (snapshot kept)
+Choosing the inverse-dynamics snapshot by closed-loop simulation (20 validation seeds)...
+  snapshot epoch 005: closed-loop success 0% | mean max coverage 21.4%
+  snapshot epoch 010: closed-loop success 0% | mean max coverage 39.2%
+  snapshot epoch 015: closed-loop success 35% | mean max coverage 61.1%
+  snapshot epoch 020: closed-loop success 10% | mean max coverage 60.4%
+  snapshot epoch 025: closed-loop success 40% | mean max coverage 66.2%
+  snapshot epoch 030: closed-loop success 35% | mean max coverage 78.4%
+  snapshot epoch 035: closed-loop success 50% | mean max coverage 77.4%
+  snapshot epoch 040: closed-loop success 55% | mean max coverage 85.1%
+  snapshot epoch 045: closed-loop success 65% | mean max coverage 85.8%
+  snapshot epoch 050: closed-loop success 65% | mean max coverage 86.4%
+  snapshot epoch 055: closed-loop success 45% | mean max coverage 85.0%
+  snapshot epoch 060: closed-loop success 50% | mean max coverage 84.2%
+Best inverse dynamics: epoch 50 (success 65%, coverage 86.4%) -> pusht_wm_dit/checkpoints/v4_h2/inverse_dynamics_best.pt

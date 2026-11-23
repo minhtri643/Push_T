@@ -1,0 +1,156 @@
+data:
+  action_horizon: 8
+  # Anti-diagonal reflection augmentation (train split only). Used by BOTH train_encoder.py
+  # (WM training + latent caching) and train_dit_planner.py so the cache always matches.
+  augment_symmetry: true
+  latents_cache_path: data/cache/precomputed_latents_hf_aug.pt
+  num_workers: 0
+  pred_horizon: 16
+  val_ratio: 0.1
+  # ONLY data source: https://huggingface.co/datasets/lerobot/pusht (downloaded to data/lerobot_pusht by scripts/1_data/download_dataset.py).
+  # Built by scripts/1_data/fit_block_pose.py hf: frames/pusher/actions from the dataset, block pose estimated from
+  # each frame (the dataset has no block pose). The old Diffusion-Policy zarr is no longer used.
+  zarr_path: data/pusht_hf.zarr
+device: cuda
+action_diffusion:
+  # Baseline in the style of Diffusion Policy: diffuse 16 robot actions directly, execute 8.
+  epochs: 100
+  horizon: 16
+  obs_history: 1
+  save_path: checkpoints/final/action_diffusion_best.pt
+dit_planner:
+  batch_size: 128
+  beta_schedule: squaredcos_cap_v2
+  diffusion_steps: 100
+  ema_decay: 0.999
+  epochs: 100
+  eval_every: 10
+  horizon: 16
+  lambda_fde: 1.0
+  lr: 0.0002
+  mlp_ratio: 4.0
+  model_dim: 256
+  num_heads: 4
+  num_layers: 4
+  # 1 = condition on the current frame only, 2 = current + previous frame (as Diffusion Policy)
+  obs_history: 1
+  sample_steps: 10
+  save_path: checkpoints/final/dit_planner_best.pt
+  traj_dim: 4
+  w_theta: 1.0
+  w_xy: 1.0
+  weight_decay: 0.0001
+demo:
+  # "wm" = actions chosen with the World Model dynamics (best measured policy), "id" = inverse dynamics only
+  action_mode: wm
+  # The interactive demo may keep pushing longer than the evaluation protocol.
+  max_steps: 1000
+dynamics:
+  # Action-conditioned dynamics (World Model part 2): (state, action) -> change of block pose.
+  batch_size: 1024
+  epochs: 60
+  hidden: 256
+  horizon: 16
+  layers: 3
+  lr: 0.002
+  save_path: checkpoints/final/dynamics_best.pt
+  sim_data_path: data/legacy/sim_interactions.npz
+  weight_decay: 0.0001
+jepa_wm:
+  # Vision World Model with a SELF-TRAINED encoder (JEPA / PLDM style), lerobot/pusht only (scripts/6_vision_world_model/train_jepa_wm.py)
+  batch_size: 64
+  cov_weight: 0.04
+  depth: 4
+  dim: 256
+  ema: [0.99, 0.999]     # EMA momentum of the target encoder, cosine from first to second value
+  epochs: 20
+  feat_dim: 64           # channels per token (12 x 12 tokens)
+  heads: 4
+  lr: 0.0003
+  probe_epochs: 20       # pose probe = measurement only
+  rollout_steps: 4
+  save_path: checkpoints/E5_vision/jepa_wm.pt
+  skip: 4
+  var_gamma: 0.5         # VICReg: minimum std of every token channel across the batch
+  var_weight: 1.0
+  width: 32
+frozen_wm:
+  # Vision World Model on a FROZEN pretrained encoder ("standing on the shoulders of giants"): only the
+  # action-conditioned predictor and the pose probe are trained, on lerobot/pusht only (scripts/6_vision_world_model/train_frozen_encoder_wm.py)
+  batch_size: 64
+  depth: 4
+  dim: 256
+  epochs: 20
+  heads: 4
+  lr: 0.0003
+  probe_epochs: 20
+  rollout_steps: 4
+  skip: 4
+vjepa2_wm:
+  # V-JEPA 2 ViT-L/16 (Hugging Face facebook/vjepa2-vitl-fpc64-256), frozen
+  save_path: checkpoints/E5_vision/vjepa2_wm.pt
+dinov2_hf_wm:
+  # DINOv2 ViT-S/14, frozen, same recipe and data as vjepa2_wm (fair comparison)
+  save_path: checkpoints/E5_vision/dinov2_hf_wm.pt
+# Which vision World Model the vision policies (dit_id_vision, dit_vwm) and the demo use:
+# jepa_wm (self-trained) | vjepa2_wm | dinov2_hf_wm.  scripts/5_evaluation/benchmark.py --vision-backend overrides it.
+vision_backend: jepa_wm
+vision_wm:
+  # LEGACY (not used any more): frozen DINOv2 patch features + action-conditioned latent predictor (DINO-WM style)
+  batch_size: 64
+  depth: 4
+  dim: 256
+  epochs: 12
+  heads: 4
+  lr: 0.0003
+  probe_epochs: 6
+  rollout_steps: 4     # predictor steps in the training rollout (4 x skip = 16 control steps)
+  save_path: checkpoints/E5_vision/legacy_dinov2_zarr_sim/vision_wm.pt
+  skip: 4              # control steps per predictor step (0.4 s), as the frame-skip of DINO-WM
+env:
+  env_name: gym_pusht/PushT-v0
+  # Evaluation protocol: 300 steps (30 s), success = coverage > 0.95.
+  max_steps: 300
+  render_size:
+  - 96
+  - 96
+  success_threshold: 0.95
+evaluation:
+  exec_horizon: 8
+  num_eval_episodes: 50
+  pred_horizon: 16
+  video_dir: results/videos
+inverse_dynamics:
+  action_dim: 2
+  batch_size: 128
+  # Share of DiT-sampled paths in the controller's training input. 0 = true paths + small noise.
+  # 0.5 was tried: equal offline error, but closed-loop success fell from 46% to 10% (experiments/E3_dynamics_world_model).
+  dit_path_ratio: 0.0
+  # closed-loop quality kept improving up to 60 epochs although the offline error stopped at ~10
+  epochs: 60
+  # Snapshots are compared by closed-loop simulation on validation seeds (never used by the benchmark).
+  select_closed_loop_episodes: 20
+  snapshot_every: 5
+  exec_steps: 8
+  hidden_dims:
+  - 256
+  - 256
+  lr: 0.0003
+  save_path: checkpoints/final/inverse_dynamics_best.pt
+  weight_decay: 0.0001
+seed: 42
+world_model:
+  action_dim: 2
+  agent_pos_dim: 2
+  batch_size: 64
+  epochs: 5
+  lambda_agent: 1.0
+  lambda_recon: 1.0
+  lambda_transition: 0.5
+  latent_dim: 128
+  lr: 0.001
+  num_groups: 16
+  pose_dim: 4
+  save_path: checkpoints/final/world_model_best.pt
+  transition_hidden_dim: 256
+  weight_decay: 0.0001

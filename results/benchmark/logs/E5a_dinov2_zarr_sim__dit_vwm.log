@@ -1,0 +1,2 @@
+﻿World Model weights frozen successfully for Diffusion training.
+vision_dit_vwm: coverage 84.8% | success 8% | >=80% 80% | <50% 5% | median steps to success 201 | 413s

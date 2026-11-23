@@ -1,0 +1,33 @@
+[project]
+name = "pusht-wm-dit"
+version = "1.0.0"
+description = "Push-T: an action-conditioned World Model + Diffusion Transformer planner, trained only on lerobot/pusht"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+dependencies = [
+    "torch==2.6.0",
+    "numpy==2.4.6",
+    "gymnasium==1.4.0",
+    "gym-pusht==0.1.8",
+    "pymunk==6.11.1",
+    "pygame==2.6.1",
+    "shapely==2.2.0",
+    "opencv-python==4.14.0.94",
+    "imageio==2.38.1",
+    "imageio-ffmpeg==0.8.1",
+    "matplotlib==3.11.2",
+    "pyyaml==6.0.3",
+    "tqdm==4.70.1",
+    "zarr==3.1.6",
+    "pyarrow==26.0.1",
+    "huggingface-hub==0.36.2",
+    "transformers==4.57.6",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["pusht_wm_dit*"]

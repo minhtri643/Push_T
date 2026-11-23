@@ -1,0 +1,43 @@
+data: https://huggingface.co/datasets/lerobot/pusht (only data source)
+25,650 frames | train windows 20,439 | val windows 1,915
+d:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\.venv\Lib\site-packages\torch\nn\modules\transformer.py:385: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+encoder 0.41M params, predictor 3.34M
+Epoch 01 | train pred 0.1307 agent 1.5750 idm 0.8371 var 0.191 cov 0.110 std 0.334 | val pred 0.1293 idm 0.0566 std 0.443 | 156s
+Epoch 02 | train pred 0.1043 agent 0.0192 idm 0.0340 var 0.026 cov 0.407 std 0.553 | val pred 0.0863 idm 0.0289 std 0.508 | 313s
+Epoch 03 | train pred 0.0690 agent 0.0095 idm 0.0170 var 0.007 cov 0.339 std 0.586 | val pred 0.0517 idm 0.0118 std 0.517 | 469s
+Epoch 04 | train pred 0.0493 agent 0.0068 idm 0.0118 var 0.004 cov 0.274 std 0.593 | val pred 0.0493 idm 0.0194 std 0.514 | 625s
+Epoch 05 | train pred 0.0407 agent 0.0058 idm 0.0094 var 0.003 cov 0.233 std 0.596 | val pred 0.0419 idm 0.0105 std 0.513 | 781s
+Epoch 06 | train pred 0.0336 agent 0.0041 idm 0.0083 var 0.002 cov 0.201 std 0.599 | val pred 0.0300 idm 0.0097 std 0.518 | 938s
+Epoch 07 | train pred 0.0272 agent 0.0029 idm 0.0068 var 0.002 cov 0.175 std 0.600 | val pred 0.0253 idm 0.0079 std 0.520 | 1095s
+Epoch 08 | train pred 0.0242 agent 0.0016 idm 0.0068 var 0.002 cov 0.156 std 0.602 | val pred 0.0263 idm 0.0091 std 0.531 | 1251s
+Epoch 09 | train pred 0.0210 agent 0.0011 idm 0.0060 var 0.001 cov 0.142 std 0.604 | val pred 0.0200 idm 0.0075 std 0.531 | 1407s
+Epoch 10 | train pred 0.0178 agent 0.0007 idm 0.0050 var 0.001 cov 0.129 std 0.605 | val pred 0.0184 idm 0.0068 std 0.524 | 1563s
+Epoch 11 | train pred 0.0160 agent 0.0003 idm 0.0046 var 0.001 cov 0.119 std 0.606 | val pred 0.0165 idm 0.0070 std 0.521 | 1719s
+Epoch 12 | train pred 0.0147 agent 0.0002 idm 0.0044 var 0.001 cov 0.111 std 0.607 | val pred 0.0159 idm 0.0064 std 0.523 | 1875s
+Epoch 13 | train pred 0.0134 agent 0.0001 idm 0.0041 var 0.001 cov 0.104 std 0.607 | val pred 0.0144 idm 0.0061 std 0.530 | 2030s
+Epoch 14 | train pred 0.0127 agent 0.0001 idm 0.0039 var 0.001 cov 0.101 std 0.609 | val pred 0.0136 idm 0.0057 std 0.529 | 2186s
+Epoch 15 | train pred 0.0120 agent 0.0001 idm 0.0037 var 0.001 cov 0.096 std 0.609 | val pred 0.0133 idm 0.0058 std 0.527 | 2341s
+Epoch 16 | train pred 0.0115 agent 0.0001 idm 0.0036 var 0.001 cov 0.095 std 0.610 | val pred 0.0131 idm 0.0055 std 0.530 | 2499s
+Epoch 17 | train pred 0.0111 agent 0.0001 idm 0.0035 var 0.001 cov 0.091 std 0.609 | val pred 0.0126 idm 0.0055 std 0.530 | 2656s
+Epoch 18 | train pred 0.0109 agent 0.0001 idm 0.0034 var 0.001 cov 0.091 std 0.610 | val pred 0.0124 idm 0.0055 std 0.530 | 2812s
+Epoch 19 | train pred 0.0108 agent 0.0001 idm 0.0033 var 0.001 cov 0.089 std 0.609 | val pred 0.0124 idm 0.0055 std 0.529 | 2968s
+Epoch 20 | train pred 0.0107 agent 0.0001 idm 0.0033 var 0.001 cov 0.089 std 0.610 | val pred 0.0124 idm 0.0055 std 0.530 | 3124s
+
+Đầu dò vị trí khối T trên đặc trưng tự học (vị trí px, góc °):
+  val_frames_vs_fitted_pose             11.14 px | 14.05°
+  sim_frames_clean_vs_true_pose         40.55 px | 71.70°
+  sim_frames_av1_vs_true_pose           40.58 px | 77.17°
+
+====================================================================================================
+JEPA WORLD MODEL (bộ mã hoá tự học) – 1,915 cửa sổ kiểm tra (1,232 có khối di chuyển > 5px)
+====================================================================================================
+Mô hình                                     vị trí (px) tại bước 4/8/12/16       góc (°) bước 16
+Đoán đứng yên                               6.1 / 12.3 / 18.8 / 25.6                       15.03
+Đầu dò trên ảnh thật (sàn)                  10.2 / 9.3 / 8.3 / 7.4                          7.37
+WM ảnh tự học (tưởng tượng)                 11.6 / 11.6 / 11.4 / 11.0                      11.30
+WM ảnh, hành động xáo trộn                  20.1 / 24.6 / 28.0 / 31.4                      34.64
+Động lực học trạng thái (cận trên)          0.6 / 0.8 / 0.9 / 1.1                           0.67
+
+Phép thử phản thực tế: độ nhạy 77% (lý tưởng 100%) | sai vị trí cuối với hành động lạ 10.5px
+Đã lưu pusht_wm_dit/checkpoints/jepa_wm.pt và results/jepa_wm/metrics.json

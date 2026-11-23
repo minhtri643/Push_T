@@ -1,0 +1,39 @@
+﻿
+calibrating colours / blur on 256 dataset frames ...
+  calibration round 1: loss 0.0051, blur s = 0.52 world px, colours (0-255):
+     background   [255, 255, 255]
+     goal         [143, 236, 144]
+     wall         [236, 236, 236]
+     agent        [79, 107, 182]
+     agent_inner  [82, 123, 249]
+     block_edge   [115, 133, 147]
+     block_fill   [143, 162, 181]
+  calibration round 2: loss 0.0051, blur s = 0.41 world px, colours (0-255):
+     background   [255, 255, 255]
+     goal         [143, 236, 144]
+     wall         [212, 203, 214]
+     agent        [82, 109, 184]
+     agent_inner  [82, 123, 248]
+     block_edge   [117, 135, 149]
+     block_fill   [143, 162, 181]
+  fitted 128/25650 (3s)
+  fitted 2688/25650 (66s)
+  fitted 5248/25650 (128s)
+  fitted 7808/25650 (191s)
+  fitted 10368/25650 (254s)
+  fitted 12928/25650 (316s)
+  fitted 15488/25650 (379s)
+  fitted 18048/25650 (442s)
+  fitted 20608/25650 (553s)
+  fitted 23168/25650 (700s)
+  fitted 25650/25650 (841s)
+fitted 25650 frames in 936s
+  reward = coverage(t)           |reward - predicted| mean 0.0220, median 0.0122, p95 0.0790, within 0.02: 62.5%
+  reward = coverage(t)/0.95      |reward - predicted| mean 0.0133, median 0.0057, p95 0.0544, within 0.02: 79.3%
+  reward = coverage(t+1)         |reward - predicted| mean 0.0147, median 0.0090, p95 0.0521, within 0.02: 73.1%
+  reward = coverage(t+1)/0.95    |reward - predicted| mean 0.0067, median 0.0035, p95 0.0252, within 0.02: 92.3%
+  static pairs (pusher > 30 px away): 9840 | jump pos mean 0.04 px (p95 0.12) | angle mean 0.02 deg (p95 0.08)
+wrote D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\pusht_wm_dit\data\pusht_hf.zarr: img (25650, 96, 96, 
+3), state (25650, 5), episodes 206
+
+

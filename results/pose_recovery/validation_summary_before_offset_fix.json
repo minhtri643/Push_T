@@ -1,0 +1,19 @@
+{
+  "what": "Accuracy of the T-block pose recovered from lerobot/pusht frames by scripts/11_fit_tpose.py (render-and-compare)",
+  "simulator_frames_known_pose": {
+    "frames": 2000,
+    "note": "contact-rich pushing episodes rendered by gym_pusht, AV1 round trip with libaom crf 30 (LeRobot used libsvtav1; ours changed pixels by only 0.43/255 on average, i.e. milder than the dataset)",
+    "position_error_mean_px": 0.58,
+    "position_error_max_px": 1.69,
+    "angle_error_mean_deg": 0.17,
+    "angle_error_max_deg": 0.57,
+    "frames_with_error_above_5px": 0
+  },
+  "real_dataset_self_checks": {
+    "frames": 25650,
+    "reward_check": "next.reward(t) = clip(coverage(pose(t+1)) / 0.95) per LeRobot; |reward - coverage(fitted pose)/0.95| mean 0.0067, median 0.0035, 92.3% of frames within 0.02, signed bias -0.0001",
+    "implied_pose_noise": "the same coverage error is produced by ~1.0 px per axis of random pose noise, i.e. ~1.2 px mean 2D position error (about 0.2 image pixels) on the real data",
+    "image_state_sync": "pusher centre seen in frame t is 1.7 px from observation.state(t) vs 13.8 px from state(t-1) and 13.9 px from state(t+1) -> frames and states are synchronised",
+    "static_jitter": "when the pusher is > 30 px away (9,840 frame pairs) the fitted pose moves 0.04 px / 0.02 deg between frames (weak test: identical video frames give identical fits)"
+  }
+}

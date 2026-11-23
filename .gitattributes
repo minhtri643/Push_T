@@ -1,0 +1,6 @@
+# Normalise line endings in the repository (LF); Windows checkouts get CRLF via core.autocrlf
+* text=auto
+*.gif binary
+*.png binary
+*.mp4 binary
+*.npz binary

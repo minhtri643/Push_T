@@ -1,0 +1,24 @@
+# Push-T: World Model + Diffusion Transformer.  Python 3.11 (tested with 3.11.9).
+# Exact versions used to produce every published number.
+#
+# NVIDIA GPU: install torch first from the PyTorch index, e.g.
+#     pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cu124
+# Without a GPU the default PyPI wheel is fine: everything also runs on the CPU (slower).
+torch==2.6.0
+numpy==2.4.6
+gymnasium==1.4.0
+gym-pusht==0.1.8
+pymunk==6.11.1
+pygame==2.6.1
+shapely==2.2.0
+opencv-python==4.14.0.94
+imageio==2.38.1
+imageio-ffmpeg==0.8.1
+matplotlib==3.11.2
+pyyaml==6.0.3
+tqdm==4.70.1
+zarr==3.1.6
+pyarrow==26.0.1
+huggingface-hub==0.36.2
+# only for the frozen V-JEPA 2 encoder (stage E5d)
+transformers==4.57.6

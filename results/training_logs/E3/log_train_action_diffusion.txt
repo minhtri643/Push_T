@@ -1,0 +1,15 @@
+﻿PushTDataset [train]: 23415 timesteps from 186 episodes (pred_horizon=16, action_horizon=16)
+World Model weights frozen successfully for Diffusion training.
+PushTDataset [val]: 2235 timesteps from 20 episodes (pred_horizon=16, action_horizon=16)
+Training action-diffusion baseline (46,830 samples, val = RMSE of executed actions in px)
+  epoch 010 | train loss 0.0141 | val 37.7508 * | 128s
+  epoch 020 | train loss 0.0090 | val 30.9975 * | 254s
+  epoch 030 | train loss 0.0068 | val 29.5467 * | 382s
+  epoch 040 | train loss 0.0052 | val 28.4872 * | 520s
+  epoch 050 | train loss 0.0043 | val 28.9056 | 675s
+  epoch 060 | train loss 0.0033 | val 28.8838 | 831s
+  epoch 070 | train loss 0.0027 | val 29.3054 | 952s
+  epoch 080 | train loss 0.0022 | val 29.3369 | 1111s
+  epoch 090 | train loss 0.0020 | val 29.5890 | 1263s
+  epoch 100 | train loss 0.0019 | val 29.4628 | 1416s
+Best action diffusion: val RMSE 28.5px -> pusht_wm_dit/checkpoints/action_diffusion_best.pt

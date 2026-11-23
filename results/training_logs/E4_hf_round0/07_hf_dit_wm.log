@@ -1,0 +1,2 @@
+World Model weights frozen successfully for Diffusion training.
+hf_dit_wm: coverage 90.1% | success 56% | >=80% 95% | <50% 4% | median steps to success 196 | 219s

@@ -1,0 +1,55 @@
+﻿data: https://huggingface.co/datasets/lerobot/pusht (only data source) | encoder (frozen): vjepa2
+  features 512/25,650 frames (+ reflections) | 17s, ~856s left
+  features 5,632/25,650 frames (+ reflections) | 189s, ~672s left
+  features 10,752/25,650 frames (+ reflections) | 361s, ~501s left
+  features 15,872/25,650 frames (+ reflections) | 534s, ~329s left
+  features 20,992/25,650 frames (+ reflections) | 707s, ~157s left
+  features 25,650/25,650 frames (+ reflections) | 864s, ~0s left
+features cached: pusht_wm_dit/data/vjepa2_feats_hf.npy (51,300 x 64 x 1024, 867s)
+features loaded in 4s: (51300, 64, 1024), 6.7 GB
+train windows 40,878 (incl. reflections) | val windows 1,915
+pose probe (20 epochs, 56s): HF val frames 5.31 px (median 3.93) | 2.67 deg
+predictor 3.79M params | probe 1.35M
+Epoch 01 | train feat 0.7799 agent 1.0206 | val feat 0.6694 | val block pos err (probe) k=4/8/12/16: 9.3 / 14.8 / 20.3 / 25.6 px * | 140s
+Epoch 02 | train feat 0.6425 agent 0.0174 | val feat 0.6125 | val block pos err (probe) k=4/8/12/16: 9.1 / 14.0 / 18.6 / 22.6 px * | 280s
+Epoch 03 | train feat 0.6008 agent 0.0097 | val feat 0.5785 | val block pos err (probe) k=4/8/12/16: 8.7 / 12.6 / 16.0 / 19.0 px * | 420s
+Epoch 04 | train feat 0.5753 agent 0.0066 | val feat 0.5644 | val block pos err (probe) k=4/8/12/16: 8.7 / 12.5 / 16.0 / 19.1 px * | 560s
+Epoch 05 | train feat 0.5601 agent 0.0053 | val feat 0.5536 | val block pos err (probe) k=4/8/12/16: 8.5 / 12.1 / 15.2 / 17.9 px * | 700s
+Epoch 06 | train feat 0.5479 agent 0.0034 | val feat 0.5427 | val block pos err (probe) k=4/8/12/16: 8.0 / 11.0 / 13.7 / 15.9 px * | 840s
+Epoch 07 | train feat 0.5375 agent 0.0024 | val feat 0.5376 | val block pos err (probe) k=4/8/12/16: 7.9 / 10.7 / 13.5 / 16.0 px * | 980s
+Epoch 08 | train feat 0.5289 agent 0.0018 | val feat 0.5293 | val block pos err (probe) k=4/8/12/16: 7.7 / 10.1 / 12.2 / 14.2 px * | 1119s
+Epoch 09 | train feat 0.5216 agent 0.0011 | val feat 0.5262 | val block pos err (probe) k=4/8/12/16: 7.7 / 10.1 / 12.1 / 13.9 px * | 1259s
+Epoch 10 | train feat 0.5153 agent 0.0008 | val feat 0.5235 | val block pos err (probe) k=4/8/12/16: 7.5 / 9.7 / 11.8 / 13.7 px * | 1399s
+Epoch 11 | train feat 0.5094 agent 0.0007 | val feat 0.5195 | val block pos err (probe) k=4/8/12/16: 7.4 / 9.8 / 11.8 / 13.5 px * | 1539s
+Epoch 12 | train feat 0.5043 agent 0.0005 | val feat 0.5189 | val block pos err (probe) k=4/8/12/16: 7.3 / 9.5 / 11.6 / 13.4 px * | 1679s
+Epoch 13 | train feat 0.4999 agent 0.0005 | val feat 0.5160 | val block pos err (probe) k=4/8/12/16: 7.3 / 9.2 / 11.0 / 12.6 px * | 1819s
+Epoch 14 | train feat 0.4959 agent 0.0004 | val feat 0.5150 | val block pos err (probe) k=4/8/12/16: 7.2 / 9.1 / 10.9 / 12.4 px * | 1959s
+Epoch 15 | train feat 0.4925 agent 0.0003 | val feat 0.5145 | val block pos err (probe) k=4/8/12/16: 7.3 / 9.1 / 10.7 / 12.1 px * | 2099s
+Epoch 16 | train feat 0.4896 agent 0.0002 | val feat 0.5137 | val block pos err (probe) k=4/8/12/16: 7.2 / 9.0 / 10.6 / 12.0 px * | 2239s
+Epoch 17 | train feat 0.4873 agent 0.0002 | val feat 0.5141 | val block pos err (probe) k=4/8/12/16: 7.2 / 9.0 / 10.6 / 12.0 px | 2379s
+Epoch 18 | train feat 0.4856 agent 0.0002 | val feat 0.5135 | val block pos err (probe) k=4/8/12/16: 7.2 / 9.0 / 10.5 / 11.8 px * | 2519s
+Epoch 19 | train feat 0.4845 agent 0.0002 | val feat 0.5137 | val block pos err (probe) k=4/8/12/16: 7.2 / 9.0 / 10.5 / 11.8 px | 2659s
+Epoch 20 | train feat 0.4840 agent 0.0002 | val feat 0.5138 | val block pos err (probe) k=4/8/12/16: 7.2 / 9.0 / 10.5 / 11.8 px | 2799s
+
+================================================================================================================
+WORLD MODEL ẢNH, BỘ MÃ HOÁ VJEPA2 ĐÓNG BĂNG – 1,915 cửa sổ kiểm tra (1,232 có khối di chuyển > 5px)
+================================================================================================================
+Mô hình                                     vị trí (px) bước 4/8/12/16      độ thay đổi (px)             góc bước 16     FDE
+Đoán đứng yên                               6.1 / 12.3 / 18.8 / 25.6        6.1 / 12.3 / 18.8 / 25.6          15.03°   0.301
+Đầu dò trên ảnh thật (sàn)                  5.0 / 4.8 / 4.6 / 4.4           5.3 / 5.8 / 6.0 / 6.3              1.82°   0.039
+WM ảnh vjepa2 (tưởng tượng)                 7.2 / 9.0 / 10.5 / 11.8         5.5 / 8.0 / 9.9 / 11.5             8.74°   0.166
+WM ảnh vjepa2, hành động xáo trộn           9.4 / 14.4 / 19.7 / 25.3        7.7 / 13.2 / 18.9 / 24.7          14.36°   0.286
+Động lực học trạng thái (cận trên)          0.6 / 0.8 / 0.9 / 1.1           0.6 / 0.8 / 0.9 / 1.1              0.67°   0.013
+
+Phép thử phản thực tế: độ nhạy 63% (lý tưởng 100%) | sai vị trí cuối với hành động lạ 10.0px
+
+Đầu dò tư thế trên đặc trưng vjepa2 (đóng băng):
+  hf_val_frames_vs_fitted_pose       vị trí TB    5.3 px (trung vị   3.9, p90  10.5) | góc TB   2.7° | n=1915
+  sim_expert_frames_clean            vị trí TB   24.0 px (trung vị  19.5, p90  54.6) | góc TB  24.4° | n=2000
+  sim_expert_frames_av1              vị trí TB   20.8 px (trung vị  14.9, p90  41.2) | góc TB  20.4° | n=2000
+  benchmark_starts_all95             vị trí TB   17.2 px (trung vị  11.4, p90  36.1) | góc TB  20.6° | n=95
+  benchmark_starts_seeds50           vị trí TB   13.9 px (trung vị   9.3, p90  29.8) | góc TB  15.7° | n=50
+  benchmark_starts_hard20            vị trí TB   22.6 px (trung vị  14.5, p90  48.8) | góc TB  28.6° | n=20
+  benchmark_starts_random25          vị trí TB   19.3 px (trung vị  11.8, p90  35.5) | góc TB  24.2° | n=25
+
+Đã lưu pusht_wm_dit/checkpoints/vjepa2_wm.pt và results/vjepa2_wm/metrics.json

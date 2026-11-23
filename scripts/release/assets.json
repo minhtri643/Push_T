@@ -1,0 +1,55 @@
+{
+ "repository": "minhtri643/Push_T-",
+ "tag": "v1.0",
+ "assets": [
+  {
+   "name": "pusht_checkpoints_final.zip",
+   "description": "final system (stage E4): world model, dynamics, DiT, inverse dynamics",
+   "bytes": 83486672,
+   "sha256": "63a94902159de529daa656ba256ae1f71663649e032ad129cb564af57873394f",
+   "files": 4
+  },
+  {
+   "name": "pusht_checkpoints_vision.zip",
+   "description": "vision World Models (stage E5): JEPA, V-JEPA 2, DINOv2, legacy DINOv2",
+   "bytes": 124402049,
+   "sha256": "c2bc679289952c7cc56108de46f6f108b8910ba4888d0b9cf9718004ebeb2ca4",
+   "files": 5
+  },
+  {
+   "name": "pusht_checkpoints_history.zip",
+   "description": "models of stages E0-E4 round 0 (for the evolution table)",
+   "bytes": 1401199351,
+   "sha256": "6cb4c2522f17ba1e5fc2f67974c575659ecb81f26bf943e58d6317e8a57d020f",
+   "files": 40
+  },
+  {
+   "name": "pusht_data_processed.zip",
+   "description": "lerobot/pusht with the block pose recovered from the images + decoded frames",
+   "bytes": 67189305,
+   "sha256": "24c56b44d26cbefd70781f5a1523de880249555afef1333209c0f5ec37e9abf6",
+   "files": 67
+  },
+  {
+   "name": "pusht_data_legacy.zip",
+   "description": "stages E1-E3 only: Diffusion Policy zarr + simulator interaction data",
+   "bytes": 66570193,
+   "sha256": "05713410cdef0d43018364011a1b376a0682db8923e9303a3d757155b79a8725",
+   "files": 804
+  },
+  {
+   "name": "final_policy.mp4",
+   "description": "video",
+   "bytes": 649785,
+   "sha256": "5d72f0ed03ad741de19f0581c2a38c2c6cdd898c363ff12f514d757cfb37c514",
+   "files": 1
+  },
+  {
+   "name": "baseline_vs_final.mp4",
+   "description": "video",
+   "bytes": 237346,
+   "sha256": "18f96d08cf7c545369ad0ffc5c461850a0d186c624ad757f05d4fe5da4945734",
+   "files": 1
+  }
+ ]
+}

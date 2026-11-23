@@ -1,0 +1,817 @@
+{
+ "date": "2026-11-23 17:01",
+ "operations": [
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/configs/default_config.yaml",
+   "dst": "configs/default.yaml"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/data/tpose_fit.py",
+   "dst": "pusht_wm_dit/data/block_pose_fit.py"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/models/vision_encoder.py",
+   "dst": "pusht_wm_dit/models/dinov2_encoder.py"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/scripts/11_fit_tpose.py",
+   "dst": "scripts/1_data/fit_block_pose.py"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/scripts/01_inspect_data.py",
+   "dst": "scripts/1_data/inspect_dataset.py"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/scripts/02_test_sim.py",
+   "dst": "scripts/2_simulation/check_simulator.py"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/scripts/03_train_wm.py",
+   "dst": "scripts/3_world_model/train_encoder.py"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/scripts/03b_train_dynamics.py",
+   "dst": "scripts/3_world_model/train_dynamics.py"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/scripts/06_evaluate_world_model.py",
+   "dst": "scripts/3_world_model/evaluate_world_model.py"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/scripts/04_train_dit.py",
+   "dst": "scripts/4_diffusion/train_dit_planner.py"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/scripts/04b_train_action_diffusion.py",
+   "dst": "scripts/4_diffusion/train_action_diffusion.py"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/scripts/07_benchmark.py",
+   "dst": "scripts/5_evaluation/benchmark.py"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/scripts/12_train_jepa_wm.py",
+   "dst": "scripts/6_vision_world_model/train_jepa_wm.py"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/scripts/13_train_frozen_wm.py",
+   "dst": "scripts/6_vision_world_model/train_frozen_encoder_wm.py"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/scripts/interactive_demo.py",
+   "dst": "demo.py"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/scripts/05_evaluate_loop.py",
+   "dst": "experiments/E1_protocol_and_augmentation_fix/code/evaluate_loop_old_protocol.py"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/scripts/collect_sim_interactions.py",
+   "dst": "experiments/E3_dynamics_world_model/code/collect_sim_interactions.py"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/scripts/08_extract_dino_features.py",
+   "dst": "experiments/E5_vision_world_models/code_legacy_dinov2/extract_dino_features.py"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/scripts/09_train_vision_wm.py",
+   "dst": "experiments/E5_vision_world_models/code_legacy_dinov2/train_dinov2_vision_wm.py"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/scripts/10_tune_vision_gate.py",
+   "dst": "experiments/E5_vision_world_models/code_legacy_dinov2/tune_vision_gate.py"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/experiments/controllers",
+   "dst": "experiments/E2_handcrafted_controllers/code/controllers"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/experiments/benchmark_tactical.py",
+   "dst": "experiments/E2_handcrafted_controllers/code/benchmark_tactical.py"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/experiments/play_test_suite.py",
+   "dst": "experiments/E2_handcrafted_controllers/code/play_test_suite.py"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/experiments/legacy_interactive_demo.py",
+   "dst": "experiments/E2_handcrafted_controllers/code/legacy_interactive_demo.py"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/experiments/README.md",
+   "dst": "experiments/E2_handcrafted_controllers/README_original.md"
+  },
+  {
+   "op": "pending",
+   "src": "pusht_wm_dit/experiments/__init__.py",
+   "dst": "_pending_delete/pusht_wm_dit/experiments/__init__.py"
+  },
+  {
+   "op": "move",
+   "src": "backups/baseline_v1/code",
+   "dst": "experiments/E0_baseline/code_snapshot"
+  },
+  {
+   "op": "move",
+   "src": "backups/before_hf/default_config.yaml",
+   "dst": "experiments/E3_dynamics_world_model/config_zarr_era.yaml"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/checkpoints/world_model_best.pt",
+   "dst": "checkpoints/final/world_model_best.pt"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/checkpoints/dynamics_best.pt",
+   "dst": "checkpoints/final/dynamics_best.pt"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/checkpoints/dit_planner_best.pt",
+   "dst": "checkpoints/final/dit_planner_best.pt"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/checkpoints/inverse_dynamics_best.pt",
+   "dst": "checkpoints/final/inverse_dynamics_best.pt"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/checkpoints/jepa_wm.pt",
+   "dst": "checkpoints/E5_vision/jepa_wm.pt"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/checkpoints/vjepa2_wm.pt",
+   "dst": "checkpoints/E5_vision/vjepa2_wm.pt"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/checkpoints/dinov2_hf_wm.pt",
+   "dst": "checkpoints/E5_vision/dinov2_hf_wm.pt"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/checkpoints/v2",
+   "dst": "checkpoints/E1_augfix"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/checkpoints/v4",
+   "dst": "checkpoints/E3_dit100ep_rmse_id"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/checkpoints/v4b",
+   "dst": "checkpoints/E3_dit100ep_closedloop_id25"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/checkpoints/v4c",
+   "dst": "checkpoints/E3_dit100ep_closedloop_id60"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/checkpoints/v4_h2",
+   "dst": "checkpoints/E3_dit100ep_history2"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/checkpoints/mix_v4dit_v2id",
+   "dst": "checkpoints/E3_dit100ep_with_augfix_id"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/checkpoints/mix_v2dit_v4id",
+   "dst": "checkpoints/E3_augfix_dit_with_rmse_id"
+  },
+  {
+   "op": "move",
+   "src": "backups/baseline_v1/checkpoints/world_model_best.pt",
+   "dst": "checkpoints/E0_baseline/world_model_best.pt"
+  },
+  {
+   "op": "move",
+   "src": "backups/baseline_v1/checkpoints/dit_planner_best.pt",
+   "dst": "checkpoints/E0_baseline/dit_planner_best.pt"
+  },
+  {
+   "op": "move",
+   "src": "backups/baseline_v1/checkpoints/inverse_dynamics_best.pt",
+   "dst": "checkpoints/E0_baseline/inverse_dynamics_best.pt"
+  },
+  {
+   "op": "move",
+   "src": "backups/before_hf/checkpoints/vision_wm.pt",
+   "dst": "checkpoints/E5_vision/legacy_dinov2_zarr_sim/vision_wm.pt"
+  },
+  {
+   "op": "move",
+   "src": "backups/before_hf/checkpoints/vision_wm_v2.pt",
+   "dst": "checkpoints/E5_vision/legacy_dinov2_zarr_sim/vision_wm_v2.pt"
+  },
+  {
+   "op": "move",
+   "src": "backups/before_hf/checkpoints/action_diffusion_best.pt",
+   "dst": "checkpoints/E3_action_diffusion/action_diffusion_best.pt"
+  },
+  {
+   "op": "move",
+   "src": "backups/before_hf/checkpoints/dynamics_demo.pt",
+   "dst": "checkpoints/E3_dynamics_variants/dynamics_demo_only.pt"
+  },
+  {
+   "op": "move",
+   "src": "backups/before_hf/checkpoints/dynamics_demo_sim.pt",
+   "dst": "checkpoints/E3_dynamics_variants/dynamics_demo_sim.pt"
+  },
+  {
+   "op": "move",
+   "src": "backups/hf_round0/world_model_best.pt",
+   "dst": "checkpoints/E4_hf_round0/world_model_best.pt"
+  },
+  {
+   "op": "move",
+   "src": "backups/hf_round0/dynamics_best.pt",
+   "dst": "checkpoints/E4_hf_round0/dynamics_best.pt"
+  },
+  {
+   "op": "move",
+   "src": "backups/hf_round0/dit_planner_best.pt",
+   "dst": "checkpoints/E4_hf_round0/dit_planner_best.pt"
+  },
+  {
+   "op": "move",
+   "src": "backups/hf_round0/inverse_dynamics_best.pt",
+   "dst": "checkpoints/E4_hf_round0/inverse_dynamics_best.pt"
+  },
+  {
+   "op": "pending",
+   "src": "backups/hf_round0/action_diffusion_best.pt",
+   "dst": "_pending_delete/backups/hf_round0/action_diffusion_best.pt"
+  },
+  {
+   "op": "restore",
+   "src": "backups/before_hf/checkpoints/world_model_best.pt",
+   "dst": "checkpoints/E1_augfix/world_model_best.pt",
+   "sha256": "894ca3740d15b6b0442cf9f167274d5091831d00fbc3ca613ad699adf6dc63f9"
+  },
+  {
+   "op": "restore",
+   "src": "backups/before_hf/checkpoints/world_model_best.pt",
+   "dst": "checkpoints/E3_dit100ep_rmse_id/world_model_best.pt",
+   "sha256": "894ca3740d15b6b0442cf9f167274d5091831d00fbc3ca613ad699adf6dc63f9"
+  },
+  {
+   "op": "restore",
+   "src": "backups/before_hf/checkpoints/world_model_best.pt",
+   "dst": "checkpoints/E3_dit100ep_closedloop_id25/world_model_best.pt",
+   "sha256": "894ca3740d15b6b0442cf9f167274d5091831d00fbc3ca613ad699adf6dc63f9"
+  },
+  {
+   "op": "restore",
+   "src": "backups/before_hf/checkpoints/world_model_best.pt",
+   "dst": "checkpoints/E3_dit100ep_closedloop_id60/world_model_best.pt",
+   "sha256": "894ca3740d15b6b0442cf9f167274d5091831d00fbc3ca613ad699adf6dc63f9"
+  },
+  {
+   "op": "restore",
+   "src": "backups/before_hf/checkpoints/world_model_best.pt",
+   "dst": "checkpoints/E3_dit100ep_history2/world_model_best.pt",
+   "sha256": "894ca3740d15b6b0442cf9f167274d5091831d00fbc3ca613ad699adf6dc63f9"
+  },
+  {
+   "op": "restore",
+   "src": "backups/before_hf/checkpoints/world_model_best.pt",
+   "dst": "checkpoints/E3_dit100ep_with_augfix_id/world_model_best.pt",
+   "sha256": "894ca3740d15b6b0442cf9f167274d5091831d00fbc3ca613ad699adf6dc63f9"
+  },
+  {
+   "op": "restore",
+   "src": "backups/before_hf/checkpoints/world_model_best.pt",
+   "dst": "checkpoints/E3_augfix_dit_with_rmse_id/world_model_best.pt",
+   "sha256": "894ca3740d15b6b0442cf9f167274d5091831d00fbc3ca613ad699adf6dc63f9"
+  },
+  {
+   "op": "restore",
+   "src": "backups/before_hf/checkpoints/world_model_best.pt",
+   "dst": "checkpoints/E3_action_diffusion/world_model_best.pt",
+   "sha256": "894ca3740d15b6b0442cf9f167274d5091831d00fbc3ca613ad699adf6dc63f9"
+  },
+  {
+   "op": "restore",
+   "src": "backups/before_hf/checkpoints/dynamics_best.pt",
+   "dst": "checkpoints/E3_action_diffusion/dynamics_best.pt",
+   "sha256": "642285bb1bcac112e1de9ed6858c52668b6b8a1fb638663106edcd0293fd3a61"
+  },
+  {
+   "op": "pending",
+   "src": "backups/before_hf/checkpoints/world_model_best.pt",
+   "dst": "_pending_delete/backups/before_hf/checkpoints/world_model_best.pt"
+  },
+  {
+   "op": "pending",
+   "src": "backups/before_hf/checkpoints/dit_planner_best.pt",
+   "dst": "_pending_delete/backups/before_hf/checkpoints/dit_planner_best.pt"
+  },
+  {
+   "op": "pending",
+   "src": "backups/before_hf/checkpoints/inverse_dynamics_best.pt",
+   "dst": "_pending_delete/backups/before_hf/checkpoints/inverse_dynamics_best.pt"
+  },
+  {
+   "op": "pending",
+   "src": "backups/before_hf/checkpoints/dynamics_best.pt",
+   "dst": "_pending_delete/backups/before_hf/checkpoints/dynamics_best.pt"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/data/lerobot_pusht",
+   "dst": "data/lerobot_pusht"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/data/pusht_hf.zarr",
+   "dst": "data/pusht_hf.zarr"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/data/precomputed_latents_hf_aug.pt",
+   "dst": "data/cache/precomputed_latents_hf_aug.pt"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/data/vjepa2_feats_hf.npy",
+   "dst": "data/cache/vjepa2_feats_hf.npy"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/data/vjepa2_feats_hf.npy.json",
+   "dst": "data/cache/vjepa2_feats_hf.npy.json"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/data/dinov2_feats_hf.npy",
+   "dst": "data/cache/dinov2_feats_hf.npy"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/data/dinov2_feats_hf.npy.json",
+   "dst": "data/cache/dinov2_feats_hf.npy.json"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/data/pusht_cchi_v7_replay.zarr",
+   "dst": "data/legacy/pusht_cchi_v7_replay.zarr"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/data/sim_interactions.npz",
+   "dst": "data/legacy/sim_interactions.npz"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/data/sim_interactions_img.npz",
+   "dst": "data/legacy/sim_interactions_img.npz"
+  },
+  {
+   "op": "move",
+   "src": "pusht_wm_dit/data/sim_interactions_img.npz.frames.npy",
+   "dst": "data/legacy/sim_interactions_img.npz.frames.npy"
+  },
+  {
+   "op": "pending",
+   "src": "pusht_wm_dit/data/dino_feats_demo.npy",
+   "dst": "_pending_delete/pusht_wm_dit/data/dino_feats_demo.npy"
+  },
+  {
+   "op": "pending",
+   "src": "pusht_wm_dit/data/dino_feats_sim.npy",
+   "dst": "_pending_delete/pusht_wm_dit/data/dino_feats_sim.npy"
+  },
+  {
+   "op": "pending",
+   "src": "pusht_wm_dit/data/precomputed_latents_aug.pt",
+   "dst": "_pending_delete/pusht_wm_dit/data/precomputed_latents_aug.pt"
+  },
+  {
+   "op": "pending",
+   "src": "backups/baseline_v1/data",
+   "dst": "_pending_delete/backups/baseline_v1/data"
+  },
+  {
+   "op": "pending",
+   "src": "pusht_wm_dit/data_inspection.png",
+   "dst": "_pending_delete/pusht_wm_dit/data_inspection.png"
+  },
+  {
+   "op": "pending",
+   "src": "pusht_wm_dit/eval_videos",
+   "dst": "_pending_delete/pusht_wm_dit/eval_videos"
+  },
+  {
+   "op": "move",
+   "src": "results/baseline_v1",
+   "dst": "results/legacy_protocol/E0_baseline"
+  },
+  {
+   "op": "move",
+   "src": "results/v2_aug_fix/log_train_dit.txt",
+   "dst": "results/training_logs/E1_augfix/log_train_dit.txt"
+  },
+  {
+   "op": "move",
+   "src": "results/v2_aug_fix/log_train_wm.txt",
+   "dst": "results/training_logs/E1_augfix/log_train_wm.txt"
+  },
+  {
+   "op": "move",
+   "src": "results/v2_aug_fix",
+   "dst": "results/legacy_protocol/E1_augfix"
+  },
+  {
+   "op": "move",
+   "src": "results/v4/log_bench_action_diffusion.txt",
+   "dst": "results/benchmark/logs/E3_log_bench_action_diffusion.txt"
+  },
+  {
+   "op": "move",
+   "src": "results/v4/log_bench_h2_id.txt",
+   "dst": "results/benchmark/logs/E3_log_bench_h2_id.txt"
+  },
+  {
+   "op": "move",
+   "src": "results/v4/log_bench_h2_wm.txt",
+   "dst": "results/benchmark/logs/E3_log_bench_h2_wm.txt"
+  },
+  {
+   "op": "move",
+   "src": "results/v4/log_bench_mix_id.txt",
+   "dst": "results/benchmark/logs/E3_log_bench_mix_id.txt"
+  },
+  {
+   "op": "move",
+   "src": "results/v4/log_bench_mix_wm.txt",
+   "dst": "results/benchmark/logs/E3_log_bench_mix_wm.txt"
+  },
+  {
+   "op": "move",
+   "src": "results/v4/log_bench_v2_dit_id.txt",
+   "dst": "results/benchmark/logs/E3_log_bench_v2_dit_id.txt"
+  },
+  {
+   "op": "move",
+   "src": "results/v4/log_bench_v2_dit_wm.txt",
+   "dst": "results/benchmark/logs/E3_log_bench_v2_dit_wm.txt"
+  },
+  {
+   "op": "move",
+   "src": "results/v4/log_bench_v2_wm_s1.txt",
+   "dst": "results/benchmark/logs/E3_log_bench_v2_wm_s1.txt"
+  },
+  {
+   "op": "move",
+   "src": "results/v4/log_bench_v4_dit_id.txt",
+   "dst": "results/benchmark/logs/E3_log_bench_v4_dit_id.txt"
+  },
+  {
+   "op": "move",
+   "src": "results/v4/log_bench_v4_dit_wm.txt",
+   "dst": "results/benchmark/logs/E3_log_bench_v4_dit_wm.txt"
+  },
+  {
+   "op": "move",
+   "src": "results/v4/log_bench_v4b_dit_id.txt",
+   "dst": "results/benchmark/logs/E3_log_bench_v4b_dit_id.txt"
+  },
+  {
+   "op": "move",
+   "src": "results/v4/log_bench_v4b_dit_wm.txt",
+   "dst": "results/benchmark/logs/E3_log_bench_v4b_dit_wm.txt"
+  },
+  {
+   "op": "move",
+   "src": "results/v4/log_bench_v4c_id.txt",
+   "dst": "results/benchmark/logs/E3_log_bench_v4c_id.txt"
+  },
+  {
+   "op": "move",
+   "src": "results/v4/log_bench_v4c_wm.txt",
+   "dst": "results/benchmark/logs/E3_log_bench_v4c_wm.txt"
+  },
+  {
+   "op": "move",
+   "src": "results/v4/log_bench_v4c_wm_s1.txt",
+   "dst": "results/benchmark/logs/E3_log_bench_v4c_wm_s1.txt"
+  },
+  {
+   "op": "move",
+   "src": "results/v4/log_train_action_diffusion.txt",
+   "dst": "results/training_logs/E3/log_train_action_diffusion.txt"
+  },
+  {
+   "op": "move",
+   "src": "results/v4/log_train_dit_h1.txt",
+   "dst": "results/training_logs/E3/log_train_dit_h1.txt"
+  },
+  {
+   "op": "move",
+   "src": "results/v4/log_train_dit_h2.txt",
+   "dst": "results/training_logs/E3/log_train_dit_h2.txt"
+  },
+  {
+   "op": "move",
+   "src": "results/v4/log_train_id_h2.txt",
+   "dst": "results/training_logs/E3/log_train_id_h2.txt"
+  },
+  {
+   "op": "move",
+   "src": "results/v4/log_train_id_v4b.txt",
+   "dst": "results/training_logs/E3/log_train_id_v4b.txt"
+  },
+  {
+   "op": "move",
+   "src": "results/v4/log_train_id_v4c.txt",
+   "dst": "results/training_logs/E3/log_train_id_v4c.txt"
+  },
+  {
+   "op": "move",
+   "src": "results/hf_pipeline/03_train_wm.log",
+   "dst": "results/training_logs/E4_final/03_train_wm.log"
+  },
+  {
+   "op": "move",
+   "src": "results/hf_pipeline/03b_dynamics.log",
+   "dst": "results/training_logs/E4_final/03b_dynamics.log"
+  },
+  {
+   "op": "move",
+   "src": "results/hf_pipeline/04_train_dit.log",
+   "dst": "results/training_logs/E4_final/04_train_dit.log"
+  },
+  {
+   "op": "move",
+   "src": "results/hf_pipeline/06_eval_wm.log",
+   "dst": "results/training_logs/E4_final/06_eval_wm.log"
+  },
+  {
+   "op": "move",
+   "src": "results/hf_pipeline/07_dinov2hf_dit_id_vision.log",
+   "dst": "results/benchmark/logs/07_dinov2hf_dit_id_vision.log"
+  },
+  {
+   "op": "move",
+   "src": "results/hf_pipeline/07_dinov2hf_dit_vwm.log",
+   "dst": "results/benchmark/logs/07_dinov2hf_dit_vwm.log"
+  },
+  {
+   "op": "move",
+   "src": "results/hf_pipeline/07_hf_dit_id.log",
+   "dst": "results/benchmark/logs/07_hf_dit_id.log"
+  },
+  {
+   "op": "move",
+   "src": "results/hf_pipeline/07_hf_dit_wm.log",
+   "dst": "results/benchmark/logs/07_hf_dit_wm.log"
+  },
+  {
+   "op": "move",
+   "src": "results/hf_pipeline/07_jepa_dit_id_vision.log",
+   "dst": "results/benchmark/logs/07_jepa_dit_id_vision.log"
+  },
+  {
+   "op": "move",
+   "src": "results/hf_pipeline/07_jepa_dit_vwm.log",
+   "dst": "results/benchmark/logs/07_jepa_dit_vwm.log"
+  },
+  {
+   "op": "move",
+   "src": "results/hf_pipeline/07_vjepa2_dit_id_vision.log",
+   "dst": "results/benchmark/logs/07_vjepa2_dit_id_vision.log"
+  },
+  {
+   "op": "move",
+   "src": "results/hf_pipeline/07_vjepa2_dit_vwm.log",
+   "dst": "results/benchmark/logs/07_vjepa2_dit_vwm.log"
+  },
+  {
+   "op": "move",
+   "src": "results/hf_pipeline/12_jepa_wm.log",
+   "dst": "results/training_logs/E4_final/12_jepa_wm.log"
+  },
+  {
+   "op": "move",
+   "src": "backups/hf_round0/03b_dynamics.log",
+   "dst": "results/training_logs/E4_hf_round0/03b_dynamics.log"
+  },
+  {
+   "op": "move",
+   "src": "backups/hf_round0/03_train_wm.log",
+   "dst": "results/training_logs/E4_hf_round0/03_train_wm.log"
+  },
+  {
+   "op": "move",
+   "src": "backups/hf_round0/04_train_dit.log",
+   "dst": "results/training_logs/E4_hf_round0/04_train_dit.log"
+  },
+  {
+   "op": "move",
+   "src": "backups/hf_round0/06_eval_wm.log",
+   "dst": "results/training_logs/E4_hf_round0/06_eval_wm.log"
+  },
+  {
+   "op": "move",
+   "src": "backups/hf_round0/07_hf_dit_id.log",
+   "dst": "results/training_logs/E4_hf_round0/07_hf_dit_id.log"
+  },
+  {
+   "op": "move",
+   "src": "backups/hf_round0/07_hf_dit_wm.log",
+   "dst": "results/training_logs/E4_hf_round0/07_hf_dit_wm.log"
+  },
+  {
+   "op": "move",
+   "src": "backups/hf_round0/12_jepa_wm.log",
+   "dst": "results/training_logs/E4_hf_round0/12_jepa_wm.log"
+  },
+  {
+   "op": "move",
+   "src": "results/world_model_eval_metrics.json",
+   "dst": "results/world_model_eval/E2_old_latent_wm/world_model_eval_metrics.json"
+  },
+  {
+   "op": "move",
+   "src": "results/wm_multistep_error_curves.png",
+   "dst": "results/world_model_eval/E2_old_latent_wm/wm_multistep_error_curves.png"
+  },
+  {
+   "op": "move",
+   "src": "results/wm_prediction_visual_trajectories.png",
+   "dst": "results/world_model_eval/E2_old_latent_wm/wm_prediction_visual_trajectories.png"
+  },
+  {
+   "op": "move",
+   "src": "results/wm_eval",
+   "dst": "results/world_model_eval/E4_final"
+  },
+  {
+   "op": "move",
+   "src": "results/play_test_scenarios.png",
+   "dst": "results/E2_handcrafted_controllers/play_test_scenarios.png"
+  },
+  {
+   "op": "move",
+   "src": "results/play_test_summary.json",
+   "dst": "results/E2_handcrafted_controllers/play_test_summary.json"
+  },
+  {
+   "op": "move",
+   "src": "results/tpose_fit/validation_summary.json",
+   "dst": "results/tpose_fit/validation_summary_before_offset_fix.json"
+  },
+  {
+   "op": "move",
+   "src": "results/tpose_fit",
+   "dst": "results/pose_recovery"
+  },
+  {
+   "op": "move",
+   "src": "results/vision_wm/log_bench_id_vision.txt",
+   "dst": "results/benchmark/logs/E5a_log_bench_id_vision.txt"
+  },
+  {
+   "op": "move",
+   "src": "results/vision_wm/log_bench_vwm.txt",
+   "dst": "results/benchmark/logs/E5a_log_bench_vwm.txt"
+  },
+  {
+   "op": "move",
+   "src": "results/vision_wm_v2/log_train.txt",
+   "dst": "results/vision_wm/log_train_v2.txt"
+  },
+  {
+   "op": "move",
+   "src": "results/vision_wm",
+   "dst": "results/vision_world_models/E5a_dinov2_zarr_sim"
+  },
+  {
+   "op": "move",
+   "src": "results/jepa_wm",
+   "dst": "results/vision_world_models/E5b_jepa"
+  },
+  {
+   "op": "move",
+   "src": "results/dinov2_hf_wm",
+   "dst": "results/vision_world_models/E5c_dinov2_frozen"
+  },
+  {
+   "op": "move",
+   "src": "results/vjepa2_wm",
+   "dst": "results/vision_world_models/E5d_vjepa2_frozen"
+  },
+  {
+   "op": "move",
+   "src": "results/vision_encoders_comparison.md",
+   "dst": "results/vision_world_models/comparison.md"
+  },
+  {
+   "op": "move",
+   "src": "backups/baseline_v1/eval_videos/eval_rollout.mp4",
+   "dst": "results/legacy_protocol/E0_baseline/videos/eval_rollout.mp4"
+  },
+  {
+   "op": "move",
+   "src": "backups/baseline_v1/eval_videos/sample_rollout.mp4",
+   "dst": "results/legacy_protocol/E0_baseline/videos/sample_rollout.mp4"
+  },
+  {
+   "op": "move",
+   "src": "backups/baseline_v1/eval_videos/comprehensive_eval.json",
+   "dst": "results/legacy_protocol/E0_baseline/from_original_run/comprehensive_eval.json"
+  },
+  {
+   "op": "move",
+   "src": "backups/baseline_v1/eval_videos/hard_cases.json",
+   "dst": "results/legacy_protocol/E0_baseline/from_original_run/hard_cases.json"
+  },
+  {
+   "op": "move",
+   "src": "backups/baseline_v1/eval_videos/random_user_eval.json",
+   "dst": "results/legacy_protocol/E0_baseline/from_original_run/random_user_eval.json"
+  },
+  {
+   "op": "pending",
+   "src": "results/benchmark/summary.md",
+   "dst": "_pending_delete/results/benchmark/summary.md"
+  },
+  {
+   "op": "pending",
+   "src": "results/benchmark/summary_log.txt",
+   "dst": "_pending_delete/results/benchmark/summary_log.txt"
+  },
+  {
+   "op": "move",
+   "src": "README_FOR_AI.md",
+   "dst": "docs/README_FOR_AI.md"
+  },
+  {
+   "op": "move",
+   "src": "PRESENTATION_SLIDES.md",
+   "dst": "docs/archive/PRESENTATION_SLIDES_2026-11-19.md"
+  },
+  {
+   "op": "pending",
+   "src": "backups/before_v4",
+   "dst": "_pending_delete/backups/before_v4"
+  },
+  {
+   "op": "rmtree_pycache",
+   "count": 8
+  },
+  {
+   "op": "rmdir_empty",
+   "dirs": [
+    "pusht_wm_dit/checkpoints",
+    "pusht_wm_dit/configs",
+    "pusht_wm_dit/experiments",
+    "pusht_wm_dit/scripts",
+    "results/hf_pipeline",
+    "results/v4",
+    "results/vision_wm_v2",
+    "backups/baseline_v1/checkpoints",
+    "backups/baseline_v1/eval_videos",
+    "backups/baseline_v1",
+    "backups/before_hf/checkpoints",
+    "backups/before_hf",
+    "backups/hf_round0",
+    "backups"
+   ]
+  }
+ ]
+}
