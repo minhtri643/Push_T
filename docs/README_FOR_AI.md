@@ -77,9 +77,9 @@
 
 ## 3. Môi trường máy và cách làm việc
 
-- **Hệ thống:** Windows 11, PowerShell. Repo được chuẩn bị để đưa lên GitHub (công khai). Tại thời điểm viết, máy **chưa cài git**.
-  - Bản sao lưu toàn bộ trước khi sắp xếp lại: `D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT_snapshot_2026-11-23` (ngoài repo).
-  - Thư mục `backups/` cũ đã được chuyển hết vào `checkpoints/`, `experiments/`, `results/`.
+- **Hệ thống:** Windows 11, PowerShell, git 2.56 + GitHub CLI. Repo công khai: https://github.com/minhtri643/Push_T- (nhánh `main`), Release v1.0 chứa checkpoint và dữ liệu đã xử lý.
+  - Kiểm thử tự động (`.github/workflows/smoke_test.yml`) chạy trên Linux, Windows, macOS ở mỗi lần đẩy code.
+  - Thư mục `backups/` cũ đã được chuyển hết vào `checkpoints/`, `experiments/`, `results/`. Bản sao lưu tạm trước khi sắp xếp lại và các bản clone thử nghiệm đã được xoá theo yêu cầu người dùng (2026-11-23); mọi thứ cần thiết nằm trong repo và Release.
 - **Python:** 3.11.9 trong `.venv`.
   - Venv không có pip; cài gói bằng `uv pip install --python .venv\Scripts\python.exe <gói>`.
   - Phiên bản ghim đầy đủ trong `requirements.txt` và `pyproject.toml`.
