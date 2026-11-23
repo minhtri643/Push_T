@@ -142,11 +142,16 @@ def write(frames, gif, mp4, every, fps, hold=20):
 
 
 def check(label, k, peak):
+    """On a GPU the replay must reproduce the stored benchmark episode exactly. On a CPU the random numbers of the
+    diffusion sampler differ from the GPU's (same seed, different generator), so the replay is another noise draw:
+    the video is still written, with a warning."""
     ref = json.load(open(os.path.join("results", "benchmark", f"{label}.json"), encoding="utf-8"))["episodes"][k]["max_coverage"]
     ok = abs(ref - peak) < 1e-9
     print(f"  start {k:2d} ({label}): replay max coverage {peak:.4f} vs benchmark {ref:.4f} -> {'IDENTICAL' if ok else 'DIFFERENT'}")
-    if not ok:
+    if not ok and torch.cuda.is_available():
         sys.exit("replay does not reproduce the benchmark episode")
+    if not ok:
+        print("  (CPU run: diffusion noise differs from the GPU benchmark, so this replay is a different noise draw)")
 
 
 def main():

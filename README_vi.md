@@ -102,8 +102,8 @@ python scripts/download_assets.py          # mô hình cuối, ~90 MB, có kiể
 | Lệnh | Làm gì | Thời gian (RTX 3050 / CPU) |
 |---|---|---|
 | `python demo.py` | Demo tương tác: kéo khối T, nhấn Space. M = World Model chọn hành động, V = chỉ dùng ảnh, G = hiện dự đoán. | thời gian thực |
-| `python scripts/5_evaluation/benchmark.py --policy dit_wm --label my_run` | Chạy lại benchmark 95 điểm xuất phát của hệ thống cuối; phải ra lại `E4_final__dit_wm` (76%). | ~3 phút / lâu hơn trên CPU |
-| `python scripts/5_evaluation/make_video.py grid` | Tạo lại GIF ở trên từ các ván của benchmark. | ~2 phút |
+| `python scripts/5_evaluation/benchmark.py --policy dit_wm --label my_run` | Chạy lại benchmark 95 điểm xuất phát của hệ thống cuối. Trên GPU, ra lại đúng `E4_final__dit_wm` (76%) từng ván. Trên CPU, nhiễu khuếch tán khác (bộ sinh số ngẫu nhiên khác) nên giống một lần lặp nhiễu mới: cài sạch chỉ có CPU cho 72%. | ~3 phút GPU / ~6 phút CPU |
+| `python scripts/5_evaluation/make_video.py grid` | Tạo lại GIF ở trên bằng cách phát lại các ván benchmark (chính xác trên GPU). | ~2 phút |
 | `python scripts/5_evaluation/summarize_results.py` | Dựng lại mọi bảng kết quả từ file JSON gốc. | vài giây |
 
 ## Chạy lại toàn bộ từ đầu

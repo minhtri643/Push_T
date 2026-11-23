@@ -98,8 +98,8 @@ python scripts/download_assets.py          # trained final system, ~90 MB, SHA-2
 | Command | What it does | Time (RTX 3050 / CPU) |
 |---|---|---|
 | `python demo.py` | Interactive demo. Drag the T, press Space. M = World Model chooses actions, V = vision only, G = show the imagination. | real time |
-| `python scripts/5_evaluation/benchmark.py --policy dit_wm --label my_run` | Re-runs the 95-start benchmark of the final system; should reproduce `E4_final__dit_wm` (76%). | ~3 min / longer on CPU |
-| `python scripts/5_evaluation/make_video.py grid` | Re-creates the GIF above from the benchmark episodes. | ~2 min |
+| `python scripts/5_evaluation/benchmark.py --policy dit_wm --label my_run` | Re-runs the 95-start benchmark of the final system. On a GPU it reproduces `E4_final__dit_wm` (76%) episode by episode. On a CPU the diffusion noise differs (other random generator), so it behaves like a new noise draw: a clean CPU-only install gave 72%. | ~3 min GPU / ~6 min CPU |
+| `python scripts/5_evaluation/make_video.py grid` | Re-creates the GIF above by replaying the benchmark episodes (exact on a GPU). | ~2 min |
 | `python scripts/5_evaluation/summarize_results.py` | Rebuilds every results table from the raw JSON files. | seconds |
 
 ## Reproduce everything from scratch

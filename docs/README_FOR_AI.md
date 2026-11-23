@@ -564,6 +564,9 @@ Các dòng E1, E3, E5a (tên cũ `v2_*`, `v4*`, `mix_*`, `vision_*`, `action_dif
   - Bản cuối trên 50 seed gym-pusht: 78 / 70 / 66% (trung bình 71%), bằng LeRobot keypoints 71%.
 - **Tính tất định:** chạy lại `E4_final__dit_wm` (tuần tự và song song 4 tiến trình) cho cùng quỹ đạo ở 95/95 ván: tư thế cuối chênh 0, số bước và thành công không đổi. Độ phủ chỉ lệch ở chữ số nhị phân cuối (≤ 4.4e-16).
 - **Video README** (`scripts/5_evaluation/make_video.py`) phát lại đúng các ván benchmark; độ phủ cao nhất của mỗi ván phát lại khớp file JSON.
+- **Chạy trên CPU (cài sạch, torch 2.6.0+cpu):** `dit_wm` đạt 72% thành công / 90.3% độ phủ, 376 s cho 95 ván trên i5-11400H.
+  - Từng ván khác GPU vì bộ sinh số ngẫu nhiên của torch trên CPU khác CUDA (cùng seed, khác nhiễu), nên tương đương một lần lặp nhiễu mới.
+  - So với GPU: chỉ GPU thắng 19 ván, chỉ CPU thắng 15 ván (không khác biệt có ý nghĩa).
 
 ### 8.8 World Model ảnh trên bộ mã hoá tiền huấn luyện đóng băng (E5c, E5d; 2026-11-21/22)
 - **Cách làm** (`scripts/6_vision_world_model/train_frozen_encoder_wm.py`, `pusht_wm_dit/models/frozen_encoders.py`):
