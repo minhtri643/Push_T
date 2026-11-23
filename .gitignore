@@ -4,8 +4,8 @@ __pycache__/
 .venv/
 
 # Large artifacts: published as GitHub Release assets (python scripts/download_assets.py) or regenerated
-checkpoints/
-data/
+/checkpoints/
+/data/
 
 # Local only, never published
 _pending_delete/
