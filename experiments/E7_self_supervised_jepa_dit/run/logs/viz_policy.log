@@ -1,0 +1,11 @@
+loaded outputs\runs\dit_main\ckpt\best.pt (epoch 290, val_fde 60.8 px)
+val samples with full horizon: 1855
+=== Pusher FDE/ADE on all val samples (px, workspace 0..512) ===
+                 method  ADE_px  FDE_1s_px  FDE_2s_px  FDE_2s_vs_still_%
+         DiT (1 sample)   46.69      49.50      59.77             -51.72
+            stand still   86.16      91.05     123.81               0.00
+      constant velocity   87.60      88.16     153.34              23.86
+DiT (best of 8, oracle)   29.85      30.10      40.75             -67.08
+[PASS] DiT FDE is at least 30% lower than both baselines
+|v| mean: expert 105.3 px/s | DiT 90.2 px/s
+saved: samples_overlay.png, denoising_steps.png, velocity_hist.png, fde_baselines.csv in outputs\runs\dit_main

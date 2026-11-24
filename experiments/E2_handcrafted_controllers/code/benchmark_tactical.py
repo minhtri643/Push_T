@@ -1,4 +1,4 @@
-"""Benchmark comparing the Baseline Policy vs the User's 3-Phase Tactical Strategy.
+"""Benchmark comparing the Baseline Policy vs a hand-written 3-Phase Tactical Strategy.
 
 Runs across identical random user placements (inverted angles, out-of-distribution positions).
 """

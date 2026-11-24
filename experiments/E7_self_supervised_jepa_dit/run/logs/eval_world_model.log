@@ -1,0 +1,31 @@
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\eval_world_model.py:41: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:209.)
+  x = preprocess(torch.from_numpy(np.ascontiguousarray(images[i:i + bs])).to(device))
+loaded outputs\runs\wm_main\ckpt\best.pt (epoch 39, val_l_pred 0.1446)
+encoding all frames (JEPA, random-init, pixel PCA)...
+=== Linear probe (Ridge alpha=1, fit on train episodes, scored on val episodes) ===
+         method  r2_agent_x  r2_agent_y  r2_block_x  r2_block_y  r2_cos_theta  r2_sin_theta  r2_block_pos  r2_block_angle  block_pos_err_px  block_angle_err_deg
+       JEPA S_t       0.711       0.709       0.863       0.900         0.423         0.692         0.881           0.558            23.251               19.982
+random-init S_t       0.589       0.627       0.691       0.682        -0.211         0.120         0.687          -0.046            40.383               40.494
+  pixel PCA-256       0.623       0.579       0.786       0.855        -0.091        -0.158         0.821          -0.124            28.133               42.763
+=== Error vs k (val) ===
+k          : [1, 2, 3, 4, 5, 6, 7, 8]
+l_pred(k)  : [0.079, 0.096, 0.118, 0.138, 0.158, 0.176, 0.192, 0.208]
+copy(k)    : [0.057, 0.097, 0.133, 0.166, 0.196, 0.225, 0.251, 0.275]
+WM pos err (px)   : [24.1, 23.7, 23.7, 24.0, 24.6, 25.5, 26.5, 27.6]
+persist pos (px)  : [22.6, 22.5, 22.7, 23.1, 23.6, 24.4, 25.2, 26.2]
+probe floor pos   : [22.8, 22.6, 22.5, 22.3, 22.1, 21.9, 21.7, 21.5]
+WM angle err (deg): [20.0, 19.9, 20.0, 20.2, 20.4, 20.8, 21.4, 22.0]
+persist angle     : [19.1, 19.0, 19.0, 19.1, 19.2, 19.3, 19.6, 19.9]
+probe floor angle : [19.0, 18.7, 18.5, 18.3, 18.1, 17.9, 17.7, 17.5]
+=== Collapse diagnostics (val frames) ===
+JEPA : erank=141.3  mean std=0.867
+random: erank=143.3  mean std=0.234
+=== SUMMARY ===
+[PASS] std_s > 0.3
+[PASS] erank S_t > 20
+[FAIL] l_pred < copy at every k
+[PASS] gap grows with k
+[PASS] probe R2 block position >= 0.7
+[PASS] probe R2 cos/sin >= 0.5
+[PASS] JEPA > random-init (block pos R2)
+saved figures + probe_table.csv in outputs\runs\wm_main\figures and outputs\runs\wm_main\wm_eval.json

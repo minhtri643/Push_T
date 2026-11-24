@@ -1,0 +1,304 @@
+World model frozen: OK (param_checksum 77077.114003, epoch 39)
+latents (5, 25650, 256) | train samples 23415 | val samples 2235 | aug versions used: 5 | use_proprio=True
+params 1,355,778 | 91 steps/epoch x 300 epochs | stand-still baseline on 1000 val samples: ADE 86.6 px, FDE 122.5 px
+ep   1 | train 0.9775
+ep   2 | train 0.7237
+ep   3 | train 0.1963
+ep   4 | train 0.1350
+ep   5 | train 0.1291
+ep   6 | train 0.1215
+ep   7 | train 0.1151
+ep   8 | train 0.1089
+ep   9 | train 0.1014
+ep  10 | train 0.0879 | val_loss 0.1021 | ADE 118.1 px | FDE 115.0 px (still 122.5) | best FDE 115.0 | 27s
+ep  11 | train 0.0733
+ep  12 | train 0.0697
+ep  13 | train 0.0668
+ep  14 | train 0.0649
+ep  15 | train 0.0627
+ep  16 | train 0.0624
+ep  17 | train 0.0609
+ep  18 | train 0.0590
+ep  19 | train 0.0581
+ep  20 | train 0.0562 | val_loss 0.0543 | ADE 80.0 px | FDE 89.4 px (still 122.5) | best FDE 89.4 | 54s
+ep  21 | train 0.0554
+ep  22 | train 0.0535
+ep  23 | train 0.0544
+ep  24 | train 0.0531
+ep  25 | train 0.0527
+ep  26 | train 0.0510
+ep  27 | train 0.0504
+ep  28 | train 0.0506
+ep  29 | train 0.0487
+ep  30 | train 0.0493 | val_loss 0.0470 | ADE 69.7 px | FDE 82.3 px (still 122.5) | best FDE 82.3 | 81s
+ep  31 | train 0.0493
+ep  32 | train 0.0481
+ep  33 | train 0.0470
+ep  34 | train 0.0476
+ep  35 | train 0.0456
+ep  36 | train 0.0460
+ep  37 | train 0.0451
+ep  38 | train 0.0452
+ep  39 | train 0.0464
+ep  40 | train 0.0449 | val_loss 0.0434 | ADE 65.1 px | FDE 75.5 px (still 122.5) | best FDE 75.5 | 108s
+ep  41 | train 0.0453
+ep  42 | train 0.0447
+ep  43 | train 0.0446
+ep  44 | train 0.0453
+ep  45 | train 0.0443
+ep  46 | train 0.0433
+ep  47 | train 0.0423
+ep  48 | train 0.0439
+ep  49 | train 0.0426
+ep  50 | train 0.0424 | val_loss 0.0415 | ADE 62.5 px | FDE 72.7 px (still 122.5) | best FDE 72.7 | 135s
+ep  51 | train 0.0415
+ep  52 | train 0.0418
+ep  53 | train 0.0413
+ep  54 | train 0.0418
+ep  55 | train 0.0409
+ep  56 | train 0.0410
+ep  57 | train 0.0405
+ep  58 | train 0.0414
+ep  59 | train 0.0403
+ep  60 | train 0.0406 | val_loss 0.0403 | ADE 60.2 px | FDE 70.1 px (still 122.5) | best FDE 70.1 | 162s
+ep  61 | train 0.0394
+ep  62 | train 0.0410
+ep  63 | train 0.0392
+ep  64 | train 0.0392
+ep  65 | train 0.0398
+ep  66 | train 0.0392
+ep  67 | train 0.0389
+ep  68 | train 0.0394
+ep  69 | train 0.0385
+ep  70 | train 0.0383 | val_loss 0.0392 | ADE 58.0 px | FDE 68.1 px (still 122.5) | best FDE 68.1 | 189s
+ep  71 | train 0.0386
+ep  72 | train 0.0381
+ep  73 | train 0.0385
+ep  74 | train 0.0376
+ep  75 | train 0.0385
+ep  76 | train 0.0377
+ep  77 | train 0.0367
+ep  78 | train 0.0376
+ep  79 | train 0.0364
+ep  80 | train 0.0366 | val_loss 0.0385 | ADE 56.5 px | FDE 66.3 px (still 122.5) | best FDE 66.3 | 216s
+ep  81 | train 0.0370
+ep  82 | train 0.0370
+ep  83 | train 0.0373
+ep  84 | train 0.0367
+ep  85 | train 0.0357
+ep  86 | train 0.0364
+ep  87 | train 0.0353
+ep  88 | train 0.0373
+ep  89 | train 0.0361
+ep  90 | train 0.0359 | val_loss 0.0380 | ADE 54.9 px | FDE 65.1 px (still 122.5) | best FDE 65.1 | 243s
+ep  91 | train 0.0362
+ep  92 | train 0.0347
+ep  93 | train 0.0349
+ep  94 | train 0.0355
+ep  95 | train 0.0346
+ep  96 | train 0.0361
+ep  97 | train 0.0350
+ep  98 | train 0.0346
+ep  99 | train 0.0351
+ep 100 | train 0.0343 | val_loss 0.0376 | ADE 53.6 px | FDE 64.0 px (still 122.5) | best FDE 64.0 | 270s
+ep 101 | train 0.0341
+ep 102 | train 0.0345
+ep 103 | train 0.0352
+ep 104 | train 0.0344
+ep 105 | train 0.0334
+ep 106 | train 0.0348
+ep 107 | train 0.0338
+ep 108 | train 0.0343
+ep 109 | train 0.0331
+ep 110 | train 0.0347 | val_loss 0.0374 | ADE 53.1 px | FDE 63.8 px (still 122.5) | best FDE 63.8 | 297s
+ep 111 | train 0.0334
+ep 112 | train 0.0336
+ep 113 | train 0.0331
+ep 114 | train 0.0339
+ep 115 | train 0.0332
+ep 116 | train 0.0339
+ep 117 | train 0.0325
+ep 118 | train 0.0332
+ep 119 | train 0.0328
+ep 120 | train 0.0337 | val_loss 0.0370 | ADE 52.2 px | FDE 62.7 px (still 122.5) | best FDE 62.7 | 324s
+ep 121 | train 0.0320
+ep 122 | train 0.0332
+ep 123 | train 0.0322
+ep 124 | train 0.0324
+ep 125 | train 0.0327
+ep 126 | train 0.0327
+ep 127 | train 0.0320
+ep 128 | train 0.0317
+ep 129 | train 0.0325
+ep 130 | train 0.0333 | val_loss 0.0372 | ADE 51.5 px | FDE 62.4 px (still 122.5) | best FDE 62.4 | 351s
+ep 131 | train 0.0321
+ep 132 | train 0.0317
+ep 133 | train 0.0321
+ep 134 | train 0.0323
+ep 135 | train 0.0324
+ep 136 | train 0.0315
+ep 137 | train 0.0317
+ep 138 | train 0.0317
+ep 139 | train 0.0319
+ep 140 | train 0.0326 | val_loss 0.0368 | ADE 51.0 px | FDE 62.1 px (still 122.5) | best FDE 62.1 | 378s
+ep 141 | train 0.0321
+ep 142 | train 0.0321
+ep 143 | train 0.0318
+ep 144 | train 0.0319
+ep 145 | train 0.0315
+ep 146 | train 0.0319
+ep 147 | train 0.0312
+ep 148 | train 0.0307
+ep 149 | train 0.0314
+ep 150 | train 0.0312 | val_loss 0.0371 | ADE 50.7 px | FDE 62.1 px (still 122.5) | best FDE 62.1 | 405s
+ep 151 | train 0.0308
+ep 152 | train 0.0306
+ep 153 | train 0.0303
+ep 154 | train 0.0312
+ep 155 | train 0.0302
+ep 156 | train 0.0314
+ep 157 | train 0.0305
+ep 158 | train 0.0306
+ep 159 | train 0.0303
+ep 160 | train 0.0303 | val_loss 0.0371 | ADE 50.3 px | FDE 61.8 px (still 122.5) | best FDE 61.8 | 432s
+ep 161 | train 0.0308
+ep 162 | train 0.0311
+ep 163 | train 0.0305
+ep 164 | train 0.0306
+ep 165 | train 0.0301
+ep 166 | train 0.0309
+ep 167 | train 0.0300
+ep 168 | train 0.0309
+ep 169 | train 0.0306
+ep 170 | train 0.0300 | val_loss 0.0371 | ADE 49.8 px | FDE 61.8 px (still 122.5) | best FDE 61.8 | 459s
+ep 171 | train 0.0305
+ep 172 | train 0.0296
+ep 173 | train 0.0291
+ep 174 | train 0.0302
+ep 175 | train 0.0301
+ep 176 | train 0.0305
+ep 177 | train 0.0298
+ep 178 | train 0.0296
+ep 179 | train 0.0303
+ep 180 | train 0.0290 | val_loss 0.0368 | ADE 49.3 px | FDE 61.1 px (still 122.5) | best FDE 61.1 | 486s
+ep 181 | train 0.0295
+ep 182 | train 0.0299
+ep 183 | train 0.0295
+ep 184 | train 0.0295
+ep 185 | train 0.0288
+ep 186 | train 0.0299
+ep 187 | train 0.0294
+ep 188 | train 0.0302
+ep 189 | train 0.0293
+ep 190 | train 0.0298 | val_loss 0.0371 | ADE 49.4 px | FDE 61.5 px (still 122.5) | best FDE 61.1 | 513s
+ep 191 | train 0.0290
+ep 192 | train 0.0293
+ep 193 | train 0.0291
+ep 194 | train 0.0291
+ep 195 | train 0.0294
+ep 196 | train 0.0291
+ep 197 | train 0.0290
+ep 198 | train 0.0282
+ep 199 | train 0.0287
+ep 200 | train 0.0294 | val_loss 0.0371 | ADE 48.8 px | FDE 61.0 px (still 122.5) | best FDE 61.0 | 540s
+ep 201 | train 0.0299
+ep 202 | train 0.0285
+ep 203 | train 0.0282
+ep 204 | train 0.0289
+ep 205 | train 0.0287
+ep 206 | train 0.0290
+ep 207 | train 0.0287
+ep 208 | train 0.0294
+ep 209 | train 0.0286
+ep 210 | train 0.0286 | val_loss 0.0371 | ADE 48.7 px | FDE 61.3 px (still 122.5) | best FDE 61.0 | 567s
+ep 211 | train 0.0289
+ep 212 | train 0.0276
+ep 213 | train 0.0289
+ep 214 | train 0.0288
+ep 215 | train 0.0288
+ep 216 | train 0.0285
+ep 217 | train 0.0284
+ep 218 | train 0.0286
+ep 219 | train 0.0289
+ep 220 | train 0.0288 | val_loss 0.0372 | ADE 48.6 px | FDE 61.2 px (still 122.5) | best FDE 61.0 | 594s
+ep 221 | train 0.0284
+ep 222 | train 0.0276
+ep 223 | train 0.0295
+ep 224 | train 0.0279
+ep 225 | train 0.0283
+ep 226 | train 0.0285
+ep 227 | train 0.0286
+ep 228 | train 0.0283
+ep 229 | train 0.0279
+ep 230 | train 0.0281 | val_loss 0.0376 | ADE 48.5 px | FDE 61.2 px (still 122.5) | best FDE 61.0 | 621s
+ep 231 | train 0.0280
+ep 232 | train 0.0282
+ep 233 | train 0.0280
+ep 234 | train 0.0276
+ep 235 | train 0.0276
+ep 236 | train 0.0284
+ep 237 | train 0.0266
+ep 238 | train 0.0284
+ep 239 | train 0.0280
+ep 240 | train 0.0281 | val_loss 0.0375 | ADE 48.3 px | FDE 61.0 px (still 122.5) | best FDE 61.0 | 648s
+ep 241 | train 0.0271
+ep 242 | train 0.0273
+ep 243 | train 0.0280
+ep 244 | train 0.0289
+ep 245 | train 0.0276
+ep 246 | train 0.0282
+ep 247 | train 0.0282
+ep 248 | train 0.0277
+ep 249 | train 0.0283
+ep 250 | train 0.0273 | val_loss 0.0373 | ADE 48.2 px | FDE 61.0 px (still 122.5) | best FDE 61.0 | 675s
+ep 251 | train 0.0279
+ep 252 | train 0.0280
+ep 253 | train 0.0284
+ep 254 | train 0.0278
+ep 255 | train 0.0285
+ep 256 | train 0.0281
+ep 257 | train 0.0279
+ep 258 | train 0.0282
+ep 259 | train 0.0278
+ep 260 | train 0.0278 | val_loss 0.0375 | ADE 48.3 px | FDE 61.1 px (still 122.5) | best FDE 61.0 | 702s
+ep 261 | train 0.0286
+ep 262 | train 0.0274
+ep 263 | train 0.0275
+ep 264 | train 0.0281
+ep 265 | train 0.0277
+ep 266 | train 0.0275
+ep 267 | train 0.0269
+ep 268 | train 0.0276
+ep 269 | train 0.0272
+ep 270 | train 0.0280 | val_loss 0.0375 | ADE 48.2 px | FDE 60.9 px (still 122.5) | best FDE 60.9 | 729s
+ep 271 | train 0.0275
+ep 272 | train 0.0281
+ep 273 | train 0.0279
+ep 274 | train 0.0269
+ep 275 | train 0.0276
+ep 276 | train 0.0274
+ep 277 | train 0.0280
+ep 278 | train 0.0274
+ep 279 | train 0.0272
+ep 280 | train 0.0281 | val_loss 0.0375 | ADE 48.2 px | FDE 61.0 px (still 122.5) | best FDE 60.9 | 756s
+ep 281 | train 0.0274
+ep 282 | train 0.0275
+ep 283 | train 0.0275
+ep 284 | train 0.0282
+ep 285 | train 0.0285
+ep 286 | train 0.0283
+ep 287 | train 0.0281
+ep 288 | train 0.0278
+ep 289 | train 0.0272
+ep 290 | train 0.0276 | val_loss 0.0375 | ADE 48.1 px | FDE 60.8 px (still 122.5) | best FDE 60.8 | 783s
+ep 291 | train 0.0282
+ep 292 | train 0.0271
+ep 293 | train 0.0274
+ep 294 | train 0.0274
+ep 295 | train 0.0282
+ep 296 | train 0.0270
+ep 297 | train 0.0275
+ep 298 | train 0.0276
+ep 299 | train 0.0284
+ep 300 | train 0.0274 | val_loss 0.0376 | ADE 48.1 px | FDE 60.9 px (still 122.5) | best FDE 60.8 | 810s
+Done. best val FDE = 60.8 px (stand-still 122.5). Files in outputs\runs\dit_main

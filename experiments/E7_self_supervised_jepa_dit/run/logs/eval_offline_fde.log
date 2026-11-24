@@ -1,0 +1,11 @@
+375 val samples (stride 5, horizon 20) from 20 episodes
+System.Management.Automation.RemoteException
+=== Object-level FDE at 2 s (T-block pose vs sim replay of the expert path) ===
+                   FDE_pos  FDE_theta_deg  FDE_obj  FDE_agent  ADE_agent
+method                                                                  
+DiT                  21.35          13.40    35.38      60.52      46.85
+constant velocity    27.08          16.71    44.58     152.99      87.29
+stand still          31.70          18.89    51.48     126.43      87.18
+DiT minFDE@5: pos 10.7 px | obj 19.9
+sim vs record drift (noise floor of this measurement): pos mean 0.07 px, median 0.01 px | theta mean 0.04 deg
+saved fde_results.csv, fde_summary.json, fde_hist.png in outputs\runs\dit_main\fde_obj

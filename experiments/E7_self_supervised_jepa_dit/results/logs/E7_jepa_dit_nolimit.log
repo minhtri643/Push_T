@@ -1,0 +1,6 @@
+E7_jepa_dit__harness__nolimit: success 20% | coverage 72.8% | 152s -> D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\results\seeds100000\E7_jepa_dit__harness__nolimit.json
+E7_jepa_dit__harness__nolimit__noise1: success 24% | coverage 76.2% | 154s -> D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\results\seeds100000\E7_jepa_dit__harness__nolimit__noise1.json
+E7_jepa_dit__harness__nolimit__noise2: success 28% | coverage 63.9% | 141s -> D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\results\seeds100000\E7_jepa_dit__harness__nolimit__noise2.json
+E7_jepa_dit__nolimit: success 24% | coverage 67.9% | 283s -> D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\results\benchmark95\E7_jepa_dit__nolimit.json
+E7_jepa_dit__nolimit__noise1: success 35% | coverage 70.1% | 281s -> D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\results\benchmark95\E7_jepa_dit__nolimit__noise1.json
+E7_jepa_dit__nolimit__noise2: success 33% | coverage 69.7% | 264s -> D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\results\benchmark95\E7_jepa_dit__nolimit__noise2.json

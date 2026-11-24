@@ -888,6 +888,87 @@
    "vs_final_only_this": 2,
    "vs_final_only_final": 64,
    "vs_final_p": 5.99563801384484e-17
+  },
+  {
+   "label": "E6a_resnet_spatial_direct",
+   "stage": "E6",
+   "date": "2026-11-24",
+   "train_data": "lerobot/pusht only",
+   "description_en": "vision only, end to end: ResNet-18 GN + spatial softmax (16 keypoints) + DiT diffusing 16 actions directly, 2 frames, 30 epochs; own episode loop without the 40 px/step limit",
+   "description_vi": "ch\u1ec9 \u1ea3nh, \u0111\u1ea7u-cu\u1ed1i: ResNet-18 GN + spatial softmax (16 \u0111i\u1ec3m) + DiT khu\u1ebfch t\u00e1n tr\u1ef1c ti\u1ebfp 16 h\u00e0nh \u0111\u1ed9ng, 2 khung, 30 epoch; v\u00f2ng ch\u1ea1y ri\u00eang, kh\u00f4ng gi\u1edbi h\u1ea1n 40 px/b\u01b0\u1edbc",
+   "policy": "resnet_spatial_direct",
+   "ckpt_dir": "checkpoints/E6_vision",
+   "vision_backend": "",
+   "n_starts": 95,
+   "success": 0.16842105263157894,
+   "success_ci_low": 0.1064116433136824,
+   "success_ci_high": 0.2562049068028677,
+   "noise_repeats": 1,
+   "success_mean_over_noise": 0.16842105263157894,
+   "success_sd_over_noise": NaN,
+   "mean_max_coverage": 0.4529633163453703,
+   "dp_score": 0.474794922397983,
+   "severe_lt50": 0.5578947368421052,
+   "success_seeds50": 0.16,
+   "success_hard20": 0.15,
+   "success_random25": 0.2,
+   "vs_final_only_this": 6,
+   "vs_final_only_final": 62,
+   "vs_final_p": 8.181953378705309e-13
+  },
+  {
+   "label": "E7_jepa_dit",
+   "stage": "E7",
+   "date": "2026-11-24",
+   "train_data": "lerobot/pusht only",
+   "description_en": "vision only, fully self-supervised: frozen JEPA World Model (2 frames \u2192 S_t) + DiT diffusing a 2 s pusher path; re-trained here from the branch's original code",
+   "description_vi": "ch\u1ec9 \u1ea3nh, ho\u00e0n to\u00e0n t\u1ef1 gi\u00e1m s\u00e1t: World Model JEPA \u0111\u00f3ng b\u0103ng (2 khung \u2192 S_t) + DiT khu\u1ebfch t\u00e1n \u0111\u01b0\u1eddng \u0111i 2 s c\u1ee7a \u0111\u1ea7u \u0111\u1ea9y; hu\u1ea5n luy\u1ec7n l\u1ea1i t\u1eeb m\u00e3 ngu\u1ed3n g\u1ed1c c\u1ee7a nh\u00e1nh",
+   "policy": "jepa_dit",
+   "ckpt_dir": "experiments/E7_self_supervised_jepa_dit/run/outputs/runs/{wm_main,dit_main}",
+   "vision_backend": "",
+   "n_starts": 95,
+   "success": 0.3157894736842105,
+   "success_ci_low": 0.2310308812871305,
+   "success_ci_high": 0.4148672021109529,
+   "noise_repeats": 3,
+   "success_mean_over_noise": 0.2982456140350877,
+   "success_sd_over_noise": 0.0303868562731382,
+   "mean_max_coverage": 0.720944721392465,
+   "dp_score": 0.7556090179465628,
+   "severe_lt50": 0.23157894736842105,
+   "success_seeds50": 0.28,
+   "success_hard20": 0.3,
+   "success_random25": 0.4,
+   "vs_final_only_this": 7,
+   "vs_final_only_final": 49,
+   "vs_final_p": 7.455210310203242e-09
+  },
+  {
+   "label": "E7_jepa_dit__nolimit",
+   "stage": "E7",
+   "date": "2026-11-24",
+   "train_data": "lerobot/pusht only",
+   "description_en": "same, without the 40 px/step limit (as in the branch's original evaluator)",
+   "description_vi": "nh\u01b0 tr\u00ean, b\u1ecf gi\u1edbi h\u1ea1n 40 px/b\u01b0\u1edbc (nh\u01b0 b\u1ed9 \u0111\u00e1nh gi\u00e1 g\u1ed1c c\u1ee7a nh\u00e1nh)",
+   "policy": "jepa_dit",
+   "ckpt_dir": "experiments/E7_self_supervised_jepa_dit/run/outputs/runs/{wm_main,dit_main}",
+   "vision_backend": "",
+   "n_starts": 95,
+   "success": 0.24210526315789474,
+   "success_ci_low": 0.1670872321759837,
+   "success_ci_high": 0.3371700845813331,
+   "noise_repeats": 3,
+   "success_mean_over_noise": 0.30526315789473685,
+   "success_sd_over_noise": 0.055700027601359815,
+   "mean_max_coverage": 0.6785822331230885,
+   "dp_score": 0.7122864703007804,
+   "severe_lt50": 0.2736842105263158,
+   "success_seeds50": 0.26,
+   "success_hard20": 0.15,
+   "success_random25": 0.28,
+   "vs_final_only_this": 5,
+   "vs_final_only_final": 54,
+   "vs_final_p": 1.9067358802971057e-11
   }
  ],
  "determinism": [
@@ -934,6 +1015,14 @@
   "E5": {
    "en": "Vision-only extension",
    "vi": "Nh\u00e1nh m\u1edf r\u1ed9ng ch\u1ec9 d\u00f9ng \u1ea3nh"
+  },
+  "E6": {
+   "en": "End-to-end vision diffusion policy (no inverse dynamics)",
+   "vi": "Ch\u00ednh s\u00e1ch khu\u1ebfch t\u00e1n \u1ea3nh \u0111\u1ea7u-cu\u1ed1i (kh\u00f4ng inverse dynamics)"
+  },
+  "E7": {
+   "en": "Self-supervised JEPA World Model + DiT",
+   "vi": "World Model JEPA t\u1ef1 gi\u00e1m s\u00e1t + DiT"
   }
  }
 }

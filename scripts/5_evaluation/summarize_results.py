@@ -37,7 +37,8 @@ FINAL = "E4_final__dit_wm"
 SUITES = ("seeds50", "hard20", "random25")
 STAGE_DIRS = {"E0": "experiments/E0_baseline", "E1": "experiments/E1_protocol_and_augmentation_fix",
               "E2": "experiments/E2_handcrafted_controllers", "E3": "experiments/E3_dynamics_world_model",
-              "E4": "experiments/E4_hf_only_final", "E5": "experiments/E5_vision_world_models"}
+              "E4": "experiments/E4_hf_only_final", "E5": "experiments/E5_vision_world_models",
+              "E6": "experiments/E6_end2end_vision_diffusion", "E7": "experiments/E7_self_supervised_jepa_dit"}
 
 
 def wilson(k, n, z=1.96):
@@ -95,6 +96,8 @@ README_ROWS = [  # (label, what it uses at run time EN, VI)
     ("E4_final__dit_id", "same, without the World Model choosing the actions", "như trên, không có World Model chọn hành động"),
     ("E5d_vjepa2_frozen__dit_id_vision", "image + pusher position only (block pose read from the image)", "chỉ ảnh + vị trí đầu đẩy (tư thế khối đọc từ ảnh)"),
     ("E3_action_diffusion_baseline", "image + pusher position (Diffusion-Policy-style baseline, zarr data)", "ảnh + vị trí đầu đẩy (baseline kiểu Diffusion Policy, dữ liệu zarr)"),
+    ("E7_jepa_dit", "image + pusher position, fully self-supervised JEPA encoder", "ảnh + vị trí đầu đẩy, bộ mã hoá JEPA hoàn toàn tự giám sát"),
+    ("E6a_resnet_spatial_direct", "image + pusher position, end-to-end ResNet-18, actions diffused directly", "ảnh + vị trí đầu đẩy, ResNet-18 học đầu-cuối, khuếch tán trực tiếp hành động"),
     ("E0_baseline__dit_id", "the original version of this project", "phiên bản đầu tiên của dự án"),
 ]
 

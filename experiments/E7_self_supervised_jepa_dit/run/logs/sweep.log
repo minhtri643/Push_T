@@ -1,0 +1,12 @@
+done k=4 steps=16: success@0.95=36%  success@0.90=48%  mean_max_cov=0.682  (4.9 min)
+done k=6 steps=16: success@0.95=20%  success@0.90=38%  mean_max_cov=0.636  (5.0 min)
+done k=12 steps=16: success@0.95=32%  success@0.90=54%  mean_max_cov=0.719  (3.5 min)
+
+=== COMPARISON (same 50 seeds; sampling std of success rate is about 6 points) ===
+ n_action_steps  n_infer  success_095  success_090  mean_max_cov  median_time_s  infer_ms  minutes            note
+              8       16         0.20         0.48         0.728          21.35    74.015      NaN baseline (main)
+              4       16         0.36         0.48         0.682          17.85    80.502    4.870                
+              6       16         0.20         0.38         0.636          24.40   107.850    4.994                
+             12       16         0.32         0.54         0.719          20.10   147.850    3.480                
+
+best by mean_max_cov: n_action_steps=8, n_infer=16

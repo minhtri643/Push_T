@@ -1,0 +1,61 @@
+=== A. Env info and speed ===
+observation_space: Dict('agent_pos': Box(0.0, 512.0, (2,), float64), 'pixels': Box(0, 255, (96, 96, 3), uint8))
+action_space     : Box(0.0, 512.0, (2,), float32)
+pixels: (96, 96, 3) uint8 | agent_pos: (2,)
+info keys at reset: ['block_pose', 'goal_pose', 'is_success', 'n_contacts', 'pos_agent', 'vel_agent']
+info keys after step: ['block_pose', 'coverage', 'goal_pose', 'is_success', 'n_contacts', 'pos_agent', 'vel_agent']
+speed [pixels_agent_pos]:   571.9 control steps/s  (0.52 s for 300 steps)
+speed [state           ]:  3461.0 control steps/s  (0.09 s for 300 steps)
+=== B. Random agent baseline ===
+seed 0: success=False  max_coverage=0.412  steps_run=300
+seed 1: success=False  max_coverage=0.000  steps_run=300
+seed 2: success=False  max_coverage=0.000  steps_run=300
+seed 3: success=False  max_coverage=0.001  steps_run=300
+seed 4: success=False  max_coverage=0.169  steps_run=300
+seed 5: success=False  max_coverage=0.000  steps_run=300
+seed 6: success=False  max_coverage=0.114  steps_run=300
+seed 7: success=False  max_coverage=0.000  steps_run=300
+seed 8: success=False  max_coverage=0.000  steps_run=300
+seed 9: success=False  max_coverage=0.000  steps_run=300
+success rate        : 0.0% (0/10)
+mean max_coverage   : 0.070   (max over episodes: 0.412)
+saved: outputs\figures\step2\random_agent.csv and outputs\videos\step2\random_agent_ep0.mp4
+=== C. Replay demo on val episodes ===
+order selection on val episode 9 (drift at step 0 and step 20):
+  angle_first     drift_pos[0]=   0.000 px | drift_pos[20]=   0.000 px | success=False
+  position_first  drift_pos[0]=  88.784 px | drift_pos[20]= 121.983 px | success=False
+=> chosen order: angle_first   (config currently: angle_first)
+ep   9: len=134 success=False max_cov=0.902 steps=None drift0=0.00 drift20=0.0 final=0.0px
+ep  15: len=153 success=False max_cov=0.901 steps=None drift0=0.00 drift20=0.0 final=0.0px
+ep  18: len= 86 success=False max_cov=0.877 steps=None drift0=0.00 drift20=0.0 final=0.0px
+ep  65: len=166 success=False max_cov=0.887 steps=None drift0=0.00 drift20=0.0 final=0.0px
+ep  68: len= 90 success=False max_cov=0.908 steps=None drift0=0.00 drift20=0.0 final=0.0px
+ep  73: len=112 success=False max_cov=0.903 steps=None drift0=0.00 drift20=0.0 final=0.0px
+ep  82: len= 94 success=False max_cov=0.923 steps=None drift0=0.00 drift20=0.0 final=0.0px
+ep  93: len= 64 success=False max_cov=0.927 steps=None drift0=0.00 drift20=0.0 final=0.0px
+ep  97: len=111 success=False max_cov=0.895 steps=None drift0=0.00 drift20=0.0 final=0.0px
+ep 101: len= 92 success=False max_cov=0.911 steps=None drift0=0.00 drift20=0.0 final=0.0px
+ep 137: len= 92 success=False max_cov=0.881 steps=None drift0=0.00 drift20=0.0 final=0.0px
+ep 148: len= 78 success=False max_cov=0.896 steps=None drift0=0.00 drift20=0.0 final=0.0px
+ep 154: len= 99 success=False max_cov=0.911 steps=None drift0=0.00 drift20=0.0 final=0.0px
+ep 163: len= 76 success=False max_cov=0.926 steps=None drift0=0.00 drift20=0.0 final=0.0px
+ep 165: len=193 success=False max_cov=0.893 steps=None drift0=0.00 drift20=0.0 final=0.0px
+ep 166: len=105 success=False max_cov=0.864 steps=None drift0=0.00 drift20=0.0 final=0.0px
+ep 176: len= 89 success=False max_cov=0.874 steps=None drift0=0.00 drift20=0.0 final=0.0px
+ep 180: len=170 success=False max_cov=0.876 steps=None drift0=0.00 drift20=0.0 final=0.0px
+ep 183: len=139 success=False max_cov=0.881 steps=None drift0=0.00 drift20=0.0 final=0.0px
+ep 201: len= 92 success=False max_cov=0.919 steps=None drift0=0.00 drift20=0.0 final=0.0px
+--- summary ---
+success rate: 0.0% (0/20)
+mean max_coverage: 0.898
+drift_pos at step 0 : mean=0.000 px
+drift_pos at step 20: mean=0.00 px  (target < 20)
+saved: outputs\figures\step2\replay_val.csv and outputs\figures\step2\replay_drift.png
+=== D. Sim render vs dataset image ===
+frame 0 (episode 0): mean|diff| = 0.655   max|diff| = 86   (0..255)
+RGB order check: as-is = 0.655 | R<->B swapped = 1.507
+50 random val frames: mean|diff| mean=0.717  median=0.695  max=1.316
+saved: outputs\figures\step2\render_vs_dataset.png
+=== E. Replay video (best val episode) ===
+episode 93: 65 frames (6.5 s), final coverage = 0.927, max = 0.927
+saved: outputs\videos\step2\replay_ep93.mp4 and media\expert_replay.gif (0.2 MB)

@@ -1,0 +1,244 @@
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:163: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=use_amp)
+device=cuda (AMP=off) | params=2,165,536 | train=23229 val=2215 | 362 iters/epoch x 40 epochs | run dir: outputs\runs\wm_main
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep   1 | loss 1.112 | l_pred tr 0.518 val 0.314 (copy 0.277) | std_s 0.899 erank 152.2 | lr 1.50e-04 tau 0.9900 | 111s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep   2 | loss 0.606 | l_pred tr 0.337 val 0.359 (copy 0.346) | std_s 0.927 erank 158.7 | lr 3.00e-04 tau 0.9901 | 99s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep   3 | loss 0.598 | l_pred tr 0.349 val 0.337 (copy 0.315) | std_s 0.935 erank 151.0 | lr 2.99e-04 tau 0.9901 | 103s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep   4 | loss 0.557 | l_pred tr 0.319 val 0.319 (copy 0.311) | std_s 0.941 erank 151.4 | lr 2.98e-04 tau 0.9902 | 103s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep   5 | loss 0.535 | l_pred tr 0.302 val 0.306 (copy 0.315) | std_s 0.937 erank 153.2 | lr 2.95e-04 tau 0.9903 | 103s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep   6 | loss 0.517 | l_pred tr 0.288 val 0.296 (copy 0.316) | std_s 0.938 erank 154.6 | lr 2.92e-04 tau 0.9905 | 103s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep   7 | loss 0.502 | l_pred tr 0.276 val 0.292 (copy 0.313) | std_s 0.937 erank 154.0 | lr 2.87e-04 tau 0.9907 | 99s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep   8 | loss 0.490 | l_pred tr 0.267 val 0.280 (copy 0.309) | std_s 0.936 erank 155.0 | lr 2.82e-04 tau 0.9909 | 103s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep   9 | loss 0.480 | l_pred tr 0.258 val 0.273 (copy 0.305) | std_s 0.935 erank 155.3 | lr 2.76e-04 tau 0.9911 | 103s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep  10 | loss 0.472 | l_pred tr 0.251 val 0.265 (copy 0.298) | std_s 0.934 erank 155.7 | lr 2.68e-04 tau 0.9913 | 103s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep  11 | loss 0.464 | l_pred tr 0.244 val 0.258 (copy 0.292) | std_s 0.937 erank 154.7 | lr 2.60e-04 tau 0.9916 | 103s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep  12 | loss 0.456 | l_pred tr 0.237 val 0.251 (copy 0.284) | std_s 0.933 erank 153.4 | lr 2.52e-04 tau 0.9919 | 103s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep  13 | loss 0.449 | l_pred tr 0.231 val 0.245 (copy 0.277) | std_s 0.931 erank 153.5 | lr 2.42e-04 tau 0.9921 | 77s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep  14 | loss 0.442 | l_pred tr 0.224 val 0.237 (copy 0.269) | std_s 0.931 erank 152.1 | lr 2.32e-04 tau 0.9925 | 74s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep  15 | loss 0.435 | l_pred tr 0.218 val 0.230 (copy 0.263) | std_s 0.925 erank 151.8 | lr 2.21e-04 tau 0.9928 | 75s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep  16 | loss 0.429 | l_pred tr 0.212 val 0.230 (copy 0.255) | std_s 0.922 erank 150.8 | lr 2.10e-04 tau 0.9931 | 74s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep  17 | loss 0.422 | l_pred tr 0.206 val 0.223 (copy 0.248) | std_s 0.918 erank 149.3 | lr 1.99e-04 tau 0.9934 | 74s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep  18 | loss 0.416 | l_pred tr 0.201 val 0.217 (copy 0.241) | std_s 0.909 erank 148.1 | lr 1.87e-04 tau 0.9938 | 75s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep  19 | loss 0.409 | l_pred tr 0.194 val 0.210 (copy 0.234) | std_s 0.905 erank 147.0 | lr 1.75e-04 tau 0.9941 | 75s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep  20 | loss 0.404 | l_pred tr 0.189 val 0.201 (copy 0.226) | std_s 0.904 erank 146.5 | lr 1.62e-04 tau 0.9945 | 75s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep  21 | loss 0.397 | l_pred tr 0.183 val 0.197 (copy 0.220) | std_s 0.899 erank 145.9 | lr 1.50e-04 tau 0.9949 | 75s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep  22 | loss 0.391 | l_pred tr 0.177 val 0.190 (copy 0.215) | std_s 0.900 erank 145.1 | lr 1.38e-04 tau 0.9952 | 75s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep  23 | loss 0.386 | l_pred tr 0.172 val 0.187 (copy 0.211) | std_s 0.894 erank 144.4 | lr 1.25e-04 tau 0.9955 | 75s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep  24 | loss 0.381 | l_pred tr 0.168 val 0.183 (copy 0.206) | std_s 0.898 erank 143.9 | lr 1.13e-04 tau 0.9959 | 75s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep  25 | loss 0.376 | l_pred tr 0.164 val 0.176 (copy 0.201) | std_s 0.889 erank 142.5 | lr 1.01e-04 tau 0.9962 | 75s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep  26 | loss 0.371 | l_pred tr 0.159 val 0.171 (copy 0.198) | std_s 0.886 erank 142.9 | lr 8.97e-05 tau 0.9965 | 75s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+ep  27 | loss 0.367 | l_pred tr 0.156 val 0.168 (copy 0.194) | std_s 0.887 erank 142.1 | lr 7.86e-05 tau 0.9969 | 75s
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep  28 | loss 0.364 | l_pred tr 0.152 val 0.165 (copy 0.191) | std_s 0.877 erank 142.0 | lr 6.80e-05 tau 0.9971 | 74s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep  29 | loss 0.360 | l_pred tr 0.148 val 0.161 (copy 0.188) | std_s 0.879 erank 141.9 | lr 5.79e-05 tau 0.9974 | 75s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+ep  30 | loss 0.356 | l_pred tr 0.145 val 0.159 (copy 0.186) | std_s 0.878 erank 141.1 | lr 4.84e-05 tau 0.9977 | 75s
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep  31 | loss 0.353 | l_pred tr 0.142 val 0.155 (copy 0.183) | std_s 0.880 erank 141.4 | lr 3.96e-05 tau 0.9979 | 75s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep  32 | loss 0.351 | l_pred tr 0.140 val 0.153 (copy 0.181) | std_s 0.875 erank 140.8 | lr 3.16e-05 tau 0.9981 | 74s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep  33 | loss 0.348 | l_pred tr 0.137 val 0.151 (copy 0.180) | std_s 0.878 erank 140.7 | lr 2.44e-05 tau 0.9983 | 75s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep  34 | loss 0.346 | l_pred tr 0.135 val 0.149 (copy 0.178) | std_s 0.877 erank 140.8 | lr 1.81e-05 tau 0.9985 | 75s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+ep  35 | loss 0.344 | l_pred tr 0.134 val 0.148 (copy 0.177) | std_s 0.873 erank 140.9 | lr 1.26e-05 tau 0.9987 | 75s
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep  36 | loss 0.343 | l_pred tr 0.132 val 0.147 (copy 0.176) | std_s 0.874 erank 140.7 | lr 8.13e-06 tau 0.9988 | 75s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep  37 | loss 0.342 | l_pred tr 0.132 val 0.145 (copy 0.175) | std_s 0.872 erank 140.5 | lr 4.59e-06 tau 0.9989 | 75s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep  38 | loss 0.341 | l_pred tr 0.131 val 0.145 (copy 0.174) | std_s 0.870 erank 140.5 | lr 2.05e-06 tau 0.9989 | 75s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep  39 | loss 0.341 | l_pred tr 0.131 val 0.145 (copy 0.173) | std_s 0.870 erank 140.5 | lr 5.12e-07 tau 0.9990 | 75s
+System.Management.Automation.RemoteException
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+System.Management.Automation.RemoteException
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\train_world_model.py:63: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast(enabled=use_amp, dtype=torch.float16):
+ep  40 | loss 0.341 | l_pred tr 0.131 val 0.145 (copy 0.173) | std_s 0.870 erank 140.5 | lr 0.00e+00 tau 0.9990 | 75s
+Done. best val_l_pred = 0.1446. Files in outputs\runs\wm_main

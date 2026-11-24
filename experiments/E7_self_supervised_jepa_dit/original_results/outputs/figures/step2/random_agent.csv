@@ -1,0 +1,11 @@
+seed,steps_run,success,max_coverage,steps_to_success,time_to_success_s
+0,300,False,0.4124231382123433,,
+1,300,False,0.0,,
+2,300,False,0.0,,
+3,300,False,0.000584836592647989,,
+4,300,False,0.16933970183927746,,
+5,300,False,0.0,,
+6,300,False,0.11371833280645935,,
+7,300,False,0.0,,
+8,300,False,0.0,,
+9,300,False,0.0,,

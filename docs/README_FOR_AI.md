@@ -1,7 +1,8 @@
 # Push-T: World Model + Diffusion Transformer — tài liệu bối cảnh đầy đủ (dành cho AI)
 
 > **Ảnh chụp trạng thái dự án ngày 2026-11-23, sau khi sắp xếp lại repo để đưa lên GitHub.** Tài liệu này dành cho một AI **không truy cập được mã nguồn** nhưng cần hiểu dự án như người đã đọc toàn bộ code, cấu hình, log và kết quả.
-> - **Nhãn mới:** mọi lần chạy mang nhãn `E<giai đoạn>_<mô hình>__<policy>`. Giai đoạn: E0 bản gốc, E1 sửa giao thức + augmentation, E2 bộ điều khiển viết tay, E3 World Model động lực học (zarr), E4 chỉ dữ liệu HF (**bản cuối**), E5 nhánh chỉ dùng ảnh.
+> - **Nhãn mới:** mọi lần chạy mang nhãn `E<giai đoạn>_<mô hình>__<policy>`. Giai đoạn: E0 bản gốc, E1 sửa giao thức + augmentation, E2 bộ điều khiển viết tay, E3 World Model động lực học (zarr), E4 chỉ dữ liệu HF (**bản cuối**), E5 nhánh chỉ dùng ảnh, E6 chính sách khuếch tán ảnh đầu-cuối, E7 JEPA tự giám sát + DiT.
+> - **Cập nhật 2026-11-24:** thêm E6 và E7 (mục 8.9). Số liệu E0–E5 không đổi.
 > - Bảng tên cũ → mới: `docs/name_mapping.md`. Lịch sử từng giai đoạn: `experiments/E*/README.md`. Mọi bảng số liệu sinh tự động: `results/summary/`.
 > - Mọi con số đều đo bằng cách chạy chính code của dự án. Chỗ nào chưa đo sẽ ghi rõ "chưa đo".
 > - Số thập phân dùng dấu chấm. Đường dẫn tính từ thư mục gốc dự án (`Final_Project_PushT/`).
@@ -10,10 +11,10 @@
 
 ## 0. Lưu ý cho AI đọc tài liệu
 
-- **Chủ dự án** là học viên thạc sĩ người Việt; đây là đồ án cuối kỳ môn World Model.
+- **Nhóm thực hiện** gồm các học viên thạc sĩ người Việt; đây là đồ án cuối kỳ của nhóm.
   - Luôn trả lời bằng **tiếng Việt**.
-  - Người dùng muốn **sự thật đã đo được**, không tô vẽ, không phóng đại.
-- **Ràng buộc cứng** (người dùng quyết định ngày 2026-11-20):
+  - Nhóm muốn **sự thật đã đo được**, không tô vẽ, không phóng đại.
+- **Ràng buộc cứng** (nhóm quyết định ngày 2026-11-20):
   - Mọi mô hình **chỉ học từ dataset Hugging Face [`lerobot/pusht`](https://huggingface.co/datasets/lerobot/pusht)**.
   - Không dùng zarr của Diffusion Policy, không dùng dữ liệu sinh từ mô phỏng, không dùng trọng số học sẵn (như DINOv2) để **học**.
   - Mô phỏng chỉ được dùng để **đánh giá, đo lường và chọn checkpoint**, và phải nói rõ điều đó.
@@ -21,7 +22,7 @@
   - (a) policy dùng **tư thế khối T thật lấy từ mô phỏng** khi chạy (thông tin đặc quyền, "dạng trạng thái");
   - (b) policy **chỉ dùng ảnh** (cộng vị trí đầu đẩy, tức proprioception).
 - **Không tuyên bố "vượt SOTA".** Cách nói đúng nằm ở mục 10.
-- **Bạn không chạy được code.** Nếu viết code giúp người dùng, hãy bám đúng API ở mục 15.
+- **Bạn không chạy được code.** Nếu viết code giúp nhóm, hãy bám đúng API ở mục 15.
 - **Máy chỉ có GPU laptop 4 GB.** Đừng đề xuất chạy hai job GPU cùng lúc: bộ nhớ bị tràn sang RAM, chậm 5–10 lần.
 
 ---
@@ -42,6 +43,7 @@
   - `dit_wm`: độ phủ TB **94.6%**, thành công **76%** [KTC 95%: 66–83] ở lần chạy tham chiếu; **71 ± 5%** qua 3 lần lặp nhiễu. Dùng tư thế thật.
   - Bỏ bước World Model chọn hành động (`dit_id`): 59% (55 ± 6% qua 3 lần). Gộp 3 lần: p = 0.0001; riêng lần đầu McNemar p = 0.014.
 - **Chỉ dùng ảnh:** JEPA tự học **45%**; DINOv2 đóng băng 49%; V-JEPA 2 đóng băng **54%** (khác biệt giữa ba bộ chưa có ý nghĩa thống kê). Dùng World Model ảnh để chọn hành động làm hại (11–20%).
+- **Sinh hành động trực tiếp từ ảnh** (không đường đi khối, không ID): E6 ResNet-18 đầu-cuối 17%; E7 JEPA tự giám sát + DiT 30 ± 3%; baseline E3 32%. Đều thấp hơn E5 (p ≤ 0.01).
 - **So với bài báo:**
   - `dit_wm` **ngang** Diffusion Policy dạng trạng thái (LeRobot keypoints 71%, 500 ván); không khác biệt có ý nghĩa thống kê.
   - Bản chỉ dùng ảnh **kém rõ** Diffusion Policy dạng ảnh (LeRobot 63.8%).
@@ -79,7 +81,7 @@
 
 - **Hệ thống:** Windows 11, PowerShell, git 2.56 + GitHub CLI. Repo công khai: https://github.com/minhtri643/Push_T- (nhánh `main`), Release v1.0 chứa checkpoint và dữ liệu đã xử lý.
   - Kiểm thử tự động (`.github/workflows/smoke_test.yml`) chạy trên Linux, Windows, macOS ở mỗi lần đẩy code.
-  - Thư mục `backups/` cũ đã được chuyển hết vào `checkpoints/`, `experiments/`, `results/`. Bản sao lưu tạm trước khi sắp xếp lại và các bản clone thử nghiệm đã được xoá theo yêu cầu người dùng (2026-11-23); mọi thứ cần thiết nằm trong repo và Release.
+  - Thư mục `backups/` cũ đã được chuyển hết vào `checkpoints/`, `experiments/`, `results/`. Bản sao lưu tạm trước khi sắp xếp lại và các bản clone thử nghiệm đã được xoá theo quyết định của nhóm (2026-11-23); mọi thứ cần thiết nằm trong repo và Release.
 - **Python:** 3.11.9 trong `.venv`.
   - Venv không có pip; cài gói bằng `uv pip install --python .venv\Scripts\python.exe <gói>`.
   - Phiên bản ghim đầy đủ trong `requirements.txt` và `pyproject.toml`.
@@ -190,7 +192,7 @@ Code ở `data/block_pose_fit.py` và `scripts/1_data/fit_block_pose.py hf`.
 
 - **Ảnh mô phỏng biết trước tư thế:** 20 tập có nhiều va chạm, tổng 2,000 khung, sinh bởi bộ điều khiển chuyên gia viết tay. Khung có tiếp xúc sai 0.71 px.
 - **Chọn giả thuyết reward:** cách tính `coverage(t+1)/0.95` khớp nhất. Các cách khác cho MAE lớn hơn: `coverage(t)` 0.022, `coverage(t)/0.95` 0.011, `coverage(t+1)` 0.015.
-- **So với zarr:** người dùng **chưa quyết định** có trích con số 0.55 px vào báo cáo hay không, vì phép này đụng tới file zarr.
+- **So với zarr:** nhóm **chưa quyết định** có trích con số 0.55 px vào báo cáo hay không, vì phép này đụng tới file zarr.
 
 ### 5.4 Dữ liệu huấn luyện sau khôi phục, cách chia tập, augmentation
 - **File `data/pusht_hf.zarr`:**
@@ -591,6 +593,18 @@ Các dòng E1, E3, E5a (tên cũ `v2_*`, `v4*`, `mix_*`, `vision_*`, `action_dif
 - `dit_vwm` so với `dit_id_vision`: p < 0.001 cho cả DINOv2 và V-JEPA 2. World Model ảnh chọn hành động làm hại; thứ tự `dit_vwm` trùng thứ tự độ nhạy, nhưng mới có 3 điểm nên chỉ là giả thuyết.
 - V-JEPA 2 chạy chậm gấp đôi DINOv2 (415 s so với 210 s cho 95 ván) và được dùng chưa đúng sở trường (một khung lặp thành clip, ảnh 96 px phóng lên).
 
+### 8.9 Sinh hành động trực tiếp từ ảnh: E6 và E7 (2026-11-23/24)
+- **E6a** (`experiments/E6_end2end_vision_diffusion/`, `scripts/7_end2end_vision_diffusion/`):
+  - ResNet-18 GN giữ bản đồ 6×6 + spatial softmax 16 điểm, 2 khung + 2 vị trí đầu đẩy (68 chiều), DiT khuếch tán trực tiếp 16 hành động (chạy 8), học đầu-cuối 30 epoch (khoảng 4.5 giờ), chỉ HF.
+  - Đánh giá bằng `eval.py` riêng: cùng 95 điểm xuất phát và seed (đã kiểm tra), không giới hạn 40 px/bước. `export_benchmark_json.py` ghi `results/benchmark/E6a_resnet_spatial_direct.json`.
+  - **17% (16/95)**, độ phủ TB 45.3%, 56% số ván dưới 0.50. RMSE hành động val khoảng 36.5 px (lặp hành động cuối 38.6, đứng yên 45.5); số 28.8 px ở epoch 30 đo trên toàn bộ val nên không so được với các epoch trước (2 batch).
+  - McNemar lần đầu: hơn E0 (16/2, p = 0.001); kém E3 action diffusion (14/28, p = 0.044) và E7 có giới hạn (10/24, p = 0.024); không phân biệt với E7 không giới hạn (12/19, p = 0.28); kém E5d, E4 (p < 0.0001).
+- **E7** (`experiments/E7_self_supervised_jepa_dit/`): nhánh tự giám sát phát triển song song (mã nguồn gốc commit `ebe99bd`, giữ nguyên), chạy lại trên RTX 3050 với TF32 tắt (fp32 thuần như GTX 1650 của lần chạy gốc).
+  - World Model JEPA tự giám sát (2.17M; 2 khung → S_t 256 chiều; bộ dự đoán 8 bước theo hành động; EMA + VICReg) đóng băng; DiT 1.36M khuếch tán 20 vị trí đích của đầu đẩy (2 s), chạy 8, DDIM 16. Không dùng tư thế khối ở đâu cả.
+  - **Tái lập:** lần chạy gốc 26% (13/50) trên seed 100000–100049; chạy lại 20%, ba lần nhiễu 24 ± 4%. Lớp nối vào `run_episode` khớp bộ đánh giá gốc 50/50 seed (khi tắt giới hạn 40 px).
+  - **95 điểm xuất phát:** `E7_jepa_dit` (giới hạn 40 px) 32 / 26 / 32% (29.8%); `E7_jepa_dit__nolimit` 24 / 35 / 33% (30.5%); hai biến thể như nhau (p = 0.89). Kém E5b/E5c/E5d (gộp 3 lần p ≤ 0.01), ngang E3 action diffusion (p = 0.31–1.0).
+  - Quét k / DDIM của lần chạy gốc chạy lại đảo thứ hạng (mọi p ≥ 0.10): khác biệt giữa các cấu hình là nhiễu. A1/A2 không huấn luyện lại; số gốc ở `original_results/`, báo cáo của nhánh ở `report/`.
+
 ---
 
 ## 9. Lịch sử phát triển và bài học
@@ -599,14 +613,16 @@ Các dòng E1, E3, E5a (tên cũ `v2_*`, `v4*`, `mix_*`, `vision_*`, `action_dif
 |---|---|---|---|
 | ≤ 11-16 | **E0** (baseline_v1, code ban đầu) | WM ẩn + DiT + ID trên zarr | 50 ván: độ phủ 36.7%, thành công 2%. Đo lại 95 ván ngày 11-23: 34.6% / 2% |
 | 11-17 | **E1** (v2, sửa lỗi) | Thống nhất giao thức đánh giá (`policy.py`); đặt trạng thái gọi hai lần; độ phủ lấy từ env thay vì IoU; sửa augmentation (bản cũ làm một nửa nhãn DiT không khớp ảnh) | 50 ván: 80.6% / 34%. Heuristic làm hại: stance 55.9/24, lock 67.9/0, cả hai 47.3/0 |
-| 11-18/19 | **E2** — bộ điều khiển viết tay của người dùng | Chiến thuật 3 nhịp, chặn xuyên thấu, nhìn trước / MPPI trên WM cũ | Tốt nhất 90.3/47; mặc định của demo 66.9/14 (kém nhất); chỉ DiT 79.7/45. Đã lưu trữ vào `experiments/` (lý do: WM cũ mù hành động) |
+| 11-18/19 | **E2** — bộ điều khiển viết tay | Chiến thuật 3 nhịp, chặn xuyên thấu, nhìn trước / MPPI trên WM cũ | Tốt nhất 90.3/47; mặc định của demo 66.9/14 (kém nhất); chỉ DiT 79.7/45. Đã lưu trữ vào `experiments/` (lý do: WM cũ mù hành động) |
 | 11-19/20 | **E3** (v4, "6 bước") | `PushDynamics` mới; `dit_wm`; học lại DiT 100 epoch + EMA; chọn ID bằng vòng kín; baseline `action_diffusion`; giao diện mới | **E3_augfix_ckpt__dit_wm 94.5/84** (cao nhất từng đo); E3_dit100ep_closedloop_id60__dit_wm 92.4/74; E3_dit100ep_rmse_id__dit_id 3% (ID chọn theo RMSE offline); action_diffusion 88.3/32 |
 | 11-20 | **E5a** — World Model ảnh DINOv2 (kiểu DINO-WM) | DINOv2 đóng băng; zarr + khung hình mô phỏng | khoảng 10 px ở bước 16, độ nhạy 80%; E5a_dinov2_zarr_sim__dit_id_vision 35%, E5a_dinov2_zarr_sim__dit_vwm 8% |
-| 11-20 | **E4 — chỉ dùng HF (BẢN CUỐI)** | Người dùng quyết định; khôi phục tư thế từ ảnh; học lại toàn bộ | vòng 0 (chưa sửa độ lệch): E4_hf_round0__dit_wm 56%; sau khi sửa: **E4_final__dit_wm 76%**, E4_final__dit_id 59% |
+| 11-20 | **E4 — chỉ dùng HF (BẢN CUỐI)** | Nhóm quyết định; khôi phục tư thế từ ảnh; học lại toàn bộ | vòng 0 (chưa sửa độ lệch): E4_hf_round0__dit_wm 56%; sau khi sửa: **E4_final__dit_wm 76%**, E4_final__dit_id 59% |
 | 11-20 | **E5b** — JEPA | Bộ mã hoá tự học | E5b_jepa__dit_id_vision 45%, E5b_jepa__dit_vwm 20% |
 | 11-21 | So sánh với bài báo | — | mục 10 |
 | 11-22 | **E5c / E5d** — bộ mã hoá tiền huấn luyện đóng băng | DINOv2 ViT-S và V-JEPA 2 ViT-L đóng băng; chỉ học bộ dự đoán + đầu dò trên HF | `dit_id_vision` 49% / 54%; `dit_vwm` 13% / 11% (mục 8.8) |
 | 11-23 | Sắp xếp lại repo | Cấu trúc mới, đổi nhãn, sửa lỗi hard link, đo lại E0 / E2 trên giao thức chuẩn, lặp nhiễu cho các cấu hình chính | mục 8.7; chạy lại bản cuối khớp 95/95 ván |
+| 11-23/24 | **E6** — khuếch tán ảnh đầu-cuối | ResNet-18 + spatial softmax + DiT sinh trực tiếp hành động, không ID | E6a_resnet_spatial_direct 17% (mục 8.9) |
+| 11-24 | **E7** — JEPA tự giám sát + DiT | Gộp nhánh phát triển song song, chạy lại, đo trên 95 điểm xuất phát | 30 ± 3%; tái lập 24 ± 4% so với 26% của lần chạy gốc (mục 8.9) |
 
 **Bài học đã đo được:**
 1. **Sai số offline đánh lừa.**
@@ -618,6 +634,7 @@ Các dòng E1, E3, E5a (tên cũ `v2_*`, `v4*`, `mix_*`, `vision_*`, `action_dif
 5. **Heuristic viết tay** (khoá, tư thế đứng, chặn xuyên thấu) đều làm giảm thành công dưới giao thức chặt.
 6. **Nhiễu khuếch tán lớn.** Cùng một mô hình dao động ±6 điểm, và 28/95 ván đổi kết quả.
 7. **Thiết kế mô hình động lực học quan trọng hơn lượng dữ liệu** (demo-only ≈ demo + mô phỏng).
+8. **Với 206 demo và mô hình nhỏ, sinh hành động trực tiếp từ ảnh thua tách bài toán.** E6 (17%), E7 (30%), E3 action diffusion (32%) đều dưới DiT đường đi khối + ID (E5 45–54%, E4 55–71%).
 
 ---
 
@@ -714,7 +731,7 @@ Các bài dưới đây cùng 206 tập người điều khiển, đưa khối T
 - **`PRESENTATION_SLIDES.md` lỗi thời** (trình bày guard / lookahead như đóng góp): chuyển vào `docs/archive/`, không đưa lên git.
 - `results/pose_recovery/validation_summary_before_offset_fix.json` ghi số **trước** khi sửa độ lệch (92.3%); số đúng nằm trong `hf_report.json` (97.0%).
 - `--policy action_diffusion` chạy được với `--ckpt-dir checkpoints/E3_action_diffusion` (bản học từ zarr). Chưa có bản học trên HF.
-- Dữ liệu cũ (zarr gốc, dữ liệu mô phỏng) nằm ở `data/legacy/`, không đưa vào git. Đặc trưng DINOv2 cũ (4.6 GB, tạo lại được) đã bị xoá theo duyệt của người dùng.
+- Dữ liệu cũ (zarr gốc, dữ liệu mô phỏng) nằm ở `data/legacy/`, không đưa vào git. Đặc trưng DINOv2 cũ (4.6 GB, tạo lại được) đã bị xoá theo quyết định của nhóm.
 - Mã của các giai đoạn cũ nằm trong `experiments/E*/code*`. Mã E0 chỉ để tham khảo (`code_snapshot/`).
 
 ---
@@ -756,16 +773,21 @@ Các bài dưới đây cùng 206 tập người điều khiển, đưa khối T
 │   ├── 4_diffusion/              train_dit_planner.py (DiT + ID, chọn ID bằng vòng kín), train_action_diffusion.py
 │   ├── 5_evaluation/             benchmark.py, summarize_results.py, make_video.py
 │   ├── 6_vision_world_model/     train_jepa_wm.py (E5b), train_frozen_encoder_wm.py (E5c/E5d; --encoder jepa --eval-only cho E5b)
+│   ├── 7_end2end_vision_diffusion/  train_resnet_spatial_direct.py (E6a)
 │   └── release/                  package_release.py, assets.json (manifest của Release)
-├── experiments/                  LỊCH SỬ: README.md tổng quan + E0_baseline/ … E5_vision_world_models/
+├── experiments/                  LỊCH SỬ: README.md tổng quan + E0_baseline/ … E7_self_supervised_jepa_dit/
 │   │                             (mỗi thư mục: README.md song ngữ + results.md sinh tự động + mã cũ của giai đoạn đó)
+│   │                             E6: code_E6a_resnet_spatial_direct/ (model, train, eval), export_benchmark_json.py
+│   │                             E7: code/ (mã nguồn gốc của nhánh, giữ nguyên), original_results/, report/, run/, benchmark_e7.py,
+│   │                                 analyze_e7.py, run_e7.ps1, results/ (seed 100000–100049, summary.md)
 │   └── run_phase3_reruns.ps1     đo lại E0 / E2 + lặp nhiễu
 ├── results/                      MỌI SỐ LIỆU (vào git)
 │   ├── benchmark/                <nhãn>.json (95 ván mỗi file), run_registry.json, logs/, diagnostics/
 │   ├── summary/                  benchmark_table.md, benchmark_table_vi.md, runs.csv, summary.json (sinh tự động)
 │   ├── world_model_eval/         E4_final/ (metrics.json, curves.png, trajectories.png), E2_old_latent_wm/
 │   ├── pose_recovery/            hf_report.json, synthetic_report.json, hf_tpose(_raw).npz, synthetic_frames.npz, log
-│   ├── vision_world_models/      E5a_dinov2_zarr_sim/, E5b_jepa/, E5c_dinov2_frozen/, E5d_vjepa2_frozen/, comparison.md
+│   ├── vision_world_models/      E5a_dinov2_zarr_sim/, E5b_jepa/, E5c_dinov2_frozen/, E5d_vjepa2_frozen/, comparison.md,
+│   │                             E6a_resnet_spatial_direct/ (eval_metrics.json, history.json, training_log.txt)
 │   ├── training_logs/            E1_augfix/, E3/, E4_hf_round0/, E4_final/
 │   ├── legacy_protocol/          E0_baseline/, E1_augfix/ (giao thức cũ 50 ván)
 │   ├── E2_handcrafted_controllers/  play_test_*
@@ -776,6 +798,7 @@ Các bài dưới đây cùng 206 tập người điều khiển, đưa khối T
 │   ├── E5_vision/                jepa_wm, vjepa2_wm, dinov2_hf_wm; legacy_dinov2_zarr_sim/ (vision_wm, vision_wm_v2)
 │   ├── E0_baseline/, E1_augfix/, E3_dit100ep_*/, E3_augfix_dit_with_rmse_id/, E3_action_diffusion/,
 │   │   E3_dynamics_variants/, E4_hf_round0/
+│   ├── E6_vision/                resnet_spatial_direct.pt (E6a; chưa có trên Releases)
 └── data/                         KHÔNG vào git
     ├── lerobot_pusht/            bản tải từ HF (+ frames.npy đã giải mã)
     ├── pusht_hf.zarr             dữ liệu HF + tư thế khôi phục (đầu vào của mọi script học)
@@ -816,6 +839,10 @@ python scripts/3_world_model/evaluate_world_model.py
 python scripts/6_vision_world_model/train_jepa_wm.py      # ~53 phút
 python scripts/6_vision_world_model/train_frozen_encoder_wm.py --encoder vjepa2   # ~47 phút (trích đặc trưng ~15 phút)
 python experiments/E2_handcrafted_controllers/code/benchmark_controllers.py      # đo lại E2
+python scripts/7_end2end_vision_diffusion/train_resnet_spatial_direct.py --epochs 30   # E6a, ~4.5 giờ
+python experiments/E6_end2end_vision_diffusion/code_E6a_resnet_spatial_direct/eval.py
+python experiments/E6_end2end_vision_diffusion/export_benchmark_json.py
+# E7: xem experiments/E7_self_supervised_jepa_dit/README.md (run_e7.ps1 cho từng bước của pipeline gốc, ~80 phút; benchmark_e7.py; analyze_e7.py)
 ```
 
 **Giao diện** (`demo.py`, pygame, chữ tiếng Việt):

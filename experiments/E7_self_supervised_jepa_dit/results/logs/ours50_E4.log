@@ -1,0 +1,12 @@
+World Model weights frozen successfully for Diffusion training.
+E4_final__dit_wm: success 70% | coverage 95.1% | 251s -> D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\results\seeds100000\E4_final__dit_wm.json
+World Model weights frozen successfully for Diffusion training.
+E4_final__dit_wm__noise1: success 64% | coverage 94.8% | 255s -> D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\results\seeds100000\E4_final__dit_wm__noise1.json
+World Model weights frozen successfully for Diffusion training.
+E4_final__dit_wm__noise2: success 64% | coverage 92.8% | 251s -> D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\results\seeds100000\E4_final__dit_wm__noise2.json
+World Model weights frozen successfully for Diffusion training.
+E4_final__dit_id: success 54% | coverage 90.4% | 187s -> D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\results\seeds100000\E4_final__dit_id.json
+World Model weights frozen successfully for Diffusion training.
+E4_final__dit_id__noise1: success 52% | coverage 88.6% | 195s -> D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\results\seeds100000\E4_final__dit_id__noise1.json
+World Model weights frozen successfully for Diffusion training.
+E4_final__dit_id__noise2: success 56% | coverage 87.5% | 195s -> D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\results\seeds100000\E4_final__dit_id__noise2.json

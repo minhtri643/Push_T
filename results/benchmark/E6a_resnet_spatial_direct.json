@@ -1,0 +1,807 @@
+{
+ "label": "E6a_resnet_spatial_direct",
+ "stage": "E6",
+ "policy": "resnet_spatial_direct",
+ "ckpt_dir": "checkpoints/E6_vision",
+ "diffusion_noise_offset": 0,
+ "max_steps": 300,
+ "rate_limit_40px": false,
+ "source": "results/vision_world_models/E6a_resnet_spatial_direct/eval_metrics.json (experiments/E6_end2end_vision_diffusion/code_E6a_resnet_spatial_direct/eval.py)",
+ "seconds": 237.46093729999848,
+ "summary": {
+  "seeds50": {
+   "num_episodes": 50,
+   "mean_max_coverage": 0.41703471354656,
+   "success_rate": 0.16,
+   "rate_max_cov_ge_0.80": 0.26,
+   "rate_max_cov_lt_0.50": 0.6,
+   "median_steps_to_success": 222.5
+  },
+  "hard20": {
+   "num_episodes": 20,
+   "mean_max_coverage": 0.5132771306811288,
+   "success_rate": 0.15,
+   "rate_max_cov_ge_0.80": 0.4,
+   "rate_max_cov_lt_0.50": 0.5,
+   "median_steps_to_success": 266.0
+  },
+  "random25": {
+   "num_episodes": 25,
+   "mean_max_coverage": 0.47656947047438414,
+   "success_rate": 0.2,
+   "rate_max_cov_ge_0.80": 0.44,
+   "rate_max_cov_lt_0.50": 0.52,
+   "median_steps_to_success": 199.0
+  }
+ },
+ "overall": {
+  "num_episodes": 95,
+  "mean_max_coverage": 0.4529633163453703,
+  "success_rate": 0.16842105263157894,
+  "rate_max_cov_ge_0.80": 0.3368421052631579,
+  "rate_max_cov_lt_0.50": 0.5578947368421052,
+  "median_steps_to_success": 222.0
+ },
+ "episodes": [
+  {
+   "suite": "seeds50",
+   "name": "seed 42",
+   "max_coverage": 0.10066735299604303,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 143",
+   "max_coverage": 0.00018937705595776507,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 244",
+   "max_coverage": 0.9519306851271254,
+   "success": true,
+   "steps_to_success": 269,
+   "total_steps": 269
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 345",
+   "max_coverage": 0.0,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 446",
+   "max_coverage": 0.0,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 547",
+   "max_coverage": 0.43721466405793563,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 648",
+   "max_coverage": 0.9740711871788006,
+   "success": true,
+   "steps_to_success": 189,
+   "total_steps": 189
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 749",
+   "max_coverage": 0.9324616396018341,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 850",
+   "max_coverage": 0.6571421008912045,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 951",
+   "max_coverage": 0.5483072519631144,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 1052",
+   "max_coverage": 0.25579002094970843,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 1153",
+   "max_coverage": 0.9633094168747529,
+   "success": true,
+   "steps_to_success": 277,
+   "total_steps": 277
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 1254",
+   "max_coverage": 0.549153798934534,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 1355",
+   "max_coverage": 0.9521570756831623,
+   "success": true,
+   "steps_to_success": 167,
+   "total_steps": 167
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 1456",
+   "max_coverage": 0.0,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 1557",
+   "max_coverage": 0.01454651955262813,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 1658",
+   "max_coverage": 0.3831431763525744,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 1759",
+   "max_coverage": 0.9693242022339249,
+   "success": true,
+   "steps_to_success": 240,
+   "total_steps": 240
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 1860",
+   "max_coverage": 0.37399104540009176,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 1961",
+   "max_coverage": 0.0,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 2062",
+   "max_coverage": 0.9397164521125349,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 2163",
+   "max_coverage": 0.000856035663644692,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 2264",
+   "max_coverage": 0.6376692271131911,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 2365",
+   "max_coverage": 0.1296931015391785,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 2466",
+   "max_coverage": 0.9570110474976637,
+   "success": true,
+   "steps_to_success": 205,
+   "total_steps": 205
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 2567",
+   "max_coverage": 0.9409359311623983,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 2668",
+   "max_coverage": 0.16321608051732428,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 2769",
+   "max_coverage": 0.10591704887813506,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 2870",
+   "max_coverage": 0.0,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 2971",
+   "max_coverage": 0.535472103870143,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 3072",
+   "max_coverage": 0.32798556018650743,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 3173",
+   "max_coverage": 0.14175104581006912,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 3274",
+   "max_coverage": 0.5553976382085368,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 3375",
+   "max_coverage": 0.0,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 3476",
+   "max_coverage": 0.25008928152449705,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 3577",
+   "max_coverage": 0.2901074916520176,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 3678",
+   "max_coverage": 0.22339091896560734,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 3779",
+   "max_coverage": 0.04377240479148153,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 3880",
+   "max_coverage": 0.3455391242994974,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 3981",
+   "max_coverage": 0.0,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 4082",
+   "max_coverage": 0.7311272161928859,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 4183",
+   "max_coverage": 0.0,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 4284",
+   "max_coverage": 0.0,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 4385",
+   "max_coverage": 0.9182232988376278,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 4486",
+   "max_coverage": 0.27899862579225543,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 4587",
+   "max_coverage": 0.0,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 4688",
+   "max_coverage": 0.9641174267442677,
+   "success": true,
+   "steps_to_success": 187,
+   "total_steps": 187
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 4789",
+   "max_coverage": 0.9532087363370485,
+   "success": true,
+   "steps_to_success": 278,
+   "total_steps": 278
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 4890",
+   "max_coverage": 0.4171253857849847,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "seeds50",
+   "name": "seed 4991",
+   "max_coverage": 0.9370149789931129,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "hard20",
+   "name": "Center-Bottom",
+   "max_coverage": 0.9599046927228935,
+   "success": true,
+   "steps_to_success": 266,
+   "total_steps": 266
+  },
+  {
+   "suite": "hard20",
+   "name": "Center-Right",
+   "max_coverage": 0.9392768694301201,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "hard20",
+   "name": "Center-Top",
+   "max_coverage": 0.856763010739283,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "hard20",
+   "name": "Center-Left",
+   "max_coverage": 0.9473775496556762,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "hard20",
+   "name": "Q1 normal angle",
+   "max_coverage": 0.9358992168863098,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "hard20",
+   "name": "Q1 inverted angle",
+   "max_coverage": 0.0,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "hard20",
+   "name": "Q1 near top wall",
+   "max_coverage": 0.9531805183734552,
+   "success": true,
+   "steps_to_success": 86,
+   "total_steps": 86
+  },
+  {
+   "suite": "hard20",
+   "name": "Q2 standard",
+   "max_coverage": 0.9463596609134459,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "hard20",
+   "name": "Q2 opposite angle",
+   "max_coverage": 0.0,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "hard20",
+   "name": "Q2 near left wall",
+   "max_coverage": 0.32931063049145004,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "hard20",
+   "name": "Q3 standard",
+   "max_coverage": 0.059304272095304394,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "hard20",
+   "name": "Q3 extreme angle",
+   "max_coverage": 0.09034717638201056,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "hard20",
+   "name": "Q3 near corner",
+   "max_coverage": 0.0,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "hard20",
+   "name": "Q4 standard",
+   "max_coverage": 0.9547283775866907,
+   "success": true,
+   "steps_to_success": 278,
+   "total_steps": 278
+  },
+  {
+   "suite": "hard20",
+   "name": "Q4 rotated 90",
+   "max_coverage": 0.0,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "hard20",
+   "name": "Q4 near right wall",
+   "max_coverage": 0.0,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "hard20",
+   "name": "Pusher opposite side",
+   "max_coverage": 0.7494899633720902,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "hard20",
+   "name": "Pusher behind goal",
+   "max_coverage": 0.7832988782872309,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "hard20",
+   "name": "Inverted at center",
+   "max_coverage": 0.33546072561933193,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "hard20",
+   "name": "Tilted 180 at center",
+   "max_coverage": 0.42484107106728175,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "random25",
+   "name": "user 1",
+   "max_coverage": 0.01697556840926105,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "random25",
+   "name": "user 2",
+   "max_coverage": 0.0,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "random25",
+   "name": "user 3",
+   "max_coverage": 0.5194630224097052,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "random25",
+   "name": "user 4",
+   "max_coverage": 0.37330055880743374,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "random25",
+   "name": "user 5",
+   "max_coverage": 0.9378848722798114,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "random25",
+   "name": "user 6",
+   "max_coverage": 0.0,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "random25",
+   "name": "user 7",
+   "max_coverage": 0.950895801688817,
+   "success": true,
+   "steps_to_success": 260,
+   "total_steps": 260
+  },
+  {
+   "suite": "random25",
+   "name": "user 8",
+   "max_coverage": 0.9060741894076821,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "random25",
+   "name": "user 9",
+   "max_coverage": 0.0,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "random25",
+   "name": "user 10",
+   "max_coverage": 0.9796544855732264,
+   "success": true,
+   "steps_to_success": 199,
+   "total_steps": 199
+  },
+  {
+   "suite": "random25",
+   "name": "user 11",
+   "max_coverage": 0.9223948837791517,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "random25",
+   "name": "user 12",
+   "max_coverage": 0.0,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "random25",
+   "name": "user 13",
+   "max_coverage": 0.9664520136185614,
+   "success": true,
+   "steps_to_success": 239,
+   "total_steps": 239
+  },
+  {
+   "suite": "random25",
+   "name": "user 14",
+   "max_coverage": 0.0,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "random25",
+   "name": "user 15",
+   "max_coverage": 0.8940087575030264,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "random25",
+   "name": "user 16",
+   "max_coverage": 0.0,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "random25",
+   "name": "user 17",
+   "max_coverage": 0.14373789103473542,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "random25",
+   "name": "user 18",
+   "max_coverage": 0.925903465285415,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "random25",
+   "name": "user 19",
+   "max_coverage": 0.9760560863759882,
+   "success": true,
+   "steps_to_success": 180,
+   "total_steps": 180
+  },
+  {
+   "suite": "random25",
+   "name": "user 20",
+   "max_coverage": 0.93958074490804,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "random25",
+   "name": "user 21",
+   "max_coverage": 0.0,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "random25",
+   "name": "user 22",
+   "max_coverage": 0.9552715527758368,
+   "success": true,
+   "steps_to_success": 116,
+   "total_steps": 116
+  },
+  {
+   "suite": "random25",
+   "name": "user 23",
+   "max_coverage": 0.0,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "random25",
+   "name": "user 24",
+   "max_coverage": 0.08585806788494475,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  },
+  {
+   "suite": "random25",
+   "name": "user 25",
+   "max_coverage": 0.42072480011796587,
+   "success": false,
+   "steps_to_success": null,
+   "total_steps": 300
+  }
+ ]
+}

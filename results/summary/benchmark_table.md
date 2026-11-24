@@ -66,6 +66,19 @@
 | `E5d_vjepa2_frozen__dit_id_vision`<br>vision only: frozen V-JEPA 2 ViT-L + pose probe | lerobot/pusht only (+ frozen pretrained V-JEPA 2) | 54% [44%–63%] | 53.7 ± 2.1 (n=3) | 85.4% | 0.894 | 56% / 55% / 48% | 15 / 36, p=0.005 |
 | `E5d_vjepa2_frozen__dit_vwm`<br>same, actions chosen by the vision World Model | lerobot/pusht only (+ frozen pretrained V-JEPA 2) | 11% [6%–18%] | - | 73.9% | 0.776 | 12% / 5% / 12% | 2 / 64, p=0.000 |
 
+## E6 — End-to-end vision diffusion policy (no inverse dynamics)
+
+| Configuration | Training data | Success [95% CI] | Success over noise repeats | Mean max coverage | DP score | seeds50 / hard20 / random25 | vs E4_final__dit_wm (only this / only final, p) |
+|---|---|---|---|---|---|---|---|
+| `E6a_resnet_spatial_direct`<br>vision only, end to end: ResNet-18 GN + spatial softmax (16 keypoints) + DiT diffusing 16 actions directly, 2 frames, 30 epochs; own episode loop without the 40 px/step limit | lerobot/pusht only | 17% [11%–26%] | - | 45.3% | 0.475 | 16% / 15% / 20% | 6 / 62, p=0.000 |
+
+## E7 — Self-supervised JEPA World Model + DiT
+
+| Configuration | Training data | Success [95% CI] | Success over noise repeats | Mean max coverage | DP score | seeds50 / hard20 / random25 | vs E4_final__dit_wm (only this / only final, p) |
+|---|---|---|---|---|---|---|---|
+| `E7_jepa_dit`<br>vision only, fully self-supervised: frozen JEPA World Model (2 frames → S_t) + DiT diffusing a 2 s pusher path; re-trained here from the branch's original code | lerobot/pusht only | 32% [23%–41%] | 29.8 ± 3.0 (n=3) | 72.1% | 0.756 | 28% / 30% / 40% | 7 / 49, p=0.000 |
+| `E7_jepa_dit__nolimit`<br>same, without the 40 px/step limit (as in the branch's original evaluator) | lerobot/pusht only | 24% [17%–34%] | 30.5 ± 5.6 (n=3) | 67.9% | 0.712 | 26% / 15% / 28% | 5 / 54, p=0.000 |
+
 ## Determinism check (exact re-runs)
 
 - `E4_final__dit_id` rerun 2026-11-23: 95/95 identical starts

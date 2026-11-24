@@ -1,0 +1,6 @@
+# E7 only: dependencies, caches and checkpoints are regenerated (see README)
+_deps/
+run/data/
+*.pt
+*.npy
+__pycache__/

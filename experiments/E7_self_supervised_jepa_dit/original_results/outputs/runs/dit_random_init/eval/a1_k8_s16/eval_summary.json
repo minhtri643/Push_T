@@ -1,0 +1,13 @@
+{
+  "n_episodes": 50,
+  "success_rate": 0.0,
+  "success_090_rate": 0.0,
+  "mean_max_coverage": 0.268633888747633,
+  "median_max_coverage": 0.3081575908462998,
+  "mean_final_coverage": 0.06631831641629908,
+  "time_to_success_s": null,
+  "time_to_090_s": null,
+  "mean_infer_ms": 101.26002826289071,
+  "n_action_steps": 8,
+  "n_infer": 16
+}

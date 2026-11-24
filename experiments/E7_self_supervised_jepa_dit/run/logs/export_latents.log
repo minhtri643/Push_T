@@ -1,0 +1,23 @@
+loaded outputs\runs\wm_main\ckpt\best.pt (epoch 39, val_l_pred 0.1446)
+param_checksum = 77077.114003
+exporting JEPA latents...
+  version 0 (clean) done
+  version 1 (shift aug) done
+  version 2 (shift aug) done
+  version 3 (shift aug) done
+  version 4 (shift aug) done
+recompute check: max |diff| = 1.89e-05 (expected < 1e-3)
+--- JEPA latents ---
+shape (5, 25650, 256) dtype float32 | size 131 MB
+mean -0.0013  std 1.0355  per-dim std (clean) mean 0.886
+S_0 (frame 0, clean), first 8 values: [0.3059000074863434, 0.6274999976158142, -0.6154000163078308, 0.7502999901771545, -1.0468000173568726, 0.34220001101493835, 1.0931999683380127, -0.4690999984741211]
+cosine(clean, shifted v1) mean = 0.439  min = 0.002
+saved: data\cache\latents_wm_main.npy
+exporting random-init latents...
+  version 0 (clean) done
+  version 1 (shift aug) done
+  version 2 (shift aug) done
+  version 3 (shift aug) done
+  version 4 (shift aug) done
+random-init latents: shape (5, 25650, 256) | per-dim std mean 0.237 | saved data\cache\latents_random_init.npy
+export_latents done

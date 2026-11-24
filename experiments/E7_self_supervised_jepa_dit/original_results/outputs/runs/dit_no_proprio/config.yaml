@@ -1,0 +1,70 @@
+project:
+  seed: 42
+  out_dir: outputs/runs
+data:
+  lerobot_dir: data/lerobot_pusht
+  dp_dir: data/dp_pusht
+  zarr_path: null
+  cache_dir: data/cache
+  image_source: lerobot
+  img_size: 96
+  fps: 10
+  dt: 0.1
+  workspace_size: 512.0
+  n_val_episodes: 20
+  split_file: data/cache/split.json
+sim:
+  set_state_order: angle_first
+wm:
+  t_ctx: 2
+  k_future: 8
+  clip_stride: 1
+  z_dim: 128
+  s_dim: 256
+  enc_channels:
+  - 32
+  - 64
+  - 128
+  - 256
+  act_emb_dim: 64
+  dyn_hidden: 512
+  shift_aug: 4
+  ema_start: 0.99
+  ema_end: 0.999
+  lambda_var: 1.0
+  lambda_cov: 0.04
+  lr: 0.0003
+  weight_decay: 0.05
+  batch_size: 64
+  epochs: 40
+  warmup_epochs: 2
+  grad_clip: 1.0
+  num_workers: 0
+policy:
+  horizon: 20
+  n_action_steps: 8
+  use_proprio: false
+  n_latent_aug: 4
+  d_model: 128
+  depth: 4
+  n_heads: 4
+  mlp_ratio: 4
+  dropout: 0.1
+  n_diffusion_steps: 100
+  n_inference_steps: 16
+  beta_schedule: cosine
+  prediction_type: epsilon
+  lr: 0.0001
+  weight_decay: 0.001
+  batch_size: 256
+  epochs: 300
+  warmup_steps: 500
+  ema_decay: 0.995
+eval:
+  n_episodes: 50
+  seed_start: 100000
+  max_steps: 300
+  success_threshold: 0.95
+  r_theta_px: 60.0
+  fde_stride: 5
+  n_videos: 3

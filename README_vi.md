@@ -32,6 +32,8 @@
 | `E4_final__dit_id` | như trên, không có World Model chọn hành động | 59% [49%–68%]; 55 ± 6% qua 3 lần lặp nhiễu | 87.4% | 0.914 |
 | `E5d_vjepa2_frozen__dit_id_vision` | chỉ ảnh + vị trí đầu đẩy (tư thế khối đọc từ ảnh) | 54% [44%–63%]; 54 ± 2% qua 3 lần lặp nhiễu | 85.4% | 0.894 |
 | `E3_action_diffusion_baseline` | ảnh + vị trí đầu đẩy (baseline kiểu Diffusion Policy, dữ liệu zarr) | 32% [23%–41%] | 88.3% | 0.926 |
+| `E7_jepa_dit` | ảnh + vị trí đầu đẩy, bộ mã hoá JEPA hoàn toàn tự giám sát | 32% [23%–41%]; 30 ± 3% qua 3 lần lặp nhiễu | 72.1% | 0.756 |
+| `E6a_resnet_spatial_direct` | ảnh + vị trí đầu đẩy, ResNet-18 học đầu-cuối, khuếch tán trực tiếp hành động | 17% [11%–26%] | 45.3% | 0.475 |
 | `E0_baseline__dit_id` | phiên bản đầu tiên của dự án | 2% [1%–7%] | 34.6% | 0.364 |
 
 **Tiến hoá của dự án (lần chạy tốt nhất mỗi giai đoạn)**
@@ -44,6 +46,8 @@
 | E3 — World Model động lực học theo hành động (dit_wm) | `E3_augfix_ckpt__dit_wm` | zarr (+ dữ liệu mô phỏng cho động lực học) | 84% | 94.5% |
 | E4 — Chỉ dữ liệu Hugging Face (BẢN CUỐI) | `E4_final__dit_wm` | chỉ lerobot/pusht | 76% | 94.6% |
 | E5 — Nhánh mở rộng chỉ dùng ảnh | `E5d_vjepa2_frozen__dit_id_vision` | chỉ lerobot/pusht (+ V-JEPA 2 tiền huấn luyện, đóng băng) | 54% | 85.4% |
+| E6 — Chính sách khuếch tán ảnh đầu-cuối (không inverse dynamics) | `E6a_resnet_spatial_direct` | chỉ lerobot/pusht | 17% | 45.3% |
+| E7 — World Model JEPA tự giám sát + DiT | `E7_jepa_dit` | chỉ lerobot/pusht | 32% | 72.1% |
 <!-- RESULTS:END -->
 
 <p align="center"><img src="docs/media/baseline_vs_final.gif" width="480" alt="Bản gốc (E0) so với hệ thống cuối (E4) từ cùng một điểm xuất phát"></p>
@@ -114,17 +118,20 @@ Xem các lệnh ở [README tiếng Anh](README.md#reproduce-everything-from-scr
 3. `3_world_model`: học World Model.
 4. `4_diffusion`: học DiT và inverse dynamics.
 5. `5_evaluation`: đánh giá.
-6. `6_vision_world_model`: nhánh mở rộng chỉ dùng ảnh.
+6. `6_vision_world_model`: nhánh mở rộng chỉ dùng ảnh (E5).
+7. `7_end2end_vision_diffusion`: chính sách khuếch tán ảnh đầu-cuối (E6).
+
+E7 (JEPA tự giám sát + DiT) có pipeline riêng, khoảng 80 phút: xem [experiments/E7_self_supervised_jepa_dit](experiments/E7_self_supervised_jepa_dit/README.md).
 
 ## Bản đồ thư mục
 
 | Đường dẫn | Nội dung |
 |---|---|
 | `pusht_wm_dit/` | Thư viện: dữ liệu, khôi phục tư thế, bộ mô phỏng, các mô hình, policy và vòng kín. |
-| `scripts/1_data` … `scripts/6_vision_world_model` | Pipeline theo thứ tự đề bài. |
+| `scripts/1_data` … `scripts/7_end2end_vision_diffusion` | Pipeline theo thứ tự đề bài (6 và 7: hai nhánh chỉ dùng ảnh E5 và E6). |
 | `demo.py` | Demo tương tác. |
 | `configs/default.yaml` | Mọi siêu tham số và đường dẫn. |
-| `experiments/E0_…` … `E5_…` | **Lịch sử dự án**: mỗi giai đoạn đã thử gì, vì sao, số liệu và bài học. Bắt đầu từ [experiments/README.md](experiments/README.md). |
+| `experiments/E0_…` … `E7_…` | **Lịch sử dự án**: mỗi giai đoạn đã thử gì, vì sao, số liệu và bài học. Bắt đầu từ [experiments/README.md](experiments/README.md). E7 là nhánh tự giám sát được phát triển song song rồi gộp vào dự án. |
 | `results/` | Mọi con số đã đo: `benchmark/` (mỗi lần chạy một file JSON 95 ván), `summary/` (bảng), đánh giá World Model, khôi phục tư thế, log huấn luyện. |
 | `docs/` | Video, hình, bảng đối chiếu tên cũ → mới, nhật ký sắp xếp lại, tài liệu kỹ thuật đầy đủ. |
 | `checkpoints/`, `data/` | Không nằm trong git; tải bằng `scripts/download_assets.py` và các script dữ liệu. |
@@ -132,6 +139,7 @@ Xem các lệnh ở [README tiếng Anh](README.md#reproduce-everything-from-scr
 ## Hạn chế
 
 - **Tư thế khối đặc quyền.** Hệ thống cuối (76%) đọc tư thế khối từ mô phỏng lúc chạy. Bản chỉ dùng ảnh đạt 45–54% ([E5](experiments/E5_vision_world_models/README.md)).
+- **Policy sinh hành động trực tiếp từ ảnh còn thấp.** Khuếch tán thẳng hành động từ ảnh, không qua đường đi của khối và inverse dynamics, đạt 17% khi học đầu-cuối ([E6](experiments/E6_end2end_vision_diffusion/README.md)), 30 ± 3% với bộ mã hoá JEPA tự giám sát ([E7](experiments/E7_self_supervised_jepa_dit/README.md)) và 32% với baseline E3, đều thấp hơn E5 (p ≤ 0,01). Với lượng dữ liệu và cỡ mô hình này, tách bài toán thành đường đi của khối và inverse dynamics mới hiệu quả.
 - **World Model ảnh làm hại khi dùng để chọn hành động.** Dùng World Model trên đặc trưng ảnh (kiểu DINO-WM) để chọn hành động làm thành công tụt còn 11–20% với mọi bộ mã hoá đã thử: sai số khoảng 10 px quá thô để xếp hạng các hành động ứng viên.
 - **Đích cố định.** Đích giống nhau trong cả 206 lần trình diễn, nên hệ thống chưa từng học đẩy tới đích khác.
 - **Thống kê còn ít.** Mới có 1 seed huấn luyện; 95 điểm xuất phát cho khoảng tin cậy ±9 điểm.

@@ -1,6 +1,6 @@
 """Tactical Hierarchical Controller (Orient -> Align -> Push).
 
-Implements the user's 3-Phase Manipulation Strategy:
+Implements a hand-written 3-Phase Manipulation Strategy:
 Phase 1 (ORIENT): Rotate the T-block until its top face is parallel to the goal (Delta_theta -> 0).
 Phase 2 (ALIGN):  Navigate around the block without collisions to stage directly behind the belly
                   along the collinear symmetry axis into the goal slot.

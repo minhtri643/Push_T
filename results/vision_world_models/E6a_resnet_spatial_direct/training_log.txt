@@ -1,0 +1,31 @@
+Stage E6a Training Log | ResNet-18 + Spatial-Softmax (K=16) | Direct Actions
+Epoch 01/30 | Train Loss: 0.0367 | Val Action RMSE: 53.22 px * | Elapsed: 537s
+Epoch 02/30 | Train Loss: 0.0206 | Val Action RMSE: 52.74 px * | Elapsed: 560s
+Epoch 03/30 | Train Loss: 0.0162 | Val Action RMSE: 48.94 px * | Elapsed: 538s
+Epoch 04/30 | Train Loss: 0.0143 | Val Action RMSE: 50.11 px   | Elapsed: 552s
+Epoch 05/30 | Train Loss: 0.0133 | Val Action RMSE: 49.23 px   | Elapsed: 562s
+Epoch 06/30 | Train Loss: 0.0128 | Val Action RMSE: 51.39 px   | Elapsed: 559s
+Epoch 07/30 | Train Loss: 0.0098 | Val Action RMSE: 39.20 px * | Elapsed: 544s
+Epoch 08/30 | Train Loss: 0.0052 | Val Action RMSE: 38.54 px * | Elapsed: 538s
+Epoch 09/30 | Train Loss: 0.0039 | Val Action RMSE: 37.83 px * | Elapsed: 549s
+Epoch 10/30 | Train Loss: 0.0031 | Val Action RMSE: 37.96 px   | Elapsed: 535s
+Epoch 11/30 | Train Loss: 0.0026 | Val Action RMSE: 36.79 px * | Elapsed: 535s
+Epoch 12/30 | Train Loss: 0.0022 | Val Action RMSE: 38.08 px   | Elapsed: 543s
+Epoch 13/30 | Train Loss: 0.0017 | Val Action RMSE: 36.88 px   | Elapsed: 535s
+Epoch 14/30 | Train Loss: 0.0015 | Val Action RMSE: 36.25 px * | Elapsed: 546s
+Epoch 15/30 | Train Loss: 0.0012 | Val Action RMSE: 37.34 px   | Elapsed: 543s
+Epoch 16/30 | Train Loss: 0.0011 | Val Action RMSE: 37.19 px   | Elapsed: 540s
+Epoch 17/30 | Train Loss: 0.0010 | Val Action RMSE: 37.30 px   | Elapsed: 543s
+Epoch 18/30 | Train Loss: 0.0008 | Val Action RMSE: 36.71 px   | Elapsed: 542s
+Epoch 19/30 | Train Loss: 0.0007 | Val Action RMSE: 36.75 px   | Elapsed: 536s
+Epoch 20/30 | Train Loss: 0.0007 | Val Action RMSE: 36.69 px   | Elapsed: 542s
+Epoch 21/30 | Train Loss: 0.0006 | Val Action RMSE: 36.75 px   | Elapsed: 549s
+Epoch 22/30 | Train Loss: 0.0006 | Val Action RMSE: 36.74 px   | Elapsed: 537s
+Epoch 23/30 | Train Loss: 0.0005 | Val Action RMSE: 36.54 px   | Elapsed: 550s
+Epoch 24/30 | Train Loss: 0.0005 | Val Action RMSE: 36.54 px   | Elapsed: 538s
+Epoch 25/30 | Train Loss: 0.0005 | Val Action RMSE: 36.65 px   | Elapsed: 542s
+Epoch 26/30 | Train Loss: 0.0005 | Val Action RMSE: 36.74 px   | Elapsed: 539s
+Epoch 27/30 | Train Loss: 0.0005 | Val Action RMSE: 36.58 px   | Elapsed: 537s
+Epoch 28/30 | Train Loss: 0.0005 | Val Action RMSE: 36.69 px   | Elapsed: 544s
+Epoch 29/30 | Train Loss: 0.0004 | Val Action RMSE: 36.67 px   | Elapsed: 534s
+Epoch 30/30 | Train Loss: 0.0004 | Val Action RMSE: 28.78 px * | Elapsed: 537s

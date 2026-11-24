@@ -1,0 +1,42 @@
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\.venv\Lib\site-packages\torch\nn\modules\transformer.py:385: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+World Model weights frozen successfully for Diffusion training.
+E5b_jepa__dit_id_vision: success 48% | coverage 78.0% | 211s -> D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\results\seeds100000\E5b_jepa__dit_id_vision.json
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\.venv\Lib\site-packages\torch\nn\modules\transformer.py:385: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+World Model weights frozen successfully for Diffusion training.
+E5b_jepa__dit_id_vision__noise1: success 44% | coverage 81.4% | 219s -> D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\results\seeds100000\E5b_jepa__dit_id_vision__noise1.json
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\.venv\Lib\site-packages\torch\nn\modules\transformer.py:385: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+World Model weights frozen successfully for Diffusion training.
+E5b_jepa__dit_id_vision__noise2: success 40% | coverage 79.8% | 221s -> D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\results\seeds100000\E5b_jepa__dit_id_vision__noise2.json
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\.venv\Lib\site-packages\torch\nn\modules\transformer.py:385: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+C:\Users\ACER\.cache\torch\hub\facebookresearch_dinov2_main\dinov2\layers\swiglu_ffn.py:51: UserWarning: xFormers is not available (SwiGLU)
+  warnings.warn("xFormers is not available (SwiGLU)")
+C:\Users\ACER\.cache\torch\hub\facebookresearch_dinov2_main\dinov2\layers\attention.py:33: UserWarning: xFormers is not available (Attention)
+  warnings.warn("xFormers is not available (Attention)")
+C:\Users\ACER\.cache\torch\hub\facebookresearch_dinov2_main\dinov2\layers\block.py:40: UserWarning: xFormers is not available (Block)
+  warnings.warn("xFormers is not available (Block)")
+World Model weights frozen successfully for Diffusion training.
+E5c_dinov2_frozen__dit_id_vision: success 52% | coverage 90.7% | 221s -> D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\results\seeds100000\E5c_dinov2_frozen__dit_id_vision.json
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\.venv\Lib\site-packages\torch\nn\modules\transformer.py:385: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+C:\Users\ACER\.cache\torch\hub\facebookresearch_dinov2_main\dinov2\layers\swiglu_ffn.py:51: UserWarning: xFormers is not available (SwiGLU)
+  warnings.warn("xFormers is not available (SwiGLU)")
+C:\Users\ACER\.cache\torch\hub\facebookresearch_dinov2_main\dinov2\layers\attention.py:33: UserWarning: xFormers is not available (Attention)
+  warnings.warn("xFormers is not available (Attention)")
+C:\Users\ACER\.cache\torch\hub\facebookresearch_dinov2_main\dinov2\layers\block.py:40: UserWarning: xFormers is not available (Block)
+  warnings.warn("xFormers is not available (Block)")
+World Model weights frozen successfully for Diffusion training.
+E5c_dinov2_frozen__dit_id_vision__noise1: success 48% | coverage 88.3% | 222s -> D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\results\seeds100000\E5c_dinov2_frozen__dit_id_vision__noise1.json
+D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\.venv\Lib\site-packages\torch\nn\modules\transformer.py:385: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+C:\Users\ACER\.cache\torch\hub\facebookresearch_dinov2_main\dinov2\layers\swiglu_ffn.py:51: UserWarning: xFormers is not available (SwiGLU)
+  warnings.warn("xFormers is not available (SwiGLU)")
+C:\Users\ACER\.cache\torch\hub\facebookresearch_dinov2_main\dinov2\layers\attention.py:33: UserWarning: xFormers is not available (Attention)
+  warnings.warn("xFormers is not available (Attention)")
+C:\Users\ACER\.cache\torch\hub\facebookresearch_dinov2_main\dinov2\layers\block.py:40: UserWarning: xFormers is not available (Block)
+  warnings.warn("xFormers is not available (Block)")
+World Model weights frozen successfully for Diffusion training.
+E5c_dinov2_frozen__dit_id_vision__noise2: success 56% | coverage 91.5% | 215s -> D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\results\seeds100000\E5c_dinov2_frozen__dit_id_vision__noise2.json

@@ -28,6 +28,8 @@
 | `E4_final__dit_id` | same, without the World Model choosing the actions | 59% [49%–68%]; 55 ± 6% over 3 noise draws | 87.4% | 0.914 |
 | `E5d_vjepa2_frozen__dit_id_vision` | image + pusher position only (block pose read from the image) | 54% [44%–63%]; 54 ± 2% over 3 noise draws | 85.4% | 0.894 |
 | `E3_action_diffusion_baseline` | image + pusher position (Diffusion-Policy-style baseline, zarr data) | 32% [23%–41%] | 88.3% | 0.926 |
+| `E7_jepa_dit` | image + pusher position, fully self-supervised JEPA encoder | 32% [23%–41%]; 30 ± 3% over 3 noise draws | 72.1% | 0.756 |
+| `E6a_resnet_spatial_direct` | image + pusher position, end-to-end ResNet-18, actions diffused directly | 17% [11%–26%] | 45.3% | 0.475 |
 | `E0_baseline__dit_id` | the original version of this project | 2% [1%–7%] | 34.6% | 0.364 |
 
 **Evolution of the project (best run of each stage)**
@@ -40,6 +42,8 @@
 | E3 — Action-conditioned dynamics World Model (dit_wm) | `E3_augfix_ckpt__dit_wm` | zarr (+ simulator data for the dynamics) | 84% | 94.5% |
 | E4 — Hugging Face data only (FINAL) | `E4_final__dit_wm` | lerobot/pusht only | 76% | 94.6% |
 | E5 — Vision-only extension | `E5d_vjepa2_frozen__dit_id_vision` | lerobot/pusht only (+ frozen pretrained V-JEPA 2) | 54% | 85.4% |
+| E6 — End-to-end vision diffusion policy (no inverse dynamics) | `E6a_resnet_spatial_direct` | lerobot/pusht only | 17% | 45.3% |
+| E7 — Self-supervised JEPA World Model + DiT | `E7_jepa_dit` | lerobot/pusht only | 32% | 72.1% |
 <!-- RESULTS:END -->
 
 <p align="center"><img src="docs/media/baseline_vs_final.gif" width="480" alt="Original baseline (E0) versus final system (E4) from the same start"></p>
@@ -118,7 +122,10 @@ python scripts/4_diffusion/train_dit_planner.py           # DiT + inverse dynami
 python scripts/5_evaluation/benchmark.py --policy dit_wm --label E4_final__dit_wm
 python scripts/6_vision_world_model/train_jepa_wm.py      # (extension E5) vision World Model, self-trained encoder (~53 min)
 python scripts/6_vision_world_model/train_frozen_encoder_wm.py --encoder vjepa2   # (E5) frozen V-JEPA 2 (~47 min)
+python scripts/7_end2end_vision_diffusion/train_resnet_spatial_direct.py --epochs 30  # (E6) end-to-end policy (~4.5 h)
 ```
+
+E6 is evaluated and exported with the two scripts listed in [its README](experiments/E6_end2end_vision_diffusion/README.md). E7 (self-supervised JEPA + DiT) has its own pipeline, about 80 minutes: see [experiments/E7_self_supervised_jepa_dit](experiments/E7_self_supervised_jepa_dit/README.md).
 
 To skip the slow pose recovery, `python scripts/download_assets.py --what data` downloads the processed dataset.
 Models of every earlier stage: `--what history`. Vision World Models: `--what vision`.
@@ -128,10 +135,10 @@ Models of every earlier stage: `--what history`. Vision World Models: `--what vi
 | Path | Content |
 |---|---|
 | `pusht_wm_dit/` | The library: `data/` (dataset, pose recovery), `envs/` (simulator wrapper), `models/` (World Model, dynamics, DiT, inverse dynamics, vision World Models), `policy.py` (all policies + closed-loop rollout), `paths.py`. |
-| `scripts/1_data` … `scripts/6_vision_world_model` | The pipeline, in the order of the task. |
+| `scripts/1_data` … `scripts/7_end2end_vision_diffusion` | The pipeline, in the order of the task (6 and 7: the vision-only extensions E5 and E6). |
 | `demo.py` | Interactive demo. |
 | `configs/default.yaml` | Every hyper-parameter and path. |
-| `experiments/E0_…` … `E5_…` | **History of the project**: what was tried at each stage, why, the numbers, and the lessons. Start with [experiments/README.md](experiments/README.md). |
+| `experiments/E0_…` … `E7_…` | **History of the project**: what was tried at each stage, why, the numbers, and the lessons. Start with [experiments/README.md](experiments/README.md). E7 is a self-supervised branch developed in parallel and merged into the project. |
 | `results/` | Every measured number. `benchmark/` (one JSON per run, 95 episodes each), `summary/` (tables), `world_model_eval/`, `pose_recovery/`, `vision_world_models/`, `training_logs/`, `legacy_protocol/`. |
 | `docs/` | Media, figures, `name_mapping.md` (old → new names), `provenance/` (reorganisation log), `README_FOR_AI.md` (full technical context). |
 | `checkpoints/`, `data/` | Not in git; filled by `scripts/download_assets.py` and the data scripts. |
@@ -139,6 +146,7 @@ Models of every earlier stage: `--what history`. Vision World Models: `--what vi
 ## Limitations
 
 - **Privileged block pose.** The final system (76%) reads the block pose from the simulator at run time. Vision-only versions reach 45–54% ([E5](experiments/E5_vision_world_models/README.md)).
+- **Direct pixel-to-action policies stay low here.** Diffusing the robot's actions straight from the image, without a block path and inverse dynamics, gives 17% end to end ([E6](experiments/E6_end2end_vision_diffusion/README.md)), 30 ± 3% with a self-supervised JEPA encoder ([E7](experiments/E7_self_supervised_jepa_dit/README.md)) and 32% for the E3 baseline, all below E5 (p ≤ 0.01). With this data and model size, splitting the problem into a block path and inverse dynamics is what works.
 - **Choosing actions with a vision World Model hurts.** With an image-feature World Model (DINO-WM style) as the action selector, success drops to 11–20% for every encoder tried: its ~10 px errors are too coarse to rank candidate actions.
 - **Fixed goal.** The goal is the same in all 206 demonstrations, so the system has never learned to push to another goal.
 - **Small statistics.** One training seed. 95 benchmark starts give ±9-point intervals; diffusion-noise repeats are reported where available.
@@ -150,3 +158,4 @@ Code: MIT ([LICENSE](LICENSE)).
 - Data: [lerobot/pusht](https://huggingface.co/datasets/lerobot/pusht) (LeRobot / Hugging Face).
 - Simulator: [gym-pusht](https://github.com/huggingface/gym-pusht).
 - Frozen encoders of the E5 extension: DINOv2 and V-JEPA 2 (Meta). Each is under its own license.
+- `experiments/E7_self_supervised_jepa_dit/code/`: original source code of the E7 branch, kept unchanged.

@@ -6,7 +6,9 @@
   "E2": {"en": "Hand-written controllers (archived)", "vi": "Bộ điều khiển viết tay (đã lưu trữ)"},
   "E3": {"en": "Action-conditioned dynamics World Model (dit_wm)", "vi": "World Model động lực học theo hành động (dit_wm)"},
   "E4": {"en": "Hugging Face data only (FINAL)", "vi": "Chỉ dữ liệu Hugging Face (BẢN CUỐI)"},
-  "E5": {"en": "Vision-only extension", "vi": "Nhánh mở rộng chỉ dùng ảnh"}
+  "E5": {"en": "Vision-only extension", "vi": "Nhánh mở rộng chỉ dùng ảnh"},
+  "E6": {"en": "End-to-end vision diffusion policy (no inverse dynamics)", "vi": "Chính sách khuếch tán ảnh đầu-cuối (không inverse dynamics)"},
+  "E7": {"en": "Self-supervised JEPA World Model + DiT", "vi": "World Model JEPA tự giám sát + DiT"}
  },
  "runs": {
   "E0_baseline__dit_id": {"date": "2026-11-23", "train_data": "zarr", "en": "original code and models (trained before 2026-11-16), DiT + inverse dynamics", "vi": "mã và mô hình ban đầu (học trước 16/11), DiT + inverse dynamics"},
@@ -41,6 +43,9 @@
   "E5c_dinov2_frozen__dit_id_vision": {"date": "2026-11-22", "train_data": "lerobot/pusht only (+ frozen pretrained DINOv2)", "en": "vision only: frozen DINOv2 ViT-S + pose probe", "vi": "chỉ ảnh: DINOv2 ViT-S đóng băng + đầu dò tư thế"},
   "E5c_dinov2_frozen__dit_vwm": {"date": "2026-11-22", "train_data": "lerobot/pusht only (+ frozen pretrained DINOv2)", "en": "same, actions chosen by the vision World Model", "vi": "như trên, World Model ảnh chọn hành động"},
   "E5d_vjepa2_frozen__dit_id_vision": {"date": "2026-11-22", "train_data": "lerobot/pusht only (+ frozen pretrained V-JEPA 2)", "en": "vision only: frozen V-JEPA 2 ViT-L + pose probe", "vi": "chỉ ảnh: V-JEPA 2 ViT-L đóng băng + đầu dò tư thế"},
-  "E5d_vjepa2_frozen__dit_vwm": {"date": "2026-11-22", "train_data": "lerobot/pusht only (+ frozen pretrained V-JEPA 2)", "en": "same, actions chosen by the vision World Model", "vi": "như trên, World Model ảnh chọn hành động"}
+  "E5d_vjepa2_frozen__dit_vwm": {"date": "2026-11-22", "train_data": "lerobot/pusht only (+ frozen pretrained V-JEPA 2)", "en": "same, actions chosen by the vision World Model", "vi": "như trên, World Model ảnh chọn hành động"},
+  "E6a_resnet_spatial_direct": {"date": "2026-11-24", "train_data": "lerobot/pusht only", "en": "vision only, end to end: ResNet-18 GN + spatial softmax (16 keypoints) + DiT diffusing 16 actions directly, 2 frames, 30 epochs; own episode loop without the 40 px/step limit", "vi": "chỉ ảnh, đầu-cuối: ResNet-18 GN + spatial softmax (16 điểm) + DiT khuếch tán trực tiếp 16 hành động, 2 khung, 30 epoch; vòng chạy riêng, không giới hạn 40 px/bước"},
+  "E7_jepa_dit": {"date": "2026-11-24", "train_data": "lerobot/pusht only", "en": "vision only, fully self-supervised: frozen JEPA World Model (2 frames → S_t) + DiT diffusing a 2 s pusher path; re-trained here from the branch's original code", "vi": "chỉ ảnh, hoàn toàn tự giám sát: World Model JEPA đóng băng (2 khung → S_t) + DiT khuếch tán đường đi 2 s của đầu đẩy; huấn luyện lại từ mã nguồn gốc của nhánh"},
+  "E7_jepa_dit__nolimit": {"date": "2026-11-24", "train_data": "lerobot/pusht only", "en": "same, without the 40 px/step limit (as in the branch's original evaluator)", "vi": "như trên, bỏ giới hạn 40 px/bước (như bộ đánh giá gốc của nhánh)"}
  }
 }

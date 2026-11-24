@@ -66,6 +66,19 @@
 | `E5d_vjepa2_frozen__dit_id_vision`<br>chỉ ảnh: V-JEPA 2 ViT-L đóng băng + đầu dò tư thế | chỉ lerobot/pusht (+ V-JEPA 2 tiền huấn luyện, đóng băng) | 54% [44%–63%] | 53.7 ± 2.1 (n=3) | 85.4% | 0.894 | 56% / 55% / 48% | 15 / 36, p=0.005 |
 | `E5d_vjepa2_frozen__dit_vwm`<br>như trên, World Model ảnh chọn hành động | chỉ lerobot/pusht (+ V-JEPA 2 tiền huấn luyện, đóng băng) | 11% [6%–18%] | - | 73.9% | 0.776 | 12% / 5% / 12% | 2 / 64, p=0.000 |
 
+## E6 — Chính sách khuếch tán ảnh đầu-cuối (không inverse dynamics)
+
+| Cấu hình | Dữ liệu học | Thành công [KTC 95%] | Thành công qua các lần lặp nhiễu | Độ phủ TB | Điểm DP | seeds50 / hard20 / random25 | so với E4_final__dit_wm (chỉ cấu hình này / chỉ bản cuối, p) |
+|---|---|---|---|---|---|---|---|
+| `E6a_resnet_spatial_direct`<br>chỉ ảnh, đầu-cuối: ResNet-18 GN + spatial softmax (16 điểm) + DiT khuếch tán trực tiếp 16 hành động, 2 khung, 30 epoch; vòng chạy riêng, không giới hạn 40 px/bước | chỉ lerobot/pusht | 17% [11%–26%] | - | 45.3% | 0.475 | 16% / 15% / 20% | 6 / 62, p=0.000 |
+
+## E7 — World Model JEPA tự giám sát + DiT
+
+| Cấu hình | Dữ liệu học | Thành công [KTC 95%] | Thành công qua các lần lặp nhiễu | Độ phủ TB | Điểm DP | seeds50 / hard20 / random25 | so với E4_final__dit_wm (chỉ cấu hình này / chỉ bản cuối, p) |
+|---|---|---|---|---|---|---|---|
+| `E7_jepa_dit`<br>chỉ ảnh, hoàn toàn tự giám sát: World Model JEPA đóng băng (2 khung → S_t) + DiT khuếch tán đường đi 2 s của đầu đẩy; huấn luyện lại từ mã nguồn gốc của nhánh | chỉ lerobot/pusht | 32% [23%–41%] | 29.8 ± 3.0 (n=3) | 72.1% | 0.756 | 28% / 30% / 40% | 7 / 49, p=0.000 |
+| `E7_jepa_dit__nolimit`<br>như trên, bỏ giới hạn 40 px/bước (như bộ đánh giá gốc của nhánh) | chỉ lerobot/pusht | 24% [17%–34%] | 30.5 ± 5.6 (n=3) | 67.9% | 0.712 | 26% / 15% / 28% | 5 / 54, p=0.000 |
+
 ## Kiểm tra tính tất định (chạy lại y hệt)
 
 - `E4_final__dit_id` rerun 2026-11-23: 95/95 điểm xuất phát trùng khớp

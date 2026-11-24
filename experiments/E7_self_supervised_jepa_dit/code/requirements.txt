@@ -1,0 +1,16 @@
+torch
+torchvision
+gym-pusht>=0.1.5
+pymunk>=6.6,<7
+huggingface_hub
+pandas
+pyarrow
+av
+zarr<3
+numcodecs
+matplotlib
+tqdm
+pyyaml
+imageio
+imageio-ffmpeg
+scikit-learn

@@ -1,0 +1,25 @@
+{
+  "n_episodes": 50,
+  "success_rate": 0.32,
+  "success_090_rate": 0.52,
+  "mean_max_coverage": 0.744452504827256,
+  "median_max_coverage": 0.9162685755230358,
+  "mean_final_coverage": 0.673088227467671,
+  "time_to_success_s": {
+    "n": 16,
+    "mean": 18.20625,
+    "median": 18.15,
+    "p25": 14.5,
+    "p75": 20.85
+  },
+  "time_to_090_s": {
+    "n": 26,
+    "mean": 15.876923076923077,
+    "median": 15.5,
+    "p25": 12.700000000000001,
+    "p75": 18.4
+  },
+  "mean_infer_ms": 108.20659681910116,
+  "n_action_steps": 6,
+  "n_infer": 16
+}

@@ -1,0 +1,57 @@
+[  1/50] seed 100000: success=False  max_cov=0.566  steps=300  infer=78 ms
+[  2/50] seed 100001: success=False  max_cov=0.641  steps=300  infer=84 ms
+[  3/50] seed 100002: success=False  max_cov=0.848  steps=300  infer=75 ms
+[  4/50] seed 100003: success=False  max_cov=0.947  steps=300  infer=64 ms
+[  5/50] seed 100004: success=False  max_cov=0.636  steps=300  infer=63 ms
+[  6/50] seed 100005: success=True  max_cov=0.962  steps=250  infer=64 ms
+[  7/50] seed 100006: success=False  max_cov=0.846  steps=300  infer=63 ms
+[  8/50] seed 100007: success=True  max_cov=0.952  steps=223  infer=84 ms
+[  9/50] seed 100008: success=False  max_cov=0.920  steps=300  infer=64 ms
+[ 10/50] seed 100009: success=False  max_cov=0.898  steps=300  infer=81 ms
+[ 11/50] seed 100010: success=False  max_cov=0.943  steps=300  infer=63 ms
+[ 12/50] seed 100011: success=False  max_cov=0.453  steps=300  infer=63 ms
+[ 13/50] seed 100012: success=True  max_cov=0.965  steps=252  infer=64 ms
+[ 14/50] seed 100013: success=False  max_cov=0.498  steps=300  infer=69 ms
+[ 15/50] seed 100014: success=False  max_cov=0.387  steps=300  infer=90 ms
+[ 16/50] seed 100015: success=False  max_cov=0.481  steps=300  infer=78 ms
+[ 17/50] seed 100016: success=False  max_cov=0.827  steps=300  infer=79 ms
+[ 18/50] seed 100017: success=False  max_cov=0.814  steps=300  infer=70 ms
+[ 19/50] seed 100018: success=False  max_cov=0.120  steps=300  infer=74 ms
+[ 20/50] seed 100019: success=False  max_cov=0.931  steps=300  infer=71 ms
+[ 21/50] seed 100020: success=False  max_cov=0.906  steps=300  infer=71 ms
+[ 22/50] seed 100021: success=False  max_cov=0.440  steps=300  infer=101 ms
+[ 23/50] seed 100022: success=False  max_cov=0.903  steps=300  infer=64 ms
+[ 24/50] seed 100023: success=False  max_cov=0.902  steps=300  infer=64 ms
+[ 25/50] seed 100024: success=False  max_cov=0.599  steps=300  infer=94 ms
+[ 26/50] seed 100025: success=True  max_cov=0.956  steps=136  infer=63 ms
+[ 27/50] seed 100026: success=False  max_cov=0.749  steps=300  infer=69 ms
+[ 28/50] seed 100027: success=False  max_cov=0.919  steps=300  infer=92 ms
+[ 29/50] seed 100028: success=False  max_cov=0.623  steps=300  infer=90 ms
+[ 30/50] seed 100029: success=False  max_cov=0.433  steps=300  infer=71 ms
+[ 31/50] seed 100030: success=False  max_cov=0.136  steps=300  infer=67 ms
+[ 32/50] seed 100031: success=True  max_cov=0.951  steps=106  infer=64 ms
+[ 33/50] seed 100032: success=False  max_cov=0.474  steps=300  infer=76 ms
+[ 34/50] seed 100033: success=False  max_cov=0.914  steps=300  infer=69 ms
+[ 35/50] seed 100034: success=True  max_cov=0.955  steps=219  infer=85 ms
+[ 36/50] seed 100035: success=False  max_cov=0.417  steps=300  infer=79 ms
+[ 37/50] seed 100036: success=True  max_cov=0.952  steps=208  infer=70 ms
+[ 38/50] seed 100037: success=True  max_cov=0.957  steps=224  infer=81 ms
+[ 39/50] seed 100038: success=False  max_cov=0.946  steps=300  infer=68 ms
+[ 40/50] seed 100039: success=False  max_cov=0.924  steps=300  infer=64 ms
+[ 41/50] seed 100040: success=False  max_cov=0.027  steps=300  infer=76 ms
+[ 42/50] seed 100041: success=False  max_cov=0.948  steps=300  infer=91 ms
+[ 43/50] seed 100042: success=False  max_cov=0.928  steps=300  infer=85 ms
+[ 44/50] seed 100043: success=False  max_cov=0.050  steps=300  infer=77 ms
+[ 45/50] seed 100044: success=False  max_cov=0.477  steps=300  infer=69 ms
+[ 46/50] seed 100045: success=True  max_cov=0.970  steps=132  infer=73 ms
+[ 47/50] seed 100046: success=True  max_cov=0.953  steps=203  infer=71 ms
+[ 48/50] seed 100047: success=False  max_cov=0.800  steps=300  infer=68 ms
+[ 49/50] seed 100048: success=False  max_cov=0.919  steps=300  infer=79 ms
+[ 50/50] seed 100049: success=False  max_cov=0.620  steps=300  infer=68 ms
+=== SUMMARY ===
+success@0.95        : 20.0% (10/50)
+success@0.90        : 48.0%   (expert replay on val: 10/20 = 50%)
+mean max coverage   : 0.728   (expert replay: 0.898 | LeRobot DP: 0.955)
+time to success (s) : {'n': 10, 'mean': 19.53, 'median': 21.35, 'p25': 15.275000000000002, 'p75': 22.375}
+mean inference time : 74 ms per path
+saved in outputs\runs\dit_main\eval\main

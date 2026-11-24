@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\export_latents.py", line 121, in <module>
+    main()
+  File "D:\Thac_Si\AI_Programming\World_Model\Final_Project_PushT\experiments\E7_self_supervised_jepa_dit\code\scripts\export_latents.py", line 85, in main
+    assert diff < 1e-3
+           ^^^^^^^^^^^
+AssertionError
+loaded outputs\runs\wm_main\ckpt\best.pt (epoch 39, val_l_pred 0.1371)
+param_checksum = 77056.029083
+exporting JEPA latents...
+  version 0 (clean) done
+  version 1 (shift aug) done
+  version 2 (shift aug) done
+  version 3 (shift aug) done
+  version 4 (shift aug) done
+recompute check: max |diff| = 8.03e-03 (expected < 1e-3)
