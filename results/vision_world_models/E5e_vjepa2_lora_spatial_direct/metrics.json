@@ -1,0 +1,101 @@
+{
+  "substage": "E5e",
+  "description": "V-JEPA 2 + LoRA (r=8) + SpatialSoftmax (K=16) + Direct Action Diffusion (No Inverse Dynamics)",
+  "lora_r": 8,
+  "num_keypoints": 16,
+  "best_val_action_rmse_px": 48.076746726940186,
+  "epochs": 15,
+  "checkpoint": "checkpoints/E5_vision\\vjepa2_lora_spatial_direct.pt",
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.03831158438951917,
+      "val_action_rmse_px": 48.076746726940186,
+      "is_best": true
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.021212414751857357,
+      "val_action_rmse_px": 66.23288747313916,
+      "is_best": false
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.020185668448932836,
+      "val_action_rmse_px": 69.47125845173711,
+      "is_best": false
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.01966969946735218,
+      "val_action_rmse_px": 68.1487097184145,
+      "is_best": false
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.019065249008966275,
+      "val_action_rmse_px": 63.0984607130605,
+      "is_best": false
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.016951948170209192,
+      "val_action_rmse_px": 48.647329033260526,
+      "is_best": false
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.013581681253561557,
+      "val_action_rmse_px": 52.30854900535034,
+      "is_best": false
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.012729833080672501,
+      "val_action_rmse_px": 51.44226485583876,
+      "is_best": false
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.01232277662009815,
+      "val_action_rmse_px": 50.24184755204279,
+      "is_best": false
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.01217269481164836,
+      "val_action_rmse_px": 49.329921295119036,
+      "is_best": false
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.011906767508289853,
+      "val_action_rmse_px": 50.65638160047852,
+      "is_best": false
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.011824980016818138,
+      "val_action_rmse_px": 49.26943942377275,
+      "is_best": false
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.011847726781877989,
+      "val_action_rmse_px": 49.158710073004016,
+      "is_best": false
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.011709123615765833,
+      "val_action_rmse_px": 49.48575929215752,
+      "is_best": false
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.011706158142190814,
+      "val_action_rmse_px": 48.51471234492265,
+      "is_best": false
+    }
+  ]
+}

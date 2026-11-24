@@ -1,0 +1,16 @@
+Stage E5e Training Log | LoRA r=8 | Keypoints=16 | Direct Actions (No ID)
+Epoch 01/15 | Train Loss: 0.0383 | Val Action RMSE: 48.08 px * | Elapsed: 28s
+Epoch 02/15 | Train Loss: 0.0212 | Val Action RMSE: 66.23 px  | Elapsed: 50s
+Epoch 03/15 | Train Loss: 0.0202 | Val Action RMSE: 69.47 px  | Elapsed: 72s
+Epoch 04/15 | Train Loss: 0.0197 | Val Action RMSE: 68.15 px  | Elapsed: 95s
+Epoch 05/15 | Train Loss: 0.0191 | Val Action RMSE: 63.10 px  | Elapsed: 117s
+Epoch 06/15 | Train Loss: 0.0170 | Val Action RMSE: 48.65 px  | Elapsed: 140s
+Epoch 07/15 | Train Loss: 0.0136 | Val Action RMSE: 52.31 px  | Elapsed: 162s
+Epoch 08/15 | Train Loss: 0.0127 | Val Action RMSE: 51.44 px  | Elapsed: 185s
+Epoch 09/15 | Train Loss: 0.0123 | Val Action RMSE: 50.24 px  | Elapsed: 208s
+Epoch 10/15 | Train Loss: 0.0122 | Val Action RMSE: 49.33 px  | Elapsed: 227s
+Epoch 11/15 | Train Loss: 0.0119 | Val Action RMSE: 50.66 px  | Elapsed: 245s
+Epoch 12/15 | Train Loss: 0.0118 | Val Action RMSE: 49.27 px  | Elapsed: 264s
+Epoch 13/15 | Train Loss: 0.0118 | Val Action RMSE: 49.16 px  | Elapsed: 283s
+Epoch 14/15 | Train Loss: 0.0117 | Val Action RMSE: 49.49 px  | Elapsed: 301s
+Epoch 15/15 | Train Loss: 0.0117 | Val Action RMSE: 48.51 px  | Elapsed: 319s
